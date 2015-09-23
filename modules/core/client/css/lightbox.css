@@ -1,0 +1,10 @@
+.lightbox {
+    position: fixed;
+    top: 5%;
+    left: 10%;
+    right: 10%;
+    padding: 10px;
+    background-color: white;
+    border: 2px solid black;
+    z-index: 2;
+}

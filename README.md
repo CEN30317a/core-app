@@ -6,11 +6,12 @@
 
 ###Getting Started
 * In terminal
-	   1. git clone "repo_link"
-	   2. cd core-app
-	   2. npm install
-	   3. bower update
-	   4. grunt
+        1. git clone "repo_link"
+        2. cd core-app
+        3. npm install
+        4. bower update
+        5. bower install materialize
+        6. grunt
 * Terminal should output the following:
     * --
     MEAN.JS - Development Environment

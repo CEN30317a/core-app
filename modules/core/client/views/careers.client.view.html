@@ -1,0 +1,58 @@
+<section ng-controller="CareersController">
+
+  	<div class="container">
+
+		<div class="section">
+
+			<h1 class="header center orange-text">Careers</h1>
+
+			<div class="row center">
+			    <h5 class="header col s12 light">Available Positions</h5>
+			</div>
+
+			<div class="row center">
+		  		<a id="contact-us-button" class="btn-large waves-effect waves-light orange" ng-click="openCareerApplication();">Apply Now</a>
+			</div>
+
+		</div>
+
+	</div>
+
+	<div class="lightbox ng-hide" ng-show="careerApplicationVisible">
+
+	    <div class="row">
+
+	      	<form class="col s12">
+
+		        <div class="row">
+
+		        	<div class="input-field col s6">
+
+			            <input id="name" type="text" class="validate">
+			            <label for="name">Name</label>
+
+		         	</div>
+
+		        </div>
+
+		        <div class="row">
+
+		        	<div class="input-field col s12">
+
+		            	<input id="email" type="email" class="validate">
+			            <label for="email">Email</label>
+
+		          	</div>
+
+		        </div>
+
+		        <button class="btn waves-effect waves-light" type="submit" name="action" ng-click="closeCareerApplication();">Submit</button>
+		        <a class="waves-effect waves-light btn" ng-click="closeCareerApplication();">Cancel</a>
+
+	      	</form>
+
+	    </div>
+
+	</div>
+
+</section>

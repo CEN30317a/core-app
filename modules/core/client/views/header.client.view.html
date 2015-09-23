@@ -1,5 +1,69 @@
 <div class="container" ng-controller="HeaderController">
-  <div class="navbar-header">
+
+    <nav class="light-blue lighten-1" role="navigation">
+
+        <div class="nav-wrapper container">
+
+            <a id="logo-container" ui-sref="home" class="brand-logo">Logo</a>
+
+            <ul class="right hide-on-med-and-down">
+
+                <li><a ui-sref="careers">Careers</a></li>
+                <li><a ng-click="openSignIn();">Sign In</a></li>
+
+            </ul>
+
+            <ul id="nav-mobile" class="side-nav">
+
+                <li><a ui-sref="careers">Careers</a></li>
+                <li><a ng-click="openSignIn();">Sign In</a></li>
+
+            </ul>
+
+            <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
+
+        </div>
+
+    </nav>
+
+    <div class="lightbox ng-hide" ng-show="signInVisible">
+
+        <div class="row">
+
+            <form class="col s12">
+
+                <div class="row">
+
+                    <div class="input-field col s6">
+
+                        <input id="name" type="text" class="validate">
+                        <label for="name">Name</label>
+
+                    </div>
+
+                </div>
+
+                <div class="row">
+
+                    <div class="input-field col s12">
+
+                        <input id="email" type="email" class="validate">
+                        <label for="email">Email</label>
+
+                    </div>
+
+                </div>
+                
+                <button class="btn waves-effect waves-light" type="submit" name="action" ng-click="closeSignIn();">Submit</button>
+                <a class="waves-effect waves-light btn" ng-click="closeSignIn();">Cancel</a>
+
+            </form>
+
+        </div>
+
+    </div>
+
+  <!--div class="navbar-header">
     <button class="navbar-toggle" type="button" ng-click="toggleCollapsibleMenu()">
       <span class="sr-only">Toggle navigation</span>
       <span class="icon-bar"></span>
@@ -21,11 +85,11 @@
       </li>
     </ul>
     <ul class="nav navbar-nav navbar-right" ng-hide="authentication.user">
-      <li ui-sref-active="active">
+      <!--li ui-sref-active="active">
         <a ui-sref="authentication.signup">Sign Up</a>
       </li>
-      <li class="divider-vertical"></li>
-      <li ui-sref-active="active">
+      <li class="divider-vertical"></li-->
+      <!--li ui-sref-active="active">
         <a ui-sref="authentication.signin">Sign In</a>
       </li>
     </ul>
@@ -55,5 +119,5 @@
         </ul>
       </li>
     </ul>
-  </nav>
+  </nav-->
 </div>

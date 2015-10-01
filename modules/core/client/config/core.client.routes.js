@@ -12,6 +12,7 @@ angular.module('core').config(['$stateProvider', '$urlRouterProvider',
     });
 
     // Home state routing
+      // When creating new routes make sure the url: has a field or your will not be able to access it
     $stateProvider
     .state('home', {
       url: '/',
@@ -22,7 +23,7 @@ angular.module('core').config(['$stateProvider', '$urlRouterProvider',
       templateUrl: 'modules/core/client/views/careers.client.view.html'
     })
     .state('login', {
-      url: '/',
+      url: '/login',
       templateUrl: 'modules/core/client/views/login.client.view.html'
     })
     .state('not-found', {

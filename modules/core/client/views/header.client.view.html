@@ -9,14 +9,16 @@
             <ul class="right hide-on-med-and-down">
 
                 <li><a ui-sref="careers">Careers</a></li>
-                <li><a ng-click="openSignIn();">Sign In</a></li>
+                <!-- <li><a ng-click="openSignIn();">Sign In</a></li> -->
+                <li><a ui-sref="authentication.signin">Sign In</a></li>
 
             </ul>
 
             <ul id="nav-mobile" class="side-nav">
 
                 <li><a ui-sref="careers">Careers</a></li>
-                <li><a ng-click="openSignIn();">Sign In</a></li>
+                <!-- <li><a ng-click="openSignIn();">Sign In</a></li> -->
+                <li><a ui-sref="authentication.signin">Sign In</a></li>
 
             </ul>
 
@@ -53,7 +55,7 @@
                     </div>
 
                 </div>
-                
+
                 <button class="btn waves-effect waves-light" type="submit" name="action" ng-click="closeSignIn();">Submit</button>
                 <a class="waves-effect waves-light btn" ng-click="closeSignIn();">Cancel</a>
 

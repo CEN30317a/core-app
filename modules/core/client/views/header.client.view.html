@@ -6,60 +6,32 @@
 
             <a id="logo-container" ui-sref="home" class="brand-logo">Logo</a>
 
-            <ul class="right hide-on-med-and-down">
+            <ul class="hide-on-med-and-down nav-options-container">
 
-                <li><a ui-sref="careers">Careers</a></li>
-                <li><a ng-click="openSignIn();">Sign In</a></li>
-
-            </ul>
-
-            <ul id="nav-mobile" class="side-nav">
-
-                <li><a ui-sref="careers">Careers</a></li>
-                <li><a ng-click="openSignIn();">Sign In</a></li>
+                <li class="left"><a ng-click="openContactForm();">Contact</a></li>
+                <li class="left"><a ui-sref="careers">Careers</a></li>
+                <li class="right"><a ng-click="openSignIn();">Log In</a></li>
 
             </ul>
 
             <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
 
+            <ul id="nav-mobile" class="side-nav">
+
+                <li><a ng-click="openContactForm();">Contact</a></li>
+                <li><a ui-sref="careers">Careers</a></li>
+                <li><a ng-click="openSignIn();">Log In</a></li>
+
+            </ul>
+
         </div>
 
     </nav>
 
-    <div class="lightbox ng-hide" ng-show="signInVisible">
 
-        <div class="row">
+    <div class="lightbox sign-in ng-hide" ng-show="signInVisible">
 
-            <form class="col s12">
-
-                <div class="row">
-
-                    <div class="input-field col s6">
-
-                        <input id="name" type="text" class="validate">
-                        <label for="name">Name</label>
-
-                    </div>
-
-                </div>
-
-                <div class="row">
-
-                    <div class="input-field col s12">
-
-                        <input id="email" type="email" class="validate">
-                        <label for="email">Email</label>
-
-                    </div>
-
-                </div>
-                
-                <button class="btn waves-effect waves-light" type="submit" name="action" ng-click="closeSignIn();">Submit</button>
-                <a class="waves-effect waves-light btn" ng-click="closeSignIn();">Cancel</a>
-
-            </form>
-
-        </div>
+        <div ng-include="'/modules/core/client/views/lightbox/signin.client.view.html'"></div>
 
     </div>
 

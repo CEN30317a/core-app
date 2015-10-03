@@ -1,0 +1,18 @@
+.after-banner {
+  top:400px;
+  position:relative;
+}
+
+.banner {
+  width: 90%;
+  left: 5%;
+  position: absolute;
+  background-image: url("../img/banner.jpg");
+  background-size: cover;
+  height: 400px;
+}
+
+.inner-banner-item {
+    top: 130px;
+    position: relative;
+}

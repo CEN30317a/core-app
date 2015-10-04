@@ -1,5 +1,6 @@
 .lightbox {
     position: fixed;
+    max-height: 90%;
     top: 5%;
     left: 10%;
     right: 10%;
@@ -7,6 +8,17 @@
     background-color: white;
     border: 2px solid black;
     z-index: 2;
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+
+.button-footer {
+    float: right;
+    margin-right: 10px;
+}
+
+.job-title {
+    text-align: center;
 }
 
 .lightbox.sign-in {

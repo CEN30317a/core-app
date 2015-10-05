@@ -1,12 +1,13 @@
 'use strict';
 
-angular.module('core').controller('HeaderController', ['$scope', '$rootScope', /*'$state', 'Authentication', 'Menus',*/
+angular.module('core').controller('HeaderController', ['$scope', '$state', 'Authentication', '$rootScope', /* 'Menus',*/
                             //function ($scope , $state, Authentication, Menus) {
-    function ($scope, $rootScope) {
-                            // Expose view variables
-                            //$scope.$state = $state;
-                            //$scope.authentication = Authentication;
-        $scope.signInVisible = false;
+    function ($scope, $state, Authentication, $rootScope) {
+        // Expose view variables
+        $scope.$state = $state;
+        $scope.authentication = Authentication;
+        $rootScope.signInVisible = false;
+        $rootScope.mobileMenuVisible = false;
 
                             // Get the topbar menu
                             //$scope.menu = Menus.getMenu('topbar');
@@ -22,11 +23,11 @@ angular.module('core').controller('HeaderController', ['$scope', '$rootScope', /
                               //$scope.isCollapsed = false;
                             //});
         $scope.openSignIn = function() {
-            $scope.signInVisible = true;
+            $rootScope.signInVisible = true;
         };
 
-        $scope.closeSignIn = function() {
-            $scope.signInVisible = false;
+        $rootScope.closeSignIn = function() {
+            $rootScope.signInVisible = false;
         };
 
         $scope.openContactForm = function() {
@@ -36,14 +37,9 @@ angular.module('core').controller('HeaderController', ['$scope', '$rootScope', /
         $scope.closeContactForm = function() {
             $rootScope.contactFormVisible = false;
         };
+
+        $scope.toggleMobileMenu = function() {
+            $rootScope.mobileMenuVisible = !$rootScope.mobileMenuVisible;
+        };
     }
 ]);
-
-// $('body').on('click', '.button-collapse', function() {
-//     if ($('#nav-mobile').css('left') === '0px') {
-//         $('#nav-mobile').css('left', '105%');
-//     }
-//     else {
-//         $('#nav-mobile').css('left', '0px');
-//     }
-// });

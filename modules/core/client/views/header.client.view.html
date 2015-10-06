@@ -1,4 +1,4 @@
-<div class="container" ng-controller="HeaderController">
+<div class="container full-width" ng-controller="HeaderController">
 
     <nav class="light-blue lighten-1" role="navigation">
 
@@ -10,29 +10,29 @@
 
                 <li class="left"><a ng-click="openContactForm();">Contact</a></li>
                 <li class="left"><a ui-sref="careers">Careers</a></li>
-                <li class="right"><a ng-click="openSignIn();">Log In</a></li>
-
+                <li class="right"><a ng-hide="authentication.user" ng-click="openSignIn();">Sign In</a></li>
+                <li class="right" ng-show="authentication.user"><span ng-bind="authentication.user.displayName">{{authentication.user.displayName}}</span></li>
+                <li class="right" ng-show="authentication.user"><a href="/api/auth/signout" target="_self">Log Out</a></li>
             </ul>
 
-            <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
+            <a href="#" class="button-collapse" ng-click="toggleMobileMenu();"><i class="material-icons">menu</i></a>
 
-            <ul id="nav-mobile" class="side-nav">
+            <ul class="side-nav" ng-show="mobileMenuVisible">
 
+                <li ng-show="authentication.user"><span ng-bind="authentication.user.displayName">{{authentication.user.displayName}}</span></li>
                 <li><a ng-click="openContactForm();">Contact</a></li>
                 <li><a ui-sref="careers">Careers</a></li>
-
-                <li><a ng-click="openSignIn();">Log In</a></li>
-
+                <li><a ng-hide="authentication.user" ng-click="openSignIn();">Sign In</a></li>
+                <li ng-show="authentication.user"><a href="/api/auth/signout" target="_self">Log Out</a></li>
             </ul>
 
         </div>
 
     </nav>
 
+    <div class="lightbox sign-in ng-hide" ng-show="signInVisible && !authentication.user">
 
-    <div class="lightbox sign-in ng-hide" ng-show="signInVisible">
-
-        <div ng-include="'/modules/core/client/views/lightbox/signin.client.view.html'"></div>
+        <div ng-include="'/modules/users/client/views/authentication/signin.client.view.html'"></div>
 
     </div>
 

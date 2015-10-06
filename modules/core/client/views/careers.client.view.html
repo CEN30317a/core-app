@@ -20,39 +20,14 @@
 
 	<div class="lightbox ng-hide" ng-show="careerApplicationVisible">
 
-	    <div class="row">
-
-	      	<form class="col s12">
-
-		        <div class="row">
-
-		        	<div class="input-field col s6">
-
-			            <input id="name" type="text" class="validate">
-			            <label for="name">Name</label>
-
-		         	</div>
-
-		        </div>
-
-		        <div class="row">
-
-		        	<div class="input-field col s12">
-
-		            	<input id="email" type="email" class="validate">
-			            <label for="email">Email</label>
-
-		          	</div>
-
-		        </div>
-
-		        <button class="btn waves-effect waves-light" type="submit" name="action" ng-click="closeCareerApplication();">Submit</button>
-		        <a class="waves-effect waves-light btn" ng-click="closeCareerApplication();">Cancel</a>
-
-	      	</form>
-
-	    </div>
+	   <div ng-include="'/modules/core/client/views/lightbox/apply.client.view.html'"></div>
 
 	</div>
+
+	<div class="lightbox ng-hide" ng-show="contactFormVisible">
+
+        <div ng-include="'/modules/core/client/views/lightbox/contact.client.view.html'"></div>
+
+    </div>
 
 </section>

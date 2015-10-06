@@ -18,7 +18,7 @@ angular.module('core').config(['$stateProvider', '$urlRouterProvider',
       templateUrl: 'modules/core/client/views/home.client.view.html'
     })
     .state('careers', {
-      url: '/',
+      url: '/careers',
       templateUrl: 'modules/core/client/views/careers.client.view.html'
     })
     .state('not-found', {

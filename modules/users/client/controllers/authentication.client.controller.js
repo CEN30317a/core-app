@@ -9,9 +9,11 @@ angular.module('users').controller('AuthenticationController', ['$scope', '$stat
     $scope.error = $location.search().err;
 
     // If user is signed in then redirect back home
-    if ($scope.authentication.user) {
+    //  COMMENTED OUT AS BUG FIX - ESSENTIALLY A FAIL-SAFE THAT IS CAUSING WEIRD BEHAVIOR DUE TO HOW WE ARE IMPLEMENTING
+    //  LIGHTBOXES
+   /* if ($scope.authentication.user) {
       $location.path('/');
-    }
+    }*/
 
     $scope.signup = function (isValid) {
       $scope.error = null;

@@ -1,19 +1,18 @@
 'use strict';
 
-angular.module('core').controller('HomeController', ['$scope', /*'Authentication',*/
+angular.module('core').controller('HomeController', ['$scope', '$rootScope', /*'Authentication',*/
               	//function ($scope, Authentication) {
                 	// This provides Authentication context.
                 	//scope.authentication = Authentication;
-    function ($scope) {
 
-      	$scope.contactFormVisible = false;
+    function ($scope, $rootScope) {
 
-      	$scope.openContactForm = function() {
-      			$scope.contactFormVisible = true;
-    		};
+        $scope.openContactForm = function() {
+            $rootScope.contactFormVisible = true;
+        };
 
-    	 	$scope.closeContactForm = function() {
-    			   $scope.contactFormVisible = false;
-    		};
+        $scope.closeContactForm = function() {
+            $rootScope.contactFormVisible = false;
+        };
     }
 ]);

@@ -39,11 +39,11 @@ angular.module('core').controller('HeaderController', ['$scope', '$rootScope', /
     }
 ]);
 
-$('body').on('click', '.button-collapse', function() {
-    if ($('#nav-mobile').css('left') == '0px') {
-        $('#nav-mobile').css('left', '105%');
-    }
-    else {
-        $('#nav-mobile').css('left', '0px');
-    }
-});
+// $('body').on('click', '.button-collapse', function() {
+//     if ($('#nav-mobile').css('left') === '0px') {
+//         $('#nav-mobile').css('left', '105%');
+//     }
+//     else {
+//         $('#nav-mobile').css('left', '0px');
+//     }
+// });

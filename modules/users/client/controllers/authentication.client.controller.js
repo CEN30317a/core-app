@@ -1,7 +1,7 @@
 'use strict';
 
-angular.module('users').controller('AuthenticationController', ['$scope', '$state', '$http', '$location', '$window', 'Authentication', 'PasswordValidator',
-  function ($scope, $state, $http, $location, $window, Authentication, PasswordValidator) {
+angular.module('users').controller('AuthenticationController', ['$scope', '$rootScope', '$state', '$http', '$location', '$window', 'Authentication', 'PasswordValidator',
+  function ($scope, $rootScope, $state, $http, $location, $window, Authentication, PasswordValidator) {
     $scope.authentication = Authentication;
     $scope.popoverMsg = PasswordValidator.getPopoverMsg();
 
@@ -9,9 +9,21 @@ angular.module('users').controller('AuthenticationController', ['$scope', '$stat
     $scope.error = $location.search().err;
 
     // If user is signed in then redirect back home
-    if ($scope.authentication.user) {
+    //  COMMENTED OUT AS BUG FIX - ESSENTIALLY A FAIL-SAFE THAT IS CAUSING WEIRD BEHAVIOR DUE TO HOW WE ARE IMPLEMENTING
+    //  LIGHTBOXES
+   /* if ($scope.authentication.user) {
       $location.path('/');
-    }
+    }*/
+
+    $scope.closeSignIn = function() {
+      $rootScope.signInVisible = false;
+      if ($scope.credentials && $scope.credentials.username) {
+        $scope.credentials.username = "";
+      }
+      if ($scope.credentials && $scope.credentials.password) {
+        $scope.credentials.password = "";
+      }
+    };
 
     $scope.signup = function (isValid) {
       $scope.error = null;

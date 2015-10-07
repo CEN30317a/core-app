@@ -4,9 +4,9 @@
   </div>
   <div class="pull-right" ng-show="authentication.user._id == article.user._id">
     <a class="btn btn-primary" ui-sref="articles.edit({articleId: article._id})">
-      <i class="glyphicon glyphicon-edit"></i>
+      <i class="glyphicon glyphicon-edit"></i> edit
     </a>
-    <a class="btn btn-primary" ng-click="remove();">
+    <a class="btn btn-primary" ng-click="remove();"> delete
       <i class="glyphicon glyphicon-trash"></i>
     </a>
   </div>

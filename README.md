@@ -1,9 +1,7 @@
 
-To navigate, go to->> localhost:3000/admin/jobs. Must be an admin user to use this feature. Ask Sarah, Hugh, or me for the admin login.
+To navigate, go to->> localhost:3000/admin/jobs. Must be an admin user to use this feature. Ask Sarah, Hugh, or me for the admin login info to test.
 
 Currently, this feature is basically the Articles feature altered to work for only Admin users.
-
-Also, I can't see the glyphicons for the Edit and Delete buttons so I put words in the buttons. But if the glyphicons work for the people testing this branch, the buttons may look weird or something.
 
 #Group7a >> Final Project
 ## Project 29 - Extended Healthcare Solutions Inc.

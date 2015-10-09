@@ -5,11 +5,13 @@
         <h1 ng-bind="user.username"></h1>
       </div>
       <div class="col-md-4">
-        <a class="btn btn-primary" ui-sref="admin.user-edit({userId: user._id})">Edit
-          <i class="glyphicon glyphicon-edit"></i>
+
+        <a class="btn waves-effect waves-light" ui-sref="admin.user-edit({userId: user._id})">
+          <i class="material-icons left">edit</i><span>Edit</span>
         </a>
-        <a class="btn btn-primary" ng-click="remove();" ng-if="user._id !== authentication.user._id">Delete
-          <i class="glyphicon glyphicon-trash"></i>
+        <a class="waves-effect waves-light btn" ng-click="remove();" ng-if="user._id !== authentication.user._id">
+          <i class="material-icons left">delete</i><span>Remove</span>
+
         </a>
       </div>
     </div>

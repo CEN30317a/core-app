@@ -3,11 +3,11 @@
     <h1 ng-bind="job.title"></h1>
   </div>
   <div class="pull-right" ng-show="authentication.user._id == job.user._id">
-    <a class="btn btn-primary" ui-sref="jobs.edit({jobId: job._id})">Edit
-      <i class="glyphicon glyphicon-edit"></i>
+    <a class="btn waves-effect waves-light" ui-sref="jobs.edit({jobId: job._id})">
+      <i class="material-icons left">edit</i><span>Edit</span>
     </a>
-    <a class="btn btn-primary" ng-click="remove();">Delete
-      <i class="glyphicon glyphicon-trash"></i>
+    <a class="waves-effect waves-light btn" ng-click="remove();" ng-if="user._id !== authentication.user._id">
+      <i class="material-icons left">delete</i><span>Remove</span>
     </a>
   </div>
   <small>

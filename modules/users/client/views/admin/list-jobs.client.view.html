@@ -2,24 +2,22 @@
   <div class="page-header">
     <h4>Current Job Listings</h4>
   </div>
-  <a class="btn btn-primary" ui-sref="jobs.create">Add new job
-  </a>
+    <a class="waves-effect waves-light btn" ui-sref="jobs.create" ng-if="user._id !== authentication.user._id">
+      <i class="material-icons left">add</i><span>Add new job</span>
+    </a>
 </br>
   <div class="list-group">
     <a ng-repeat="job in jobs" ui-sref="jobs.view({jobId: job._id})" class="list-group-item">
-      <small class="list-group-item-text">
-      </br>
-        Posted on
-        <span ng-bind="job.created | date:'mediumDate'"></span>
-        by
-        <span ng-bind="job.user.displayName"></span>
-      </small>
-      <h4 class="list-group-item-heading" ng-bind="job.title"></h4>
-      <p class="list-group-item-text" ng-bind="job.content"></p>
+      <p class="list-group-item-text pull-right large bold">
+        <span>{{job.title}}</span>
+      </p>
+      <p class="list-group-item-text pull-right small">
+        <span>Description: {{job.content}}</span>
+      </p>
       -----------------------------------------------------------------
     </a>
   </div>
   <div class="alert alert-warning text-center" ng-if="jobs.$resolved && !jobs.length">
-    No jobs yet, why don't you <a ui-sref="jobs.create">create one</a>?
+    None
   </div>
 </section>

@@ -45,7 +45,7 @@ angular.module('jobs').controller('JobsController', ['$scope', '$stateParams', '
         }
       } else {
         $scope.job.$remove(function () {
-          $location.path('jobs');
+          $location.path('admin/jobs');
         });
       }
     };

@@ -3,10 +3,10 @@
     <h1 ng-bind="job.title"></h1>
   </div>
   <div class="pull-right" ng-show="authentication.user._id == job.user._id">
-    <a class="btn btn-primary" ui-sref="jobs.edit({jobId: job._id})">
-      <i class="glyphicon glyphicon-edit"></i> edit
+    <a class="btn btn-primary" ui-sref="jobs.edit({jobId: job._id})">Edit
+      <i class="glyphicon glyphicon-edit"></i>
     </a>
-    <a class="btn btn-primary" ng-click="remove();"> delete
+    <a class="btn btn-primary" ng-click="remove();">Delete
       <i class="glyphicon glyphicon-trash"></i>
     </a>
   </div>
@@ -19,4 +19,6 @@
     </em>
   </small>
   <p class="lead" ng-bind="job.content"></p>
+</br>
+  <a class="btn btn-primary" ui-sref="jobs.list">Done</a>
 </section>

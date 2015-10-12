@@ -1,7 +1,111 @@
 <div class="row">
-<!-- Linking to the typeform -->
-	<iframe id="typeform-full" width="100%" height="100%" frameborder="0" src="https://dnol777.typeform.com/to/PKDpkg"></iframe>
-<!-- Cancel entering application -->
-	<a class="waves-effect waves-light btn" ng-click="closeCareerApplication();">Cancel</a>
 
-</div>
+    <form class="col s12">
+
+        <div class="row">
+
+            <div class="input-field col s6">
+
+                <input id="first_name" type="text" class="validate">
+                <label for="first_name">First Name</label>
+
+            </div>
+
+						<div class="input-field col s6">
+
+							<input id="last_name" type="text" class="validate">
+							<label for="last_name">Last Name</label>
+
+					  </div>
+
+        </div>
+
+        <div class="row">
+
+            <div class="input-field col s12">
+
+                <input id="email" type="email" class="validate">
+                <label for="email">Email</label>
+
+            </div>
+
+        </div>
+
+				<div class="row">
+
+					  <div class="input-field col s6">
+
+			          <input id="street_address" type="text" class="validate">
+			          <label for="street_address">Street Address</label>
+
+	          </div>
+
+						<div class="input-field col s6">
+
+								<input id="apt_number" type="text" class="validate">
+								<label for="apt_number">Apt #</label>
+
+						</div>
+
+				</div>
+
+				<div class="row">
+
+					<div class="input-field col s6">
+
+							<input id="city" type="text" class="validate">
+							<label for="city">City</label>
+
+					</div>
+
+					<div class="input-field col s3">
+
+							<input id="state" type="text" class="validate">
+							<label for="state">State</label>
+
+					</div>
+
+					<div class="input-field col s3">
+
+							<input id="zip_code" type="text" class="validate">
+							<label for="zip_code">Zip Code</label>
+
+					</div>
+
+				</div>
+
+
+				<div class="row">
+
+							<div class="input-field col s12">
+
+									<textarea id="textarea1" class="materialize-textarea"></textarea>
+									<label for="textarea1">Why are you interested in this position?</label>
+
+							</div>
+
+				</div>
+				
+<!-- Input resume -->
+
+				<div class="file-field input-field">
+
+							<div class="btn">
+
+									<span>Resume</span>
+									<input type="file">
+
+							</div>
+
+							<div class="file-path-wrapper">
+
+									<input class="file-path validate" type="text" placeholder="PDF only">
+
+							</div>
+
+				</div>
+
+        <button class="btn waves-effect waves-light" type="submit" name="action" ng-click="closeCareerApplication();">Submit</button>
+        <a class="waves-effect waves-light btn" ng-click="closeCareerApplication();">Cancel</a>
+
+    </form>

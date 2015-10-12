@@ -1,9 +1,9 @@
 'use strict';
 
 angular.module('core').controller('CareersController', ['$scope', '$rootScope',
-    
+
     function ($scope, $rootScope) {
-      
+
         $scope.careerApplicationVisible = false;
 
         $scope.openCareerApplication = function() {

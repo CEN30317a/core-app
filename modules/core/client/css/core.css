@@ -39,3 +39,6 @@ a:hover .header-profile-image {
   position: fixed;
   cursor: pointer;
 }
+.bold {
+  font-weight: bold;
+}

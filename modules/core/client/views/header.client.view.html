@@ -17,7 +17,10 @@
 
             <a href="#" class="button-collapse" ng-click="toggleMobileMenu();"><i class="material-icons">menu</i></a>
 
-            <ul class="side-nav" ng-show="mobileMenuVisible">
+            <div class="overlay hide-on-large-only" ng-show="mobileMenuVisible" ng-click="toggleMobileMenu();">
+            </div>
+
+            <ul class="side-nav hide-on-large-only" ng-show="mobileMenuVisible">
 
                 <li ng-show="authentication.user"><span ng-bind="authentication.user.displayName">{{authentication.user.displayName}}</span></li>
                 <li><a ng-click="openContactForm();">Contact</a></li>

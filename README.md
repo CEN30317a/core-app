@@ -1,3 +1,8 @@
+
+To navigate, go to->> localhost:3000/admin/jobs. Must be an admin user to use this feature. Ask Sarah, Hugh, or me for the admin login info to test.
+
+Currently, this feature is basically the Articles feature altered to work for only Admin users.
+
 #Group7a >> Final Project
 ## Project 29 - Extended Healthcare Solutions Inc.
 

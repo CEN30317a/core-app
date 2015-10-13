@@ -9,10 +9,11 @@
       </div>
     </div>
   </div>
+</br>
   <div class="collection">
     <a ng-repeat="user in pagedItems" ui-sref="admin.user({userId: user._id})" class="collection-item">
       <p class="list-group-item-text pull-right small bold">
-        <span>{{user.firstName}} {{user.lastName}} ({{user.username}})</span> 
+        <span>{{user.firstName}} {{user.lastName}} ({{user.username}})</span>
       </p>
       <p class="list-group-item-text pull-right small">
         <span>Role: {{user.roles}}</span>

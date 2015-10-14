@@ -26,10 +26,6 @@ angular.module('core').controller('HeaderController', ['$scope', '$state', 'Auth
             $rootScope.signInVisible = true;
         };
 
-        $rootScope.closeSignIn = function() {
-            $rootScope.signInVisible = false;
-        };
-
         $scope.openContactForm = function() {
             $rootScope.contactFormVisible = true;
         };

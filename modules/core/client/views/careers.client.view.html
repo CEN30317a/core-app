@@ -10,13 +10,30 @@
 			    <h5 class="header col s12 light">Available Positions</h5>
 			</div>
 
-			<div class="row center">
-		  		<a id="contact-us-button" class="btn-large waves-effect waves-light orange" ng-click="openCareerApplication();">Apply Now</a>
-			</div>
-
 		</div>
 
 	</div>
+
+  <div class="row left">
+    <ul class="left jobsList">
+      <li class="jobList-item" ng-repeat="job in Jobs">
+        <div class="row">
+          <h5 class="col s12 light">{{job}}</h5>
+        </div>
+        <div class="row">
+          <span class="col s12 light">Description of Job goes here blah blah blah blah blah b lbkajasdfkjhasdkjfhaskjdhfksajdhfaksjdhfkajshfdksajhdfajksdfhasjkdfhajksdhfsdjkfhajkshdf
+                                      blah blah b lbkajasdfkjhasdkjfhaskjdhfksajdhfaksjdhfkajshfdksajhdfajksdfhasjkdfhajksdhfsdjkfhajkshdf
+                                      blah blah b lbkajasdfkjhasdkjfhaskjdhfksajdhfaksjdhfkajshfdksajhdfajksdfhasjkdfhajksdhfsdjkfhajkshdf....</span>
+        </div>
+        <div class="row">
+          <span class="right col s1 light">
+            <a id="contact-us-button" class="btn-large waves-effect waves-light orange" ng-click="openCareerApplication();">Apply Now</a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+
 
 	<div class="lightbox ng-hide" ng-show="careerApplicationVisible">
 		<i class="material-icons close-button" ng-click="closeCareerApplication();">close</i>

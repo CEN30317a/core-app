@@ -1,9 +1,12 @@
 'use strict';
 
 angular.module('core').controller('CareersController', ['$scope', '$rootScope',
-    
+
     function ($scope, $rootScope) {
-      
+
+
+        $scope.Jobs = ["Job1", "Job2", "Job3"];
+
         $scope.careerApplicationVisible = false;
 
         $scope.openCareerApplication = function() {

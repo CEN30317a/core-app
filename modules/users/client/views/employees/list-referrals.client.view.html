@@ -1,0 +1,20 @@
+<section ng-controller="ReferralsController">
+    <div class="page-header">
+    <h4>Current Job Listings</h4>
+  </div>
+    
+  <div class="list-group">
+    <a ng-repeat="referral in referrals" ui-sref="referrals.view({referralId: referral._id})" class="list-group-item">
+      <p class="list-group-item-text pull-right large bold">
+        <span>{{referral.title}}</span>
+      </p>
+      <p class="list-group-item-text pull-right small">
+        <span>Description: {{referral.content}}</span>
+      </p>
+      -----------------------------------------------------------------
+    </a>
+  </div>
+  <div class="alert alert-warning text-center" ng-if="referrals.$resolved && !referrals.length">
+    None
+  </div>
+</section>

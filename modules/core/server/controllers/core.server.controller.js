@@ -1,4 +1,11 @@
 'use strict';
+/**
+ * Module dependencies.
+ */
+var path = require('path'),
+  mongoose = require('mongoose'),
+  Job = mongoose.model('Job'),
+  errorHandler = require(path.resolve('./modules/core/server/controllers/errors.server.controller'));
 
 /**
  * Render the main application page
@@ -37,6 +44,21 @@ exports.renderNotFound = function (req, res) {
     },
     'default': function () {
       res.send('Path not found');
+    }
+  });
+};
+
+/**
+ * List of Jobs
+ */
+exports.list = function (req, res) {
+  Job.find().sort('-created').populate('user', 'displayName').exec(function (err, jobs) {
+    if (err) {
+      return res.status(400).send({
+        message: errorHandler.getErrorMessage(err)
+      });
+    } else {
+      res.json(jobs);
     }
   });
 };

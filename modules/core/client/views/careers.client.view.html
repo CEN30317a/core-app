@@ -1,4 +1,4 @@
-<section ng-controller="CareersController">
+<section ng-controller="CareersController" data-ng-init="find()">
 
   	<div class="container">
 
@@ -19,11 +19,6 @@
       <li class="jobList-item" ng-repeat="job in Jobs">
         <div class="row">
           <h5 class="col s12 light">{{job}}</h5>
-        </div>
-        <div class="row">
-          <span class="col s12 light">Description of Job goes here blah blah blah blah blah b lbkajasdfkjhasdkjfhaskjdhfksajdhfaksjdhfkajshfdksajhdfajksdfhasjkdfhajksdhfsdjkfhajkshdf
-                                      blah blah b lbkajasdfkjhasdkjfhaskjdhfksajdhfaksjdhfkajshfdksajhdfajksdfhasjkdfhajksdhfsdjkfhajkshdf
-                                      blah blah b lbkajasdfkjhasdkjfhaskjdhfksajdhfaksjdhfkajshfdksajhdfajksdfhasjkdfhajksdhfsdjkfhajkshdf....</span>
         </div>
         <div class="row">
           <span class="right col s1 light">

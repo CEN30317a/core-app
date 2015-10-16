@@ -1,11 +1,10 @@
 'use strict';
 
-angular.module('core').controller('CareersController', ['$scope', '$rootScope',
+angular.module('core').controller('CareersController', ['$scope', '$rootScope', 'Jobs',
 
-    function ($scope, $rootScope) {
+    function ($scope, $rootScope, Jobs) {
 
-
-        $scope.Jobs = ["Job1", "Job2", "Job3"];
+        $scope.Jobs = [];
 
         $scope.careerApplicationVisible = false;
 
@@ -25,5 +24,8 @@ angular.module('core').controller('CareersController', ['$scope', '$rootScope',
             $rootScope.contactFormVisible = false;
         };
 
-  	}
-]);
+        $scope.find = function() {
+          $scope.Jobs = Jobs.query();
+        };
+
+  	}]);

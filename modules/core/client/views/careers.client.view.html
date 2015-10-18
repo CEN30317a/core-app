@@ -14,16 +14,34 @@
 
 	</div>
 
-  <div class="row left">
-    <ul class="left jobsList">
-      <li class="jobList-item" ng-repeat="job in Jobs">
+<nav>
+  <div class="nav-wrapper">
+    <form>
+      <div class="input-field">
+        <input id="search" type="search" required>
+        <label for "search"><i class="material-icons">search</i></label>
+        <i class="material-icons">close</i>
+      </div>
+    </form>
+  </div>
+</nav>
+
+
+  <div class="row">
+    <ul class="jobsList">
+      <li class="jobList-item" data-ng-repeat="job in Jobs">
         <div class="row">
-          <h5 class="col s12 light">{{job}}</h5>
-        </div>
-        <div class="row">
-          <span class="right col s1 light">
-            <a id="contact-us-button" class="btn-large waves-effect waves-light orange" ng-click="openCareerApplication();">Apply Now</a>
-          </span>
+          <ul class="collapsible" data-collapsible="expandable">
+            <li>
+              <div class="collapsible-header"><h5>{{job.title}}</h5></div>
+              <div class="collapsible-body"><p>Job Description: {{job.content}}</p>
+                <div class="collapsible-body"><p>Job Created: {{job.created}}</p>
+                <span class="right col s1 light">
+                  <a id="contact-us-button" class="btn-large waves-effect waves-light orange" ng-click="openCareerApplication();">Apply Now</a>
+                </span>
+              </div>
+            </li>
+          </ul>
         </div>
       </li>
     </ul>

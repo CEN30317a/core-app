@@ -14,11 +14,13 @@
 
 	</div>
 
+
+<!--   Search Bar  -->
 <nav>
   <div class="nav-wrapper">
     <form>
       <div class="input-field">
-        <input id="search" type="search" required>
+        <input id="search" class="grey" type="search" required>
         <label for "search"><i class="material-icons">search</i></label>
         <i class="material-icons">close</i>
       </div>
@@ -26,22 +28,14 @@
   </div>
 </nav>
 
-
+<!--   Job List  -->
   <div class="row">
     <ul class="jobsList">
       <li class="jobList-item" data-ng-repeat="job in Jobs">
-        <div class="row">
-          <ul class="collapsible" data-collapsible="expandable">
-            <li>
-              <div class="collapsible-header"><h5>{{job.title}}</h5></div>
-              <div class="collapsible-body"><p>Job Description: {{job.content}}</p>
-                <div class="collapsible-body"><p>Job Created: {{job.created}}</p>
-                <span class="right col s1 light">
-                  <a id="contact-us-button" class="btn-large waves-effect waves-light orange" ng-click="openCareerApplication();">Apply Now</a>
-                </span>
-              </div>
-            </li>
-          </ul>
+        <div class="collapsible-header" ng-click="showBody1 === 'false' ? showBody1 = 'true' : showBody1 = 'false'"><i class="material-icons">games</i>{{job.title}}</div>
+        <div class=" collapsible-body" style="display: block" ng-show="showBody1 === 'true'"><p>Job Description: {{job.content}}</p>
+          <p>Creation Date: {{job.created}}</p>
+          <a id="contact-us-button" class="btn waves-effect waves-light blue" ng-click="openCareerApplication();">Apply Now</a>
         </div>
       </li>
     </ul>
@@ -50,16 +44,12 @@
 
 	<div class="lightbox ng-hide" ng-show="careerApplicationVisible">
 		<i class="material-icons close-button" ng-click="closeCareerApplication();">close</i>
-
 	   <div ng-include="'/modules/core/client/views/lightbox/apply.client.view.html'"></div>
-
 	</div>
 
 	<div class="lightbox ng-hide" ng-show="contactFormVisible">
 		<i class="material-icons close-button" ng-click="closeContactForm();">close</i>
-
         <div ng-include="'/modules/core/client/views/lightbox/contact.client.view.html'"></div>
-
-    </div>
+  </div>
 
 </section>

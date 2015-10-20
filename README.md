@@ -1,8 +1,3 @@
-
-To navigate, go to->> localhost:3000/admin/jobs. Must be an admin user to use this feature. Ask Sarah, Hugh, or me for the admin login info to test.
-
-Currently, this feature is basically the Articles feature altered to work for only Admin users.
-
 #Group7a >> Final Project
 ## Project 29 - Extended Healthcare Solutions Inc.
 
@@ -33,3 +28,7 @@ Currently, this feature is basically the Articles feature altered to work for on
 	- from the terminal output of grunt tells you the port number in this case it will be 3000. This is subject to change with further development
 * To Kill App
    * Goto Terminal and press CTRL + C
+
+* To Navigate
+  * go to->> localhost:3000/admin/jobs. Must be an admin user to use this feature.
+  * For Admin privileges refer to Slack

@@ -2,9 +2,7 @@
   <div class="page-header">
     <h4>Current Referral Listings</h4>
   </div>
-    <a class="waves-effect waves-light btn" ui-sref="referrals.create" ng-if="user._id !== authentication.user._id">
-      <i class="material-icons left">add</i><span>Add new referral</span>
-    </a>
+
 </br>
   <div class="list-group">
     <a ng-repeat="referral in referrals" ui-sref="referrals.view({referralId: referral._id})" class="list-group-item">

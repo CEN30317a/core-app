@@ -41,6 +41,7 @@ exports.update = function (req, res) {
 
   referral.title = req.body.title;
   referral.content = req.body.content;
+  referral.assigned = req.body.assigned;
 
   referral.save(function (err) {
     if (err) {

@@ -25,6 +25,11 @@ var ReferralSchema = new Schema({
     default: '',
     trim: true
   },
+  assigned: {
+    type: String,
+    default: '',
+    trim: true
+  },
   user: {
     type: Schema.ObjectId,
     ref: 'User'

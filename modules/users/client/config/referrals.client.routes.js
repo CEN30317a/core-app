@@ -8,7 +8,7 @@ angular.module('referrals').config(['$stateProvider',
       .state('referrals', {
         abstract: true,
         url: '/referrals',
-        template: '<ui-view/>',
+        template: '<ui-view>',
         data:{
           roles:['admin', 'user']
         }

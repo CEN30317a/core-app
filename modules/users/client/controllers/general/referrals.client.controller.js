@@ -47,7 +47,7 @@ angular.module('referrals').controller('ReferralsController', ['$scope', '$state
         }
       } else {
         $scope.referral.$remove(function () {
-          $location.path('employees/referrals');
+          $location.path('referrals');
         });
       }
     };
@@ -65,7 +65,7 @@ angular.module('referrals').controller('ReferralsController', ['$scope', '$state
       var referral = $scope.referral;
 
       referral.$update(function () {
-        $location.path('employees/referrals/' + referral._id);
+        $location.path('referrals/' + referral._id);
       }, function (errorResponse) {
         $scope.error = errorResponse.data.message;
       });

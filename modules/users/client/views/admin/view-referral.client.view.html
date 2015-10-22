@@ -3,7 +3,7 @@
     <h1 ng-bind="referral.title"></h1>
   </div>
   <div class="pull-right">
-    <a class="btn waves-effect waves-light" ui-sref="referrals.edit({referralId: job._id})">
+    <a class="btn waves-effect waves-light" ui-sref="referrals.edit({referralId: referral._id})">
       <i class="material-icons left">edit</i><span>Edit</span>
     </a>
     <a class="waves-effect waves-light btn" ng-click="remove();">
@@ -20,5 +20,5 @@
   </small>
   <p class="lead" ng-bind="referral.content"></p>
 </br>
-  <a class="btn btn-primary" ui-sref="referral.list">Done</a>
+  <a class="btn btn-primary" ui-sref="referrals.list">Done</a>
 </section>

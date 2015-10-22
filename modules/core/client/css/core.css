@@ -42,3 +42,27 @@ a:hover .header-profile-image {
 .bold {
   font-weight: bold;
 }
+.dark-yellow {
+  background-color: #ffb83c;
+}
+.yellow {
+  background-color: #ffda5f
+}
+.blue {
+  background-color: #6b79f4;
+}
+.dark-blue {
+  background-color: #2b39b4;
+}
+.dark-yellow-text {
+  color: #ffb83c;
+}
+.yellow-text {
+  color: #ffda5f
+}
+.blue-text {
+  color: #6b79f4;
+}
+.dark-blue-text {
+  color: #2b39b4;
+}

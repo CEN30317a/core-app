@@ -18,16 +18,18 @@ angular.module('referrals').controller('ReferralsController', ['$scope', '$state
       // Create new Referral object
       var referral = new Referrals({
         title: this.title,
-        content: this.content
+        content: this.content,
+        assigned: this.assigned
       });
 
       // Redirect after save
       referral.$save(function (response) {
-        $location.path('employees/referrals/' + response._id);
+        $location.path('referrals');
 
         // Clear form fields
         $scope.title = '';
         $scope.content = '';
+        $scope.assigned = '';
       }, function (errorResponse) {
         $scope.error = errorResponse.data.message;
       });

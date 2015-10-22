@@ -10,7 +10,7 @@
 }
 
 .full-width {
-    width: 100%; 
+    width: 100%;
 }
 
 .overlay {
@@ -21,4 +21,11 @@
     position: fixed;
     top: 64px;
     z-index: 2;
+}
+
+.nav-logo {
+  height: 40px;
+  width: 50px;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }

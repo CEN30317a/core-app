@@ -2,11 +2,11 @@
   <div class="page-header">
     <h1 ng-bind="job.title"></h1>
   </div>
-  <div class="pull-right" ng-show="authentication.user._id == job.user._id">
+  <div class="pull-right">
     <a class="btn waves-effect waves-light" ui-sref="jobs.edit({jobId: job._id})">
       <i class="material-icons left">edit</i><span>Edit</span>
     </a>
-    <a class="waves-effect waves-light btn" ng-click="remove();" ng-if="user._id !== authentication.user._id">
+    <a class="waves-effect waves-light btn" ng-click="remove();">
       <i class="material-icons left">delete</i><span>Remove</span>
     </a>
   </div>

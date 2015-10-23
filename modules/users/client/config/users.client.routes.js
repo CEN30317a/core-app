@@ -43,6 +43,10 @@ angular.module('users').config(['$stateProvider',
         url: '/signin?err',
         templateUrl: 'modules/users/client/views/authentication/signin.client.view.html'
       })
+      .state('authentication.forgot', {
+        url: '/forgotusername',
+        templateUrl: 'modules/users/client/views/authentication/forgot-username.client.view.html'
+      })
       .state('password', {
         abstract: true,
         url: '/password',
@@ -69,5 +73,5 @@ angular.module('users').config(['$stateProvider',
         url: '/:token',
         templateUrl: 'modules/users/client/views/password/reset-password.client.view.html'
       });
-  }
+    }
 ]);

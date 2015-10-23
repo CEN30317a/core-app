@@ -23,7 +23,7 @@ angular.module('jobs').controller('JobsController', ['$scope', '$stateParams', '
 
       // Redirect after save
       job.$save(function (response) {
-        $location.path('admin/jobs/' + response._id);
+        $location.path('admin/jobs');
 
         // Clear form fields
         $scope.title = '';

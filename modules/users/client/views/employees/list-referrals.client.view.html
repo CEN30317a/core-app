@@ -5,7 +5,7 @@
 
 </br>
   <div class="list-group">
-    <a ng-repeat="referral in referrals" ui-sref="referrals.view({referralId: referral._id})" class="list-group-item">
+    <a ng-repeat="referral in referrals | filter: displayReferral" ui-sref="referrals.view({referralId: referral._id})" class="list-group-item">
       <p class="list-group-item-text pull-right large bold">
         <span>{{referral.title}}</span>
       </p>

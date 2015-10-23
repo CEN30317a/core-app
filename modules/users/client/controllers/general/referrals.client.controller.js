@@ -4,6 +4,7 @@
 angular.module('referrals').controller('ReferralsController', ['$scope', '$stateParams', '$location', 'Authentication', 'Referrals',
   function ($scope, $stateParams, $location, Authentication, Referrals) {
     $scope.authentication = Authentication;
+    $scope.isAdmin  = (Authentication.user.roles[0] === "admin") ? true : false;
 
     // Create new Referral
     $scope.create = function (isValid) {
@@ -81,6 +82,14 @@ angular.module('referrals').controller('ReferralsController', ['$scope', '$state
       $scope.referral = Referrals.get({
         referralId: $stateParams.referralId
       });
+    };
+
+    $scope.displayReferral = function(referral) {
+        if(referral.assigned === $scope.authentication.user.username || $scope.isAdmin){
+          return true; // displayReferral
+        } else {
+          return false; // hide
+        }
     };
   }
 ]);

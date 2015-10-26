@@ -25,4 +25,9 @@
 
 nav .brand-logo {
   height: 54px;
+  padding: 5px;
+}
+
+nav a {
+  color: #6b79f4;
 }

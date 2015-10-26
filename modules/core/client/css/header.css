@@ -31,3 +31,14 @@ nav .brand-logo {
 nav a {
   color: #6b79f4;
 }
+
+.dropdown-content {
+  opacity: 1.0;
+  display: block;
+  top: 64px;
+}
+
+.dropdown-button.active {
+  background-color: gray;
+  background-color: rgba(0,0,0,.1);
+}

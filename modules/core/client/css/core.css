@@ -43,28 +43,43 @@ a:hover .header-profile-image {
   font-weight: bold;
 }
 .dark-yellow {
-  background-color: #ffb83c;
+  background-color: #ffb83c !important;
 }
 .yellow {
-  background-color: #ffda5f
+  background-color: #ffda5f !important;
 }
 .blue {
-  background-color: #6b79f4;
+  background-color: #6b79f4 !important;
 }
 .dark-blue {
-  background-color: #2b39b4;
+  background-color: #2b39b4 !important;
 }
 .dark-yellow-text {
-  color: #ffb83c;
+  color: #ffb83c !important;
 }
 .yellow-text {
-  color: #ffda5f
+  color: #ffda5f !important;
 }
 .blue-text {
-  color: #6b79f4;
+  color: #6b79f4 !important;
 }
 .dark-blue-text {
-  color: #2b39b4;
+  color: #2b39b4 !important;
+}
+.pagination li.active {
+  background-color: #ffda5f !important;
+}
+.btn:hover, .btn-large:hover {
+  background-color: #ffb83c !important;
+}
+.btn, .btn-large {
+  background-color: #ffda5f !important;
+}
+input[type=text]:focus:not([readonly]), input[type=password]:focus:not([readonly]), input[type=email]:focus:not([readonly]), input[type=url]:focus:not([readonly]), input[type=time]:focus:not([readonly]), input[type=date]:focus:not([readonly]), input[type=datetime-local]:focus:not([readonly]), input[type=tel]:focus:not([readonly]), input[type=number]:focus:not([readonly]), input[type=search]:focus:not([readonly]), textarea.materialize-textarea:focus:not([readonly]) {
+    border-bottom: 1px solid #6b79f4 !important;
+}
+input[type=text]:focus:not([readonly]) + label, input[type=password]:focus:not([readonly]) + label, input[type=email]:focus:not([readonly]) + label, input[type=url]:focus:not([readonly]) + label, input[type=time]:focus:not([readonly]) + label, input[type=date]:focus:not([readonly]) + label, input[type=datetime-local]:focus:not([readonly]) + label, input[type=tel]:focus:not([readonly]) + label, input[type=number]:focus:not([readonly]) + label, input[type=search]:focus:not([readonly]) + label, textarea.materialize-textarea:focus:not([readonly]) + label {
+    color: #6b79f4 !important;
 }
 .black-text {
   color: black;

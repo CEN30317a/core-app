@@ -22,3 +22,7 @@
     top: 64px;
     z-index: 2;
 }
+
+nav .brand-logo {
+  height: 54px;
+}

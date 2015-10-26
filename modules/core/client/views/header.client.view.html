@@ -23,11 +23,11 @@
 
             <ul class="side-nav hide-on-large-only" ng-show="mobileMenuVisible">
 
-                <li ng-show="authentication.user"><span ng-bind="authentication.user.displayName">{{authentication.user.displayName}}</span></li>
-                <li><a ng-click="openContactForm();">Contact</a></li>
-                <li><a ui-sref="careers">Careers</a></li>
-                <li><a ng-hide="authentication.user" ng-click="openSignIn();">Sign In</a></li>
-                <li ng-show="authentication.user"><a href="/api/auth/signout" target="_self">Log Out</a></li>
+                <li ng-click="toggleMobileMenu();" ng-show="authentication.user"><span ng-bind="authentication.user.displayName" class="black-text">{{authentication.user.displayName}}</span></li>
+                <li><a ng-click="openContactForm(); toggleMobileMenu();">Contact</a></li>
+                <li><a ng-click="toggleMobileMenu();" ui-sref="careers">Careers</a></li>
+                <li><a ng-hide="authentication.user" ng-click="openSignIn(); toggleMobileMenu();">Sign In</a></li>
+                <li ng-click="toggleMobileMenu();" ng-show="authentication.user"><a href="/api/auth/signout" target="_self">Log Out</a></li>
             </ul>
 
         </div>

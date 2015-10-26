@@ -5,28 +5,46 @@
         <div class="nav-wrapper container">
 
             <a id="logo-container" ui-sref="home" class="brand-logo">
-              <img class="nav-logo brand-logo" ng-src="/modules/core/client/img/brand/logonotext.jpg" /></a>
+              <img class="nav-logo brand-logo" ng-src="/modules/core/client/img/brand/logonotext.jpg" />
+            </a>
 
-            <ul class="hide-on-med-and-down nav-options-container">
+            <ul class="hide-on-med-and-down nav-options-container" ng-init="dropdownOpen = false;">
 
                 <li class="left"><a class="dark-blue-text" ng-click="openContactForm();">Contact</a></li>
-                <li class="left dark-blue-text"><a class="dark-blue-text" ui-sref="careers">Careers</a></li>
-                <li class="right dark-blue-text"><a class="dark-blue-text"  ng-hide="authentication.user" ng-click="openSignIn();">Sign In</a></li>
-                <li class="right dark-blue-text" ng-show="authentication.user"><span class="dark-blue-text" ng-bind="authentication.user.displayName">{{authentication.user.displayName}}</span></li>
-                <li class="right dark-blue-text" ng-show="authentication.user"><a class="dark-blue-text" href="/api/auth/signout" target="_self">Log Out</a></li>
+                <li class="left"><a class="dark-blue-text" ui-sref="careers">Careers</a></li>
+                <li class="right"><a class="dark-blue-text" ng-hide="authentication.user" ng-click="openSignIn();">Sign In</a></li>
+                <li class="right">
+
+                    <a class='dropdown-button right dark-blue-text' ng-class="{active: dropdownOpen == true}" href='#' data-activates='dropdown1' ng-bind="authentication.user.displayName" ng-click="dropdownOpen = !dropdownOpen;">{{authentication.user.displayName}}</a>
+
+                    <ul ng-show="dropdownOpen == true" class='dropdown-content'>
+                        <li ng-show="getHighestRole() == 'admin';"><a class="blue-text" ui-sref="admin.users">Manage Users</a></li>
+                        <li ng-show="getHighestRole() == 'admin';"><a class="blue-text" ui-sref="jobs.list">Manage Jobs</a></li>
+                        <li ng-show="getHighestRole() == 'user';"><a class="blue-text" href="#!">View Referrals</a></li>
+                        <li><a class="blue-text" href="/api/auth/signout" target="_self">Signout</a></li>
+                    </ul>
+
+                </li>
+
             </ul>
 
             <a href="#" class="button-collapse" ng-click="toggleMobileMenu();"><i class="material-icons">menu</i></a>
 
-            <div class="overlay hide-on-large-only" ng-show="mobileMenuVisible" ng-click="toggleMobileMenu();">
+            <div class="overlay hide-on-large-only" ng-show="mobileMenuVisible" ng-init="submenuOpen = false;" ng-click="toggleMobileMenu();">
             </div>
 
             <ul class="side-nav hide-on-large-only" ng-show="mobileMenuVisible">
+                <li><a ng-show="authentication.user" ng-click="submenuOpen = !submenuOpen;"><span ng-bind="authentication.user.displayName">{{authentication.user.displayName}}</span></a></li>
 
-                <li ng-click="toggleMobileMenu();" ng-show="authentication.user"><span ng-bind="authentication.user.displayName" class="black-text">{{authentication.user.displayName}}</span></li>
-                <li><a ng-click="openContactForm(); toggleMobileMenu();">Contact</a></li>
-                <li><a ng-click="toggleMobileMenu();" ui-sref="careers">Careers</a></li>
-                <li><a ng-hide="authentication.user" ng-click="openSignIn(); toggleMobileMenu();">Sign In</a></li>
+                <ul ng-show="submenuOpen == true" class='submenu'>
+                    <li ng-show="getHighestRole() == 'admin';" ng-click="toggleMobileMenu();"><a class="blue-text" ui-sref="admin.users">Manage Users</a></li>
+                    <li ng-show="getHighestRole() == 'admin';" ng-click="toggleMobileMenu();"><a class="blue-text" ui-sref="jobs.list">Manage Jobs</a></li>
+                    <li ng-show="getHighestRole() == 'user';" ng-click="toggleMobileMenu();"><a class="blue-text" href="#!">View Referrals</a></li>
+                </ul>
+
+                <li ng-click="toggleMobileMenu();"><a ng-click="openContactForm();">Contact</a></li>
+                <li ng-click="toggleMobileMenu();"><a ui-sref="careers">Careers</a></li>
+                <li ng-click="toggleMobileMenu();"><a ng-hide="authentication.user" ng-click="openSignIn();">Sign In</a></li>
                 <li ng-click="toggleMobileMenu();" ng-show="authentication.user"><a href="/api/auth/signout" target="_self">Log Out</a></li>
             </ul>
 

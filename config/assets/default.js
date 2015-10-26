@@ -27,6 +27,7 @@ module.exports = {
     css: [
       'modules/*/client/css/*.css',
       'modules/core/client/css/lightbox.css',
+      'modules/core/client/css/dropdown.css',
       'modules/core/client/css/header.css',
       'modules/core/client/css/home.css'
     ],

@@ -84,3 +84,9 @@ input[type=text]:focus:not([readonly]) + label, input[type=password]:focus:not([
 .black-text {
   color: black;
 }
+.no-shadow {
+  box-shadow: none;
+}
+.progress {
+  background-color: #6b79f4;
+}

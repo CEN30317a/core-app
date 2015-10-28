@@ -3,12 +3,17 @@
 angular.module('core').controller('CareersController', ['$scope', '$filter', '$rootScope', 'Jobs',
 
     function ($scope, $filter, $rootScope, Jobs) {
+        Jobs.query(function (data) {
+          $scope.Jobs = data;
+          $scope.buildPager();
+        });
 
-        $scope.Jobs = [];
-        $scope.itemsPerPage = 15;
-        $scope.currentPage = 1;
-        $scope.pagedItems = [];
-        $scope.careerApplicationVisible = false;
+        $scope.buildPager = function () {
+          $scope.pagedItems = [];
+          $scope.itemsPerPage = 15;
+          $scope.currentPage = 1;
+          $scope.figureOutItemsToDisplay();
+        };
 
         $scope.openCareerApplication = function() {
             $scope.careerApplicationVisible = true;
@@ -25,11 +30,7 @@ angular.module('core').controller('CareersController', ['$scope', '$filter', '$r
         $scope.closeContactForm = function() {
             $rootScope.contactFormVisible = false;
         };
-
-        $scope.find = function() {
-          $scope.Jobs = Jobs.query();
-        };
-
+        
         $scope.figureOutItemsToDisplay = function () {
           $scope.filteredItems = $filter('filter')($scope.Jobs, {
             $: $scope.search
@@ -38,6 +39,7 @@ angular.module('core').controller('CareersController', ['$scope', '$filter', '$r
           var begin = (($scope.currentPage - 1) * $scope.itemsPerPage);
           var end = begin + $scope.itemsPerPage;
           $scope.pagedItems = $scope.filteredItems.slice(begin, end);
+          console.log($scope.pagedItems);
         };
 
         $scope.pageChanged = function () {

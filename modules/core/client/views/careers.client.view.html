@@ -19,23 +19,10 @@
     <input class="form-control col-md-4" type="text" ng-model="search" placeholder="Search" ng-change="figureOutItemsToDisplay()" />
   </div>
 
-<!--   Search Bar  -->
-<!-- <nav>
-  <div class="nav-wrapper">
-    <form>
-      <div class="input-field">
-        <input id="search" class="grey" type="search" required>
-        <label for "search"><i class="material-icons">search</i></label>
-        <i class="material-icons">close</i>
-      </div>
-    </form>
-  </div>
-</nav> -->
-
 <!--   Job List  -->
-  <!-- <div class="row">
+  <div class="row">
     <ul class="jobsList">
-      <li class="jobList-item" data-ng-repeat="job in Jobs">
+      <li class="jobList-item" ng-repeat="job in pagedItems" >
         <div class="collapsible-header" ng-click="showBody1 === 'false' ? showBody1 = 'true' : showBody1 = 'false'"><i class="material-icons">games</i>{{job.title}}</div>
         <div class=" collapsible-body" style="display: block" ng-show="showBody1 === 'true'"><p>Job Description: {{job.content}}</p>
           <p>Creation Date: {{job.created}}</p>
@@ -43,20 +30,6 @@
         </div>
       </li>
     </ul>
-  </div> -->
-
-  <div class="collection">
-    <a ng-repeat="user in pagedItems" ui-sref="core({jobId: jobs._id})" class="collection-item dark-blue-text">
-      <p class="list-group-item-text pull-right small bold">
-        <span>{{job.title}}</span>
-      </p>
-      <p class="list-group-item-text pull-right small">
-        <span>Job Description: {{job.content}}</span>
-      </p>
-      <p class="list-group-item-text">
-        <span>Creation Date: {{job.created}}</span>
-      </p>
-    </a>
   </div>
 
 	<div class="lightbox ng-hide" ng-show="careerApplicationVisible">

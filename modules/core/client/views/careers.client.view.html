@@ -14,24 +14,15 @@
 
 	</div>
 
-
-<!--   Search Bar  -->
-<nav>
-  <div class="nav-wrapper">
-    <form>
-      <div class="input-field">
-        <input id="search" class="grey" type="search" required>
-        <label for "search"><i class="material-icons">search</i></label>
-        <i class="material-icons">close</i>
-      </div>
-    </form>
+<!-- New Search Bar -->
+  <div class="col-md-4" style="margin-top: 2em">
+    <input class="form-control col-md-4" type="text" ng-model="search" placeholder="Search" ng-change="figureOutItemsToDisplay()" />
   </div>
-</nav>
 
 <!--   Job List  -->
   <div class="row">
     <ul class="jobsList">
-      <li class="jobList-item" data-ng-repeat="job in Jobs">
+      <li class="jobList-item" ng-repeat="job in pagedItems" >
         <div class="collapsible-header" ng-click="showBody1 === 'false' ? showBody1 = 'true' : showBody1 = 'false'"><i class="material-icons">games</i>{{job.title}}</div>
         <div class=" collapsible-body" style="display: block" ng-show="showBody1 === 'true'"><p>Job Description: {{job.content}}</p>
           <p>Creation Date: {{job.created}}</p>
@@ -40,7 +31,6 @@
       </li>
     </ul>
   </div>
-
 
 	<div class="lightbox ng-hide" ng-show="careerApplicationVisible">
 		<i class="material-icons close-button" ng-click="closeCareerApplication();">close</i>
@@ -51,5 +41,7 @@
 		<i class="material-icons close-button" ng-click="closeContactForm();">close</i>
         <div ng-include="'/modules/core/client/views/lightbox/contact.client.view.html'"></div>
   </div>
+
+  <pagination boundary-links="true" max-size="8" items-per-page="itemsPerPage" total-items="filterLength" ng-model="currentPage" ng-change="pageChanged()"></pagination>
 
 </section>

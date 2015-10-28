@@ -1,0 +1,24 @@
+<section ng-controller="ReferralsController" ng-init="findOne()">
+  <div class="page-header">
+    <h1 ng-bind="referral.title"></h1>
+  </div>
+  <div class="pull-right">
+    <a class="btn waves-effect waves-light" ui-sref="referrals.edit({referralId: referral._id})">
+      <i class="material-icons left">edit</i><span>Edit</span>
+    </a>
+    <a class="waves-effect waves-light btn" ng-click="remove();">
+      <i class="material-icons left">delete</i><span>Remove</span>
+    </a>
+  </div>
+  <small>
+    <em class="text-muted">
+      Posted on
+      <span ng-bind="referral.created | date:'mediumDate'"></span>
+      by
+      <span ng-bind="referral.user.displayName"></span>
+    </em>
+  </small>
+  <p class="lead" ng-bind="referral.content"></p>
+</br>
+  <a class="btn btn-primary" ui-sref="referrals.list">Done</a>
+</section>

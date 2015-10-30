@@ -1,14 +1,18 @@
 <section ng-controller="ReferralsController" ng-init="find()">
   <div class="page-header">
-    <h4>Current Referral Listings</h4>
+    <div class="row">
+      <div class="col-md-4">
+        <h1>Current Referral Listings</h1>
+      </div>
+      <a class="waves-effect waves-light btn" ui-sref="referrals.create" ng-show="authentication.user.roles == 'admin'">
+        <i class="material-icons left">add</i><span>Add new referral</span>
+      </a>
+    </div>
   </div>
-  <a class="waves-effect waves-light btn" ui-sref="referrals.create" ng-show="authentication.user.roles == 'admin'">
-    <i class="material-icons left">add</i><span>Add new referral</span>
-  </a>
 </br>
-  <div class="list-group">
-    <a ng-repeat="referral in referrals | filter: displayReferral" ui-sref="referrals.view({referralId: referral._id})" class="list-group-item">
-      <p class="list-group-item-text pull-right large bold">
+  <div class="collection">
+    <a ng-repeat="referral in referrals | filter: displayReferral" ui-sref="referrals.view({referralId: referral._id})" class="collection-item dark-blue-text">
+      <p class="list-group-item-text pull-right small bold">
         <span>{{referral.title}}</span>
       </p>
       <p class="list-group-item-text pull-right small">
@@ -17,10 +21,6 @@
       <p class="list-group-item-text pull-right small">
         <span>Assigned to: {{referral.assigned}}</span>
       </p>
-      -----------------------------------------------------------------
     </a>
-  </div>
-  <div class="alert alert-warning text-center" ng-if="referrals.$resolved && !referrals.length">
-    None
   </div>
 </section>

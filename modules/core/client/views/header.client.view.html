@@ -17,7 +17,7 @@
 
                     <a class='dropdown-button right dark-blue-text' ng-class="{active: dropdownOpen == true}" href='#' data-activates='dropdown1' ng-bind="authentication.user.displayName" ng-click="dropdownOpen = !dropdownOpen;">{{authentication.user.displayName}}</a>
 
-                    <ul ng-show="dropdownOpen == true" class='dropdown-content'>
+                    <ul ng-show="dropdownOpen == true" class="dropdown-content" ng-click="dropdownOpen = false;">
                         <li ng-show="getHighestRole() == 'admin';"><a class="blue-text" ui-sref="admin.users">Manage Users</a></li>
                         <li ng-show="getHighestRole() == 'admin';"><a class="blue-text" ui-sref="jobs.list">Manage Jobs</a></li>
                         <li ng-show="getHighestRole() == 'user';"><a class="blue-text" href="#!">View Referrals</a></li>

@@ -23,9 +23,28 @@
     z-index: 2;
 }
 
+nav, nav .nav-wrapper i, nav a.button-collapse, nav a.button-collapse i {
+  height: 74px;
+  line-height: 74px;
+}
+
+@media only screen and (max-width : 992px) {
+  nav, nav .nav-wrapper i, nav a.button-collapse, nav a.button-collapse i {
+    height: 74px;
+    line-height: 74px;
+  }
+}
+
+@media only screen and (min-width : 601px) {
+  nav, nav .nav-wrapper i, nav a.button-collapse, nav a.button-collapse i {
+    height: 74px;
+    line-height: 74px;
+  }
+}
+
 nav .brand-logo {
-  height: 54px;
-  padding: 5px;
+  height: 70px;
+  padding: 1px;
 }
 
 nav a {

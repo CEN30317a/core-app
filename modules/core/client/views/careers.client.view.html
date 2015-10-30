@@ -26,7 +26,7 @@
         <div class="collapsible-header" ng-click="showBody1 === 'false' ? showBody1 = 'true' : showBody1 = 'false'"><i class="material-icons">games</i>{{job.title}}</div>
         <div class=" collapsible-body" style="display: block" ng-show="showBody1 === 'true'"><p>Job Description: {{job.content}}</p>
           <p>Creation Date: {{job.created}}</p>
-          <a id="contact-us-button" class="btn waves-effect waves-light" ng-click="openCareerApplication();">Apply Now</a>
+          <a class="btn waves-effect waves-light" ng-click="openCareerApplication();">Apply Now</a>
         </div>
       </li>
     </ul>
@@ -36,11 +36,6 @@
 		<i class="material-icons close-button" ng-click="closeCareerApplication();">close</i>
 	   <div ng-include="'/modules/core/client/views/lightbox/apply.client.view.html'"></div>
 	</div>
-
-	<div class="lightbox ng-hide" ng-show="contactFormVisible">
-		<i class="material-icons close-button" ng-click="closeContactForm();">close</i>
-        <div ng-include="'/modules/core/client/views/lightbox/contact.client.view.html'"></div>
-  </div>
 
   <pagination boundary-links="true" max-size="8" items-per-page="itemsPerPage" total-items="filterLength" ng-model="currentPage" ng-change="pageChanged()"></pagination>
 

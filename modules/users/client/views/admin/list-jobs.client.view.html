@@ -1,23 +1,23 @@
 <section ng-controller="JobsController" ng-init="find()">
   <div class="page-header">
-    <h4>Current Job Listings</h4>
+    <div class="row">
+      <div class="col-md-4">
+        <h1>Current Job Listings</h1>
+      </div>
+      <a class="waves-effect waves-light btn" ui-sref="jobs.create" ng-if="user._id !== authentication.user._id">
+        <i class="material-icons left">add</i><span>Add new job</span>
+      </a>
+    </div>
   </div>
-    <a class="waves-effect waves-light btn" ui-sref="jobs.create" ng-if="user._id !== authentication.user._id">
-      <i class="material-icons left">add</i><span>Add new job</span>
-    </a>
 </br>
-  <div class="list-group">
-    <a ng-repeat="job in jobs" ui-sref="jobs.view({jobId: job._id})" class="list-group-item">
-      <p class="list-group-item-text pull-right large bold">
+  <div class="collection">
+    <a ng-repeat="job in jobs" ui-sref="jobs.view({jobId: job._id})" class="collection-item dark-blue-text">
+      <p class="list-group-item-text pull-right small bold">
         <span>{{job.title}}</span>
       </p>
       <p class="list-group-item-text pull-right small">
         <span>Description: {{job.content}}</span>
       </p>
-      -----------------------------------------------------------------
     </a>
-  </div>
-  <div class="alert alert-warning text-center" ng-if="jobs.$resolved && !jobs.length">
-    None
   </div>
 </section>

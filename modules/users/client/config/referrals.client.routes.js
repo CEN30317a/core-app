@@ -40,7 +40,7 @@ angular.module('referrals').config(['$stateProvider',
         url: '/:referralId',
         templateUrl: 'modules/users/client/views/admin/view-referral.client.view.html',
         data: {
-          roles: ['admin']
+          roles: ['admin', 'user']
         }
       })
       .state('referrals.edit', {

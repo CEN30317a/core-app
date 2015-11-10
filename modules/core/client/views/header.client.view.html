@@ -11,6 +11,9 @@
             <ul class="hide-on-med-and-down nav-options-container" ng-init="dropdownOpen = false;">
 
                 <li class="left"><a class="dark-blue-text" ng-click="openContactForm();">Contact</a></li>
+                <li class="left"><a class="dark-blue-text" ui-sref="about">About Us</a></li>
+                <li class="left"><a class="dark-blue-text" ui-sref="services">Services</a></li>
+                <li class="left"><a class="dark-blue-text" ui-sref="packages">Packages</a></li>
                 <li class="left"><a class="dark-blue-text" ui-sref="careers">Careers</a></li>
                 <li class="right"><a class="dark-blue-text" ng-hide="authentication.user" ng-click="openSignIn();">Sign In</a></li>
                 <li class="right">
@@ -48,6 +51,9 @@
 
                 <li ng-click="toggleMobileMenu();"><a ng-click="openContactForm();">Contact</a></li>
                 <li ng-click="toggleMobileMenu();"><a ui-sref="careers">Careers</a></li>
+                <li ng-click="toggleMobileMenu();"><a ui-sref="about">About Us</a></li>
+                <li ng-click="toggleMobileMenu();"><a ui-sref="services">Services</a></li>
+                <li ng-click="toggleMobileMenu();"><a ui-sref="packages">Packages</a></li>
                 <li ng-click="toggleMobileMenu();"><a ng-hide="authentication.user" ng-click="openSignIn();">Sign In</a></li>
                 <li ng-click="toggleMobileMenu();" ng-show="authentication.user"><a href="/api/auth/signout" target="_self">Log Out</a></li>
             </ul>

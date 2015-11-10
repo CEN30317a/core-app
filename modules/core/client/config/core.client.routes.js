@@ -22,6 +22,18 @@ angular.module('core').config(['$stateProvider', '$urlRouterProvider',
       url: '/careers',
       templateUrl: 'modules/core/client/views/careers.client.view.html'
     })
+    .state('about', {
+      url: '/about',
+      templateUrl: 'modules/core/client/views/about.client.view.html'
+    })
+    .state('services', {
+      url: '/services',
+      templateUrl: 'modules/core/client/views/services.client.view.html'
+    })
+    .state('packages', {
+      url: '/packages',
+      templateUrl: 'modules/core/client/views/packages.client.view.html'
+    })
     .state('login', {
       url: '/login',
       templateUrl: 'modules/core/client/views/login.client.view.html'

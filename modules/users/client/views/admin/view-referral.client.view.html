@@ -18,7 +18,27 @@
       <span ng-bind="referral.user.displayName"></span>
     </em>
   </small>
-  <p class="lead" ng-bind="referral.content"></p>
+  <p class="list-group-item-text pull-right small">
+    <span><b>Assigned to:</b> </br> {{referral.assigned}}</span>
+  </p>
+  <p class="list-group-item-text pull-right small">
+    <span><b>Location:</b> </br> {{referral.locate}}</span>
+  </p>
+  <p class="list-group-item-text pull-right small">
+    <span><b>Date and Time of Appointment:</b> </br> {{referral.dateVisit}}</span>
+  </p>
+  <p class="list-group-item-text pull-right small">
+    <span><b>Patient Contact Info:</b> </br> {{referral.contactClient}}</span>
+  </p>
+  <p class="list-group-item-text pull-right small">
+    <span><b>Description/Background of Patient:</b> </br> {{referral.description}}</span>
+  </p>
+  <p class="list-group-item-text pull-right small">
+    <span><b>History of Patient:</b> </br> {{referral.history}}</span>
+  </p>
+  <p class="list-group-item-text pull-right small">
+    <span><b>Comments:</b> </br> {{referral.comments}}</span>
+  </p>
 </br>
   <a class="btn btn-primary" ui-sref="referrals.list">Done</a>
 </section>

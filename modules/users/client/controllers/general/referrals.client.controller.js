@@ -19,8 +19,13 @@ angular.module('referrals').controller('ReferralsController', ['$scope', '$state
       // Create new Referral object
       var referral = new Referrals({
         title: this.title,
-        content: this.content,
-        assigned: this.assigned
+        assigned: this.assigned,
+        locate: this.locate,
+        dateVisit: this.dateVisit,
+        contactClient: this.contactClient,
+        description: this.description,
+        history: this.history,
+        comments: this.comments,
       });
 
       // Redirect after save
@@ -29,8 +34,13 @@ angular.module('referrals').controller('ReferralsController', ['$scope', '$state
 
         // Clear form fields
         $scope.title = '';
-        $scope.content = '';
         $scope.assigned = '';
+        $scope.locate = '';
+        $scope.dateVisit = '';
+        $scope.contactClient = '';
+        $scope.description = '';
+        $scope.history = '';
+        $scope.comments = '';
       }, function (errorResponse) {
         $scope.error = errorResponse.data.message;
       });

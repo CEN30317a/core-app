@@ -20,12 +20,37 @@ var ReferralSchema = new Schema({
     trim: true,
     required: 'Title cannot be blank'
   },
-  content: {
+  assigned: {
     type: String,
     default: '',
     trim: true
   },
-  assigned: {
+  locate: {
+    type: String,
+    default: '',
+    trim: true
+  },
+  dateVisit: {
+    type: String,
+    default: '',
+    trim: true
+  },
+  contactClient: {
+    type: String,
+    default: '',
+    trim: true
+  },
+  description: {
+    type: String,
+    default: '',
+    trim: true
+  },
+  history: {
+    type: String,
+    default: '',
+    trim: true
+  },
+  comments: {
     type: String,
     default: '',
     trim: true

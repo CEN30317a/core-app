@@ -6,19 +6,39 @@
       <form name="referralForm" class="form-horizontal" ng-submit="create(referralForm.$valid)" novalidate>
         <fieldset>
           <div class="form-group" show-errors>
-            <label for="title">Title</label>
-            <input name="title" type="text" ng-model="title" id="title" class="form-control" placeholder="Title" required>
+            <label for="title">Patient Name</label>
+            <input name="title" type="text" ng-model="title" id="title" class="form-control" placeholder="Patient's Name" required>
             <div ng-messages="articleForm.title.$error" role="alert">
               <p class="help-block error-text" ng-message="required">Referral title is required.</p>
             </div>
           </div>
           <div class="form-group">
-            <label for="content">Content</label>
-            <textarea name="content" ng-model="content" id="content" class="form-control" cols="30" rows="10" placeholder="Content"></textarea>
+            <label for="assigned">Assigned to:</label>
+            <textarea name="assigned" ng-model="assigned" id="assigned" class="form-control" cols="30" rows="10" placeholder="User Name"></textarea>
           </div>
           <div class="form-group">
-            <label for="content">Assigned to:</label>
-            <textarea name="assigned" ng-model="assigned" id="assigned" class="form-control" cols="30" rows="10" placeholder="User Name"></textarea>
+            <label for="locate">Location:</label>
+            <textarea name="locate" ng-model="locate" id="locate" class="form-control" cols="30" rows="10" placeholder="Address of patient"></textarea>
+          </div>
+          <div class="form-group">
+            <label for="dateVisit">Date and time of appointment:</label>
+            <textarea name="dateVisit" ng-model="dateVisit" id="dateVisit" class="form-control" cols="30" rows="10" placeholder="Date and time of appointment"></textarea>
+          </div>
+          <div class="form-group">
+            <label for="contactClient">Patient's contact information:</label>
+            <textarea name="contactClient" ng-model="contactClient" id="contactClient" class="form-control" cols="30" rows="10" placeholder="Contact information of patient"></textarea>
+          </div>
+          <div class="form-group">
+            <label for="description">Background of client:</label>
+            <textarea name="description" ng-model="description" id="description" class="form-control" cols="30" rows="10" placeholder="Description or background of patient"></textarea>
+          </div>
+          <div class="form-group">
+            <label for="history">History of patient:</label>
+            <textarea name="history" ng-model="history" id="history" class="form-control" cols="30" rows="10" placeholder="Patient's history with us"></textarea>
+          </div>
+          <div class="form-group">
+            <label for="comments">General Comments:</label>
+            <textarea name="comments" ng-model="comments" id="comments" class="form-control" cols="30" rows="10" placeholder="This space reserved for employees to make comments on the appointment"></textarea>
           </div>
           <div class="form-group">
             <input type="submit" class="btn btn-default">

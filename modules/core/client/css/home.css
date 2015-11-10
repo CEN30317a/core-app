@@ -1,5 +1,5 @@
 .after-banner {
-  top:400px;
+  top:450px;
   position:relative;
 }
 
@@ -15,4 +15,52 @@
 .inner-banner-item {
     top: 130px;
     position: relative;
+}
+
+.slider .slides li {
+  opacity: 1.0 !important;
+}
+
+.slider {
+  width: 70%;
+  left: 15%;
+  position: absolute;
+  height: 400px;
+}
+
+.carousel-indicators {
+  width: 200px;
+  margin: auto;
+}
+
+.carousel-indicators li {
+  height: 20px;
+  width: 20px;
+  margin: 10px;
+  border-radius: 20px;
+  border: 2px solid gray;
+  float: left;
+  cursor: pointer;
+}
+
+.carousel-indicators li.active {
+  background-color: gray;
+}
+
+#leftArrowBox {
+  left: 10px;
+}
+
+#rightArrowBox {
+  right: 10px;
+}
+
+.imgArrowBox {
+  cursor: pointer;
+  height: 20px;
+  position: absolute;
+  margin: auto;
+  top: 0;
+  bottom: 0;
+  z-index: 2;
 }

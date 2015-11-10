@@ -6,10 +6,10 @@
     <form name="referralForm" class="form-horizontal" ng-submit="update(referralForm.$valid)" novalidate>
       <fieldset>
         <div class="form-group" show-errors>
-          <label for="title">Title</label>
-          <input name="title" type="text" ng-model="referral.title" id="title" class="form-control" placeholder="Title" required>
+          <label for="title">Patient's name</label>
+          <input name="title" type="text" ng-model="referral.title" id="title" class="form-control" placeholder="Patient's name" required>
           <div ng-messages="referralForm.title.$error" role="alert">
-            <p class="help-block error-text" ng-message="required">Job title is required.</p>
+            <p class="help-block error-text" ng-message="required">Patient's name is required.</p>
           </div>
         </div>
         <div class="form-group">

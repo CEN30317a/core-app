@@ -25,6 +25,22 @@
           </div>
         </div>
         <div class="form-group" show-errors>
+          <label for="address">Address</label>
+          <input type="text" id="address" name="address" class="form-control" ng-model="user.address" placeholder="Address">
+          <div ng-messages="userForm.address.$error" role="alert">
+            <p class="help-block error-text" ng-message="required">Address is required.</p>
+            <p class="help-block error-text" ng-message="address">Address is invalid.</p>
+          </div>
+        </div>
+        <div class="form-group" show-errors>
+          <label for="phone">Phone Number</label>
+          <input type="tel" id="phone" name="phone" class="form-control" ng-model="user.phone" placeholder="Phone Number">
+          <div ng-messages="userForm.phone.$error" role="alert">
+            <p class="help-block error-text" ng-message="required">Phone number is required.</p>
+            <p class="help-block error-text" ng-message="address">Phone number is invalid.</p>
+          </div>
+        </div>
+        <div class="form-group" show-errors>
           <label for="username">Username</label>
           <input type="text" id="username" name="username" class="form-control" ng-model="user.username" placeholder="Username" lowercase required>
           <div ng-messages="userForm.username.$error" role="alert">

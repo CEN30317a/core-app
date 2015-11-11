@@ -4,8 +4,3 @@
   top: 64px;
   position: absolute;
 }
-
-.dropdown-button.active {
-  background-color: #ffda5f;
-  background-color: rgba(0, 0, 0, 0.1);
-}

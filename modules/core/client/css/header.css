@@ -51,13 +51,14 @@ nav a {
   color: #6b79f4;
 }
 
-.dropdown-content {
-  opacity: 1.0;
-  display: block;
-  top: 64px;
+nav ul a {
+  color: #2b39b4;
 }
 
-.dropdown-button.active {
-  background-color: gray;
-  background-color: rgba(0,0,0,.1);
+nav ul li:hover, nav ul li.active {
+  background-color: #6b79f4;
+}
+
+nav ul li:hover a, nav ul li.active a {
+  color: white;
 }

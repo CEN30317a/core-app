@@ -20,7 +20,32 @@ var JobSchema = new Schema({
     trim: true,
     required: 'Title cannot be blank'
   },
-  content: {
+  description: {
+    type: String,
+    default: '',
+    trim: true
+  },
+  contract: {
+    type: String,
+    default: '',
+    trim: true
+  },
+  closing: {
+    type: String,
+    default: '',
+    trim: true
+  },
+  minExp: {
+    type: String,
+    default: '',
+    trim: true
+  },
+  prefExp: {
+    type: String,
+    default: '',
+    trim: true
+  },
+  responsibilities: {
     type: String,
     default: '',
     trim: true

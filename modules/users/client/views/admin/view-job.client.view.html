@@ -18,7 +18,24 @@
       <span ng-bind="job.user.displayName"></span>
     </em>
   </small>
-  <p class="lead" ng-bind="job.content"></p>
+  <p class="list-group-item-text pull-right small">
+    <span><b>Job Description:</b> </br> {{job.description}}</span>
+  </p>
+  <p class="list-group-item-text pull-right small">
+    <span><b>Contract:</b> </br> {{job.contract}}</span>
+  </p>
+  <p class="list-group-item-text pull-right small">
+    <span><b>Closing Date:</b> </br> {{job.closing}}</span>
+  </p>
+  <p class="list-group-item-text pull-right small">
+    <span><b>Minimum Experience:</b> </br> {{job.minExp}}</span>
+  </p>
+  <p class="list-group-item-text pull-right small">
+    <span><b>Preferred Experience:</b> </br> {{job.prefExp}}</span>
+  </p>
+  <p class="list-group-item-text pull-right small">
+    <span><b>Job Responibilities:</b> </br> {{job.responsibilities}}</span>
+  </p>
 </br>
   <a class="btn btn-primary" ui-sref="jobs.list">Done</a>
 </section>

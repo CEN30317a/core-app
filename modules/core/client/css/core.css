@@ -1,5 +1,9 @@
+html {
+  background-color: #d3d3d3;
+}
+
 .content {
-  margin-top: 50px;
+  margin-top: 100px;
 }
 .undecorated-link:hover {
   text-decoration: none;
@@ -89,4 +93,27 @@ input[type=text]:focus:not([readonly]) + label, input[type=password]:focus:not([
 }
 .progress {
   background-color: #6b79f4;
+}
+
+nav {
+  width: 76%;
+  left: 12%;
+  position: absolute;
+  top: 0;
+}
+
+.contact-row {
+  margin-top: 17px;
+}
+
+.card-panel {
+  padding: 20px 20px 0 20px;
+}
+
+.card.medium .card-image {
+  height: 150px;
+}
+
+.card.medium .card-content {
+  height: 250px;
 }

@@ -26,6 +26,10 @@ angular.module('core').config(['$stateProvider', '$urlRouterProvider',
       url: '/about',
       templateUrl: 'modules/core/client/views/about.client.view.html'
     })
+    .state('contact', {
+      url: '/contact',
+      templateUrl: 'modules/core/client/views/contactpage.client.view.html'
+    })
     .state('services', {
       url: '/services',
       templateUrl: 'modules/core/client/views/services.client.view.html'

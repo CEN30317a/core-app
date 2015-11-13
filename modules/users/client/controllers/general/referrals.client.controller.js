@@ -101,5 +101,23 @@ angular.module('referrals').controller('ReferralsController', ['$scope', '$state
           return false; // hide
         }
     };
+
+    $scope.getHighestRole = function() {
+        var roles;
+        if ($scope.authentication.user && $scope.authentication.user.roles) {
+
+            roles = $scope.authentication.user.roles;
+
+            if (roles.indexOf('admin') !== -1) {
+                return 'admin';
+            } else if (roles.indexOf('user') !== -1) {
+                return 'user';
+            }
+
+            return '';
+        }
+
+        return '';
+    };
   }
 ]);

@@ -4,8 +4,8 @@
 }
 
 .banner {
-  width: 90%;
-  left: 5%;
+  width: 70%;
+  left: 15%;
   position: absolute;
   background-image: url("../img/banner.jpg");
   background-size: cover;

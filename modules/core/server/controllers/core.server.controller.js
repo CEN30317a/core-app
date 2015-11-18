@@ -1,5 +1,46 @@
 'use strict';
 
+var path = require('path'),
+  mongoose = require('mongoose'),
+  Contact = mongoose.model('Contact'),
+  errorHandler = require(path.resolve('./modules/core/server/controllers/errors.server.controller'));
+
+  /**
+   * Create a contact
+   */
+  exports.create = function (req, res) {
+    var contact = new Contact(req.body);
+    contact.user = req.user;
+
+    contact.save(function (err) {
+      if (err) {
+        return res.status(400).send({
+          message: errorHandler.getErrorMessage(err)
+        });
+      } else {
+        res.json(contact);
+      }
+    });
+  };
+
+  /**
+   * Delete an contact
+   */
+  exports.delete = function (req, res) {
+    var contact = req.contact;
+
+    contact.remove(function (err) {
+      if (err) {
+        return res.status(400).send({
+          message: errorHandler.getErrorMessage(err)
+        });
+      } else {
+        res.json(contact);
+      }
+    });
+  };
+
+
 /**
  * Render the main application page
  */

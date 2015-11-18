@@ -26,4 +26,9 @@ module.exports = function (app) {
     app.param('jobId', jobs.jobByID);
 
 
+    // Jobs collection routes
+    app.route('/api/contacts')
+      .post(core.create);
+
+
 };

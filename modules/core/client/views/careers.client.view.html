@@ -19,8 +19,26 @@
     <input class="form-control col-md-4" type="text" ng-model="search" placeholder="Search" ng-change="figureOutItemsToDisplay()" />
   </div>
 
-<!--   Job List  -->
+<!-- Job List -->
   <div class="row">
+    <ul class="jobsList">
+      <li class="jobList-item" ng-repeat="job in pagedItems" >
+        <div class="collapsible-header deep-purple lighten-5" ng-click="showBody1 === 'false' ? showBody1 = 'true' : showBody1 = 'false'"><i class="material-icons">import_export</i>{{job.title}}</div>
+        <div class="card-body collapsible-body blue-grey lighten-5" style="display: block;" ng-show="showBody1 === 'true'"><p><strong>Job Description:</strong> {{job.description}}</p>
+          <!-- <p><strong>Creation Date: </strong> {{job.created}}</p> -->
+          <p><strong>Responsibilities</strong>: {{job.responsibilities}}</p>
+          <p><strong>Job Type</strong>: {{job.contract}}</p>
+          <p><strong>Minimum Qualifications</strong>: {{job.minExp}}</p>
+          <p><strong>Prefered Qualifications</strong>: {{job.prefExp}}</p>
+          <p><strong>Closing Date: </strong> {{job.closing}} </p>
+          <a class="btn waves-effect waves-light" ng-click="openCareerApplication();" style = "margin-left: 28px">Apply Now</a>
+        </div>
+      </li>
+    </ul>
+  </div>
+
+<!--   Job List  -->
+  <!-- <div class="row">
     <ul class="jobsList">
       <li class="jobList-item" ng-repeat="job in pagedItems" >
         <div class="collapsible-header deep-purple lighten-5" ng-click="showBody1 === 'false' ? showBody1 = 'true' : showBody1 = 'false'">
@@ -44,7 +62,7 @@
         </div>
       </li>
     </ul>
-  </div>
+  </div> -->
 
 	<div class="lightbox ng-hide" ng-show="careerApplicationVisible">
 		<i class="material-icons close-button" ng-click="closeCareerApplication();">close</i>

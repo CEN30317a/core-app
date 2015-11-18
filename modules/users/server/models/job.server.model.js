@@ -35,12 +35,52 @@ var JobSchema = new Schema({
     default: '',
     trim: true
   },
-  minExp: {
+  minExp1: {
     type: String,
     default: '',
     trim: true
   },
-  prefExp: {
+  minExp2: {
+    type: String,
+    default: '',
+    trim: true
+  },
+  minExp3: {
+    type: String,
+    default: '',
+    trim: true
+  },
+  minExp4: {
+    type: String,
+    default: '',
+    trim: true
+  },
+  minExp5: {
+    type: String,
+    default: '',
+    trim: true
+  },
+  prefExp1: {
+    type: String,
+    default: '',
+    trim: true
+  },
+  prefExp2: {
+    type: String,
+    default: '',
+    trim: true
+  },
+  prefExp3: {
+    type: String,
+    default: '',
+    trim: true
+  },
+  prefExp4: {
+    type: String,
+    default: '',
+    trim: true
+  },
+  prefExp5: {
     type: String,
     default: '',
     trim: true

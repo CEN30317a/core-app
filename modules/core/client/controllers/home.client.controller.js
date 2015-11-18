@@ -16,8 +16,6 @@ angular.module('core').controller('HomeController', ['$scope', '$rootScope', '$l
         };
 
         $scope.submitContactForm = function() {
-
-          console.log("Hello");
           // Create new Contact object
           var contact = new Contacts({
             name: this.name,
@@ -54,8 +52,5 @@ angular.module('core').controller('HomeController', ['$scope', '$rootScope', '$l
             });
           }
         };
-
-            //$scope.closeContactForm();
-
-        };
+      }
 ]);

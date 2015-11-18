@@ -14,5 +14,18 @@ angular.module('core').controller('HomeController', ['$scope', '$rootScope', /*'
         $scope.closeContactForm = function() {
             $rootScope.contactFormVisible = false;
         };
+
+        $scope.submitContactForm = function() {
+
+            // Create new Contact object
+            var contact = new Contact({
+              name: this.title,
+              email: this.email,
+              message: this.message
+            });
+
+            $scope.closeContactForm();
+
+        };
     }
 ]);

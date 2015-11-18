@@ -88,6 +88,7 @@ input[type=text]:focus:not([readonly]) + label, input[type=password]:focus:not([
 .black-text {
   color: black;
 }
+<<<<<<< HEAD
 .no-shadow {
   box-shadow: none;
 }
@@ -116,4 +117,10 @@ nav {
 
 .card.medium .card-content {
   height: 250px;
+=======
+
+.card-body {
+  height: 100% !important;
+  padding-bottom: 28px;
+>>>>>>> Fixed bugs on Job Posting
 }

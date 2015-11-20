@@ -1,0 +1,27 @@
+<section ng-controller="ContactsController" ng-init="find()">
+  <div class="page-header">
+    <div class="row">
+      <div class="col-md-4">
+        <h1>Current Messages</h1>
+      </div>
+    </div>
+  </div>
+</br>
+  <div class="collection">
+    <a ng-repeat="contact in contacts" ui-sref="contacts.view({contactId: contact._id})" class="collection-item dark-blue-text">
+      <p class="list-group-item-text pull-right small bold">
+        <span>Status: {{contact.status}}</span>
+      </p>
+      <p class="list-group-item-text pull-right small bold">
+        <span>{{contact.name}}</span>
+      </p>
+      <p class="list-group-item-text pull-right small">
+        <span>E-mail: {{contact.email}}</span>
+      </p>
+      <p class="list-group-item-text pull-right small">
+        <span>Message: {{contact.message}}</span>
+      </p>
+      </a>
+    </a>
+  </div>
+</section>

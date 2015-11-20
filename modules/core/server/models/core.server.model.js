@@ -29,6 +29,11 @@ var ContactSchema = new Schema({
     type: String,
     default: '',
     trim: true
+  },
+  status: {
+    type: String,
+    default: 'Unread',
+    trim: true
   }
 });
 

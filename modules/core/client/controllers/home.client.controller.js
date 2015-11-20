@@ -25,8 +25,7 @@ angular.module('core').controller('HomeController', ['$scope', '$rootScope', '$l
 
           // Redirect after save
           contact.$save(function (response) {
-            $location.path('~');
-
+            
             // Clear form fields
             $scope.name = '';
             $scope.email = '';

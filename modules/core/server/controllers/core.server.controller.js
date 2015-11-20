@@ -23,23 +23,6 @@ var path = require('path'),
     });
   };
 
-  /**
-   * Delete an contact
-   */
-  exports.delete = function (req, res) {
-    var contact = req.contact;
-
-    contact.remove(function (err) {
-      if (err) {
-        return res.status(400).send({
-          message: errorHandler.getErrorMessage(err)
-        });
-      } else {
-        res.json(contact);
-      }
-    });
-  };
-
 
 /**
  * Render the main application page

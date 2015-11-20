@@ -1,0 +1,33 @@
+<section ng-controller="ContactsController" ng-init="findOne()">
+  <div class="page-header">
+    <h1 ng-bind="contact.name"></h1>
+  </div>
+  <div class="pull-right">
+    <a class="waves-effect waves-light btn" ng-show="contact.status == 'Read';" ng-click="update(true)">
+      <i class="material-icons left">done</i><span>Mark as unread</span>
+    </a>
+    <a class="waves-effect waves-light btn" ng-show="contact.status == 'Unread';" ng-click="update(true)">
+      <i class="material-icons left">done</i><span>Mark as read</span>
+    </a>
+    <a class="waves-effect waves-light btn" ng-click="remove();">
+      <i class="material-icons left">delete</i><span>Delete</span>
+    </a>
+  </div>
+  <small>
+    <em class="text-muted">
+      Posted on
+      <span ng-bind="contact.created | date:'mediumDate'"></span>
+    </em>
+  </small>
+  <p class="list-group-item-text pull-right small bold">
+    <span>Status: {{contact.status}}</span>
+  </p>
+  <p class="list-group-item-text pull-right small">
+    <span><b>Contact E-mail:</b> </br> {{contact.email}}</span>
+  </p>
+  <p class="list-group-item-text pull-right small">
+    <span><b>Message:</b> </br> {{contact.message}}</span>
+  </p>
+</br>
+  <a class="btn btn-primary" ui-sref="contacts.list">Done</a>
+</section>

@@ -25,11 +25,65 @@
 <!-- Job List -->
   <div class="row">
     <ul class="jobsList">
+<<<<<<< HEAD
       <li class="jobList-item" ng-repeat="job in pagedItems">
         <div class="collapsible-header" ng-click="showBody1 === 'false' ? showBody1 = 'true' : showBody1 = 'false'"><i class="material-icons">games</i>{{job.title}}</div>
         <div class=" collapsible-body" style="display: block" ng-show="showBody1 === 'true'"><p>Job Description: {{job.content}}</p>
           <p>Creation Date: {{job.created}}</p>
           <a class="btn waves-effect waves-light apply-btn" ng-click="openCareerApplication();">Apply Now</a>
+=======
+      <li class="jobList-item" ng-repeat="job in pagedItems" >
+        <div class="collapsible-header deep-purple lighten-5" ng-click="showBody1 === 'false' ? showBody1 = 'true' : showBody1 = 'false'"><i class="material-icons">import_export</i>{{job.title}}</div>
+        <div class="card-body collapsible-body blue-grey lighten-5" style="display: block;" ng-show="showBody1 === 'true'"><p><strong>Job Description:</strong> {{job.description}}</p>
+          <!-- <p><strong>Creation Date: </strong> {{job.created}}</p> -->
+          <p><strong>Responsibilities</strong>: {{job.responsibilities}}</p>
+          <p><strong>Job Type</strong>: {{job.contract}}</p>
+          <p><strong>Minimum Qualifications</strong>:</p>
+          <ul class="jobList-req">
+            <li class="jobList-reqItem">{{job.minExp1}}</li>
+            <li class="jobList-reqItem">{{job.minExp2}}</li>
+            <li class="jobList-reqItem">{{job.minExp3}}</li>
+            <li class="jobList-reqItem">{{job.minExp4}}</li>
+            <li>{{job.minExp5}}</li>
+          </ul>
+          <p><strong>Prefered Qualifications</strong>:</p>
+          <ul class="jobList-req">
+            <li class="jobList-reqItem">{{job.prefExp1}}</li>
+            <li class="jobList-reqItem">{{job.prefExp2}}</li>
+            <li class="jobList-reqItem">{{job.prefExp3}}</li>
+            <li class="jobList-reqItem">{{job.prefExp4}}</li>
+            <li>{{job.prefExp5}}</li>
+          </ul>
+          <p><strong>Closing Date: </strong> {{job.closing}} </p>
+          <a class="btn waves-effect waves-light" ng-click="openCareerApplication();" style = "margin-left: 28px">Apply Now</a>
+        </div>
+      </li>
+    </ul>
+  </div>
+
+<!--   Job List  -->
+  <!-- <div class="row">
+    <ul class="jobsList">
+      <li class="jobList-item" ng-repeat="job in pagedItems" >
+        <div class="collapsible-header deep-purple lighten-5" ng-click="showBody1 === 'false' ? showBody1 = 'true' : showBody1 = 'false'">
+          <p class="right">Closing Date: {{job.closing}}</p>
+
+          <p class="left"><i class="material-icons">import_export</i>{{job.title}}</p>
+          <div class="left">
+            <p class="left">{{job.contract}}</p>
+          </div>
+        </div>
+        <div class=" collapsible-body blue-grey lighten-5" style="display: block" ng-show="showBody1 === 'true'">
+          <p><strong>Job Description</strong>: {{job.description}}</p>
+          <p><strong>Responsibilities</strong>: {{job.responsibilities}}</p>
+          <p><strong>Job Type</strong>: {{job.contract}}</p>
+          <p><strong>Minimum Qualifications</strong>: {{job.minExp}}</p>
+          <p><strong>Prefered Qualifications</strong>: {{job.prefExp}}</p>
+          <div class="right">
+            <a id="contact-us-button" class="btn waves-effect waves-light" ng-click="openCareerApplication();">Apply</a>
+          </div>
+          <p></p>
+>>>>>>> Fixed some visual things
         </div>
       </li>
     </ul>

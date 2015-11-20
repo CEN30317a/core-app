@@ -124,3 +124,12 @@ nav {
   padding-bottom: 28px;
 >>>>>>> Fixed bugs on Job Posting
 }
+
+.jobList-req{
+  padding-left: 28px;
+
+}
+
+.jobList-reqItem{
+  padding-bottom:20px;
+}

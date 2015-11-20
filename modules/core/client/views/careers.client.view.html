@@ -28,8 +28,22 @@
           <!-- <p><strong>Creation Date: </strong> {{job.created}}</p> -->
           <p><strong>Responsibilities</strong>: {{job.responsibilities}}</p>
           <p><strong>Job Type</strong>: {{job.contract}}</p>
-          <p><strong>Minimum Qualifications</strong>: {{job.minExp}}</p>
-          <p><strong>Prefered Qualifications</strong>: {{job.prefExp}}</p>
+          <p><strong>Minimum Qualifications</strong>:</p>
+          <ul class="jobList-req">
+            <li class="jobList-reqItem">{{job.minExp1}}</li>
+            <li class="jobList-reqItem">{{job.minExp2}}</li>
+            <li class="jobList-reqItem">{{job.minExp3}}</li>
+            <li class="jobList-reqItem">{{job.minExp4}}</li>
+            <li>{{job.minExp5}}</li>
+          </ul>
+          <p><strong>Prefered Qualifications</strong>:</p>
+          <ul class="jobList-req">
+            <li class="jobList-reqItem">{{job.prefExp1}}</li>
+            <li class="jobList-reqItem">{{job.prefExp2}}</li>
+            <li class="jobList-reqItem">{{job.prefExp3}}</li>
+            <li class="jobList-reqItem">{{job.prefExp4}}</li>
+            <li>{{job.prefExp5}}</li>
+          </ul>
           <p><strong>Closing Date: </strong> {{job.closing}} </p>
           <a class="btn waves-effect waves-light" ng-click="openCareerApplication();" style = "margin-left: 28px">Apply Now</a>
         </div>

@@ -89,3 +89,12 @@ input[type=text]:focus:not([readonly]) + label, input[type=password]:focus:not([
   height: 100% !important;
   padding-bottom: 28px;
 }
+
+.jobList-req{
+  padding-left: 28px;
+
+}
+
+.jobList-reqItem{
+  padding-bottom:20px;
+}

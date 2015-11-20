@@ -13,9 +13,22 @@
             </div>
           </div>
           <div class="form-group">
-            <label for="assigned">Assigned to:</label>
+
             <textarea name="assigned" ng-model="assigned" id="assigned" class="form-control" cols="30" rows="10" placeholder="User Name"></textarea>
           </div>
+          <div class="col-md-4" style="margin-top: 2em">
+            <label for="first_name">Assigned to</label>
+            <input class="form-control col-md-4" type="text" ng-model="search" placeholder="Search" ng-change="figureOutItemsToDisplay()" />
+          </div>
+          <div class="collection">
+            <a ng-repeat="user in usersList" class="collection-item dark-blue-text">
+              <p class="list-group-item-text pull-right small bold">
+                <span>{{user.firstName}} {{user.lastName}} ({{user.username}})</span>
+              </p>
+            </a>
+          </div>
+
+
           <div class="form-group">
             <label for="locate">Location:</label>
             <textarea name="locate" ng-model="locate" id="locate" class="form-control" cols="30" rows="10" placeholder="Address of patient"></textarea>

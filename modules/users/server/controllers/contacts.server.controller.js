@@ -21,9 +21,9 @@ exports.read = function (req, res) {
 exports.update = function (req, res) {
   var contact = req.contact;
 
-  if(contact.status == 'Unread'){
+  if(contact.status === 'Unread'){
   contact.status = "Read";
-} else if(contact.status == 'Read'){
+} else if(contact.status === 'Read'){
   contact.status = "Unread";
 }
 

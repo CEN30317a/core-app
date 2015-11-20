@@ -40,7 +40,6 @@ angular.module('contacts').controller('ContactsController', ['$scope', '$statePa
     $scope.update = function (isValid) {
       $scope.error = null;
 
-      console.log("Here!")
       if (!isValid) {
         $scope.$broadcast('show-errors-check-validity', 'contactForm');
 

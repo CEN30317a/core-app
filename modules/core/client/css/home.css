@@ -47,11 +47,11 @@
   background-color: gray;
 }
 
-#leftArrowBox {
+.leftArrowBox {
   left: 10px;
 }
 
-#rightArrowBox {
+.rightArrowBox {
   right: 10px;
 }
 
@@ -63,4 +63,8 @@
   top: 0;
   bottom: 0;
   z-index: 2;
+}
+
+.apply-btn {
+  margin: 0 2rem 2rem;
 }

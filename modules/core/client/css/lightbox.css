@@ -24,7 +24,8 @@
 .lightbox.sign-in {
     top:auto;
     left:auto;
-    right: 0;
+    right: 12%;
+    position: absolute;
 }
 
 .lightbox .row:first-child {

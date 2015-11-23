@@ -5,6 +5,7 @@
         <div class="section">
 
             <div class="slider" ng-init="slideval = 0">
+            
               <ul class="slides" ng-click="slideval = (slideval + 1) % 5">
                 <li ng-show="slideval === 0" style="background-image: url('modules/core/client/img/banner.jpg'); background-size: cover;"></li>
                 <li ng-show="slideval === 1" style="background-image: url('modules/core/client/img/banner1.jpg'); background-size: cover;"></li>
@@ -12,6 +13,7 @@
                 <li ng-show="slideval === 3" style="background-image: url('modules/core/client/img/banner3.jpg'); background-size: cover;"></li>
                 <li ng-show="slideval === 4" style="background-image: url('modules/core/client/img/banner4.jpg'); background-size: cover;"></li>
               </ul>
+
               <ul class="carousel-indicators">
                 <li ng-click="slideval = 0" ng-class="{'active': slideval === 0}"></li>
                 <li ng-click="slideval = 1" ng-class="{'active': slideval === 1}"></li>
@@ -19,11 +21,10 @@
                 <li ng-click="slideval = 3" ng-class="{'active': slideval === 3}"></li>
                 <li ng-click="slideval = 4" ng-class="{'active': slideval === 4}"></li>
               </ul>
-              <div class = "imgArrowBox left white-text leftArrowBox" ng-click="slideval = (slideval + 4) % 5"><i class="material-icons">call_received</i></div>
-              <div class = "imgArrowBox right white-text rightArrowBox" ng-click="slideval = (slideval + 1) % 5"><i class="material-icons">call_made</i></div>
-                <div class="row center">
-                    <h5 class="header col s12 light inner-banner-item">Extended Healthcare Solutions</h5>
-                </div>
+
+              <div class="row center">
+                  <h5 class="header col s12 light inner-banner-item">Extended Healthcare Solutions</h5>
+              </div>
             </div>
 
             <!--   Icon Section   -->

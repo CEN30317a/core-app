@@ -15,7 +15,7 @@
                 <li class="left"><a class="dark-blue-text" ui-sref="services">Services</a></li>
                 <li class="left"><a class="dark-blue-text" ui-sref="packages">Packages</a></li>
                 <li class="left"><a class="dark-blue-text" ui-sref="careers">Careers</a></li>
-                <li class="right"><a class="dark-blue-text" ng-hide="authentication.user" ng-click="openSignIn();">Sign In</a></li>
+                <li class="right"><a class="dark-blue-text" ng-hide="authentication.user" ng-click="toggleSignIn();">Sign In</a></li>
                 <li class="right">
 
                     <a class='dropdown-button right dark-blue-text' ng-class="{active: dropdownOpen == true}" href='#' data-activates='dropdown1' ng-bind="authentication.user.displayName" ng-click="dropdownOpen = !dropdownOpen;">{{authentication.user.displayName}}</a>
@@ -36,7 +36,7 @@
 
             <a href="#" class="button-collapse" ng-click="toggleMobileMenu();"><i class="material-icons">menu</i></a>
 
-            <div class="overlay hide-on-large-only" ng-show="mobileMenuVisible" ng-init="submenuOpen = false;" ng-click="toggleMobileMenu();">
+            <div class="overlay" ng-show="mobileMenuVisible || signInVisible" ng-init="submenuOpen = false;" ng-click="toggleMenus();">
             </div>
 
             <ul class="side-nav hide-on-large-only" ng-show="mobileMenuVisible">

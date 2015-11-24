@@ -22,11 +22,11 @@
 <!--   Job List  -->
   <div class="row">
     <ul class="jobsList">
-      <li class="jobList-item" ng-repeat="job in pagedItems" >
+      <li class="jobList-item" ng-repeat="job in pagedItems">
         <div class="collapsible-header" ng-click="showBody1 === 'false' ? showBody1 = 'true' : showBody1 = 'false'"><i class="material-icons">games</i>{{job.title}}</div>
         <div class=" collapsible-body" style="display: block" ng-show="showBody1 === 'true'"><p>Job Description: {{job.content}}</p>
-          <p>Creation Date: <span ng-bind="job.created | date:'mediumDate'"></span></p>
-          <a class="btn waves-effect waves-light" ng-click="openCareerApplication();">Apply Now</a>
+          <p>Creation Date: {{job.created}}</p>
+          <a class="btn waves-effect waves-light apply-btn" ng-click="openCareerApplication();">Apply Now</a>
         </div>
       </li>
     </ul>

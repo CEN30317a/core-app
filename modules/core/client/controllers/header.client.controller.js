@@ -8,8 +8,17 @@ angular.module('core').controller('HeaderController', ['$scope', '$state', 'Auth
         $rootScope.signInVisible = false;
         $rootScope.mobileMenuVisible = false;
 
-        $scope.openSignIn = function() {
-            $rootScope.signInVisible = true;
+        $scope.toggleSignIn = function() {
+            $rootScope.signInVisible = !$rootScope.signInVisible;
+        };
+
+        $scope.toggleMenus = function() {
+            if ($rootScope.mobileMenuVisible) {
+                $rootScope.mobileMenuVisible = !$rootScope.mobileMenuVisible;
+            }
+            else {
+                $rootScope.signInVisible = !$rootScope.signInVisible;
+            }
         };
 
         $scope.openContactForm = function() {

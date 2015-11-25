@@ -25,7 +25,7 @@ exports.invokeRolesPolicies = function () {
     roles: ['user'],
     allows: [{
       resources: '/api/contacts',
-      permissions: []
+      permissions: ['post']
     }, {
       resources: '/api/contacts/:contactId',
       permissions: []
@@ -34,7 +34,7 @@ exports.invokeRolesPolicies = function () {
     roles: ['guest'],
     allows: [{
       resources: '/api/contacts',
-      permissions: []
+      permissions: ['post']
     }, {
       resources: '/api/contacts/:contactId',
       permissions: []

@@ -37,7 +37,10 @@ angular.module('users').config(['$stateProvider',
       //take out after cleanup no users should be create their own account
       .state('authentication.signup', {
         url: '/signup',
-        templateUrl: 'modules/users/client/views/authentication/signup.client.view.html'
+        templateUrl: 'modules/users/client/views/authentication/signup.client.view.html',
+        data: {
+          roles: ['admin']
+        }
       })
       .state('authentication.signin', {
         url: '/signin?err',

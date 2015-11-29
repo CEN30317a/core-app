@@ -25,13 +25,6 @@
 <!-- Job List -->
   <div class="row">
     <ul class="jobsList">
-<<<<<<< HEAD
-      <li class="jobList-item" ng-repeat="job in pagedItems">
-        <div class="collapsible-header" ng-click="showBody1 === 'false' ? showBody1 = 'true' : showBody1 = 'false'"><i class="material-icons">games</i>{{job.title}}</div>
-        <div class=" collapsible-body" style="display: block" ng-show="showBody1 === 'true'"><p>Job Description: {{job.content}}</p>
-          <p>Creation Date: {{job.created}}</p>
-          <a class="btn waves-effect waves-light apply-btn" ng-click="openCareerApplication();">Apply Now</a>
-=======
       <li class="jobList-item" ng-repeat="job in pagedItems" >
         <div class="collapsible-header deep-purple lighten-5" ng-click="showBody1 === 'false' ? showBody1 = 'true' : showBody1 = 'false'"><i class="material-icons">import_export</i>{{job.title}}</div>
         <div class="card-body collapsible-body blue-grey lighten-5" style="display: block;" ng-show="showBody1 === 'true'"><p><strong>Job Description:</strong> {{job.description}}</p>
@@ -40,7 +33,7 @@
           <p><strong>Job Type</strong>: {{job.contract}}</p>
           <p><strong>Minimum Qualifications</strong>:</p>
           <ul class="jobList-req">
-            <li class="jobList-reqItem">{{job.minExp1}}</li>
+            <li class="jobList-reqItem">{{job.minExp}}</li>
             <li class="jobList-reqItem">{{job.minExp2}}</li>
             <li class="jobList-reqItem">{{job.minExp3}}</li>
             <li class="jobList-reqItem">{{job.minExp4}}</li>
@@ -48,7 +41,7 @@
           </ul>
           <p><strong>Prefered Qualifications</strong>:</p>
           <ul class="jobList-req">
-            <li class="jobList-reqItem">{{job.prefExp1}}</li>
+            <li class="jobList-reqItem">{{job.prefExp}}</li>
             <li class="jobList-reqItem">{{job.prefExp2}}</li>
             <li class="jobList-reqItem">{{job.prefExp3}}</li>
             <li class="jobList-reqItem">{{job.prefExp4}}</li>
@@ -83,7 +76,6 @@
             <a id="contact-us-button" class="btn waves-effect waves-light" ng-click="openCareerApplication();">Apply</a>
           </div>
           <p></p>
->>>>>>> Fixed some visual things
         </div>
       </li>
     </ul>

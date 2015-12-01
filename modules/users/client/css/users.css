@@ -39,6 +39,7 @@
   float:right;
 }
 
-.user-edit{
+/*Placed admin css here if additional style needed make admin.css */
+.admin {
   margin-top: 100px;
 }

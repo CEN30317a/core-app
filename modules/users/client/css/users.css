@@ -38,3 +38,16 @@
 .user-selected{
   float:right;
 }
+
+/*Placed admin css here if additional style needed make admin.css */
+.admin {
+  margin-top: 100px;
+}
+
+.referral-list{
+  margin-top: 100px;
+}
+
+.job-create{
+  background-color: white;
+}

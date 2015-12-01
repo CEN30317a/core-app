@@ -4,6 +4,11 @@
 
         <div class="section">
 
+            <div class="row center">
+                <h3 class="header col s12 inner-banner-item dark-blue-text">Extended Health Care Solutions</h3>
+                <p><i>Our mission is to keep you safe at home!</i></p>
+            </div>
+
             <div class="slider" ng-init="slideval = 0">
             
               <ul class="slides" ng-click="slideval = (slideval + 1) % 5">
@@ -21,51 +26,50 @@
                 <li ng-click="slideval = 3" ng-class="{'active': slideval === 3}"></li>
                 <li ng-click="slideval = 4" ng-class="{'active': slideval === 4}"></li>
               </ul>
-
-              <div class="row center">
-                  <h5 class="header col s12 light inner-banner-item">Extended Healthcare Solutions</h5>
-              </div>
             </div>
 
             <!--   Icon Section   -->
             <div class="row after-banner">
 
-                <div class="col s12 m4">
+                <div class="col s12 m3">
 
                     <div class="icon-block">
 
-                        <h2 class="center dark-blue-text"><i class="material-icons">flash_on</i></h2>
-                        <h5 class="center"><a class="dark-blue-text" ui-sref="about">About Us</a></h5>
-                        <p class="light"></p>
+                      <a class="waves-effect waves-light btn" ui-sref = "about">About Us</a>
 
                     </div>
 
                 </div>
 
-                <div class="col s12 m4">
+                <div class="col s12 m3">
 
                     <div class="icon-block">
 
-                        <h2 class="center dark-blue-text"><i class="material-icons">group</i></h2>
-                        <h5 class="center"><a class="dark-blue-text" ui-sref="services">Services</a></h5>
-                        <p class="light"></p>
+                      <a class="waves-effect waves-light btn" ui-sref = "services">Services</a>
 
                     </div>
 
                 </div>
 
-                <div class="col s12 m4">
+                <div class="col s12 m3">
 
                     <div class="icon-block">
 
-                        <h2 class="center dark-blue-text"><i class="material-icons">settings</i></h2>
-                        <h5 class="center"><a class="dark-blue-text" ui-sref="packages">Care Packages</a></h5>
-                        <p class="light"></p>
+                      <a class="waves-effect waves-light btn" ui-sref = "about">Packages</a>
 
                     </div>
 
                 </div>
 
+                  <div class="col s12 m3">
+
+                    <div class="icon-block">
+
+                      <a class="waves-effect waves-light btn" ui-sref = "contact">Contact</a>
+
+                    </div>
+
+                </div>
             </div>
 
         </div>

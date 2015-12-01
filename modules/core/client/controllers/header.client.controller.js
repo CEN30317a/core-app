@@ -21,14 +21,6 @@ angular.module('core').controller('HeaderController', ['$scope', '$state', 'Auth
             }
         };
 
-        $scope.openContactForm = function() {
-            $rootScope.contactFormVisible = true;
-        };
-
-        $scope.closeContactForm = function() {
-            $rootScope.contactFormVisible = false;
-        };
-
         $scope.toggleMobileMenu = function() {
             $rootScope.mobileMenuVisible = !$rootScope.mobileMenuVisible;
         };

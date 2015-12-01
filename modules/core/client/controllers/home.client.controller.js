@@ -7,13 +7,6 @@ angular.module('core').controller('HomeController', ['$scope', '$rootScope', '$l
 
     function ($scope, $rootScope, $location, Contacts) {
 
-        $scope.openContactForm = function() {
-            $rootScope.contactFormVisible = true;
-        };
-
-        $scope.closeContactForm = function() {
-            $rootScope.contactFormVisible = false;
-        };
 
         $scope.submitContactForm = function() {
           // Create new Contact object

@@ -1,6 +1,6 @@
 .after-banner {
-  top:450px;
-  position:relative;
+  top: 525px;
+  position: relative;
 }
 
 .banner {
@@ -10,11 +10,6 @@
   background-image: url("../img/banner.jpg");
   background-size: cover;
   height: 400px;
-}
-
-.inner-banner-item {
-    top: 130px;
-    position: relative;
 }
 
 .slider .slides li {

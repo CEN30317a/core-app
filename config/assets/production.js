@@ -7,7 +7,7 @@ module.exports = {
         //'public/lib/bootstrap/dist/css/bootstrap.min.css',
         //'public/lib/bootstrap/dist/css/bootstrap-theme.min.css',
         'public/lib/materialize/dist/css/materialize.css',
-        'http://fonts.googleapis.com/icon?family=Material+Icons'
+        'https://fonts.googleapis.com/icon?family=Material+Icons'
       ],
       js: [
         'public/lib/angular/angular.min.js',

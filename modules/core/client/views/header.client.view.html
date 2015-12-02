@@ -10,7 +10,7 @@
 
             <ul class="hide-on-med-and-down nav-options-container" ng-init="dropdownOpen = false;">
 
-                <li class="left"><a class="dark-blue-text" ui-sref="contact">Contact</a></li>
+                <li class="left"><a class="dark-blue-text" ng-hide="authentication.user" ui-sref="contact">Contact</a></li>
                 <li class="left"><a class="dark-blue-text" ui-sref="about">About Us</a></li>
                 <li class="left"><a class="dark-blue-text" ui-sref="services">Services</a></li>
                 <li class="left"><a class="dark-blue-text" ui-sref="packages">Packages</a></li>
@@ -50,12 +50,12 @@
                     <li ng-show="getHighestRole() == 'user';" ng-click="toggleMobileMenu();"><a class="blue-text" ui-sref="settings.profile">Edit Profile</a></li>
                 </ul>
 
-                <li ng-click="toggleMobileMenu();"><a ui-sref="contact">Contact</a></li>
+                <li ng-click="toggleMobileMenu();"><a ng-hide="authentication.user" ui-sref="contact">Contact</a></li>
                 <li ng-click="toggleMobileMenu();"><a ui-sref="careers">Careers</a></li>
                 <li ng-click="toggleMobileMenu();"><a ui-sref="about">About Us</a></li>
                 <li ng-click="toggleMobileMenu();"><a ui-sref="services">Services</a></li>
                 <li ng-click="toggleMobileMenu();"><a ui-sref="packages">Packages</a></li>
-                <li ng-click="toggleMobileMenu();"><a ng-hide="authentication.user" ng-click="openSignIn();">Sign In</a></li>
+                <li ng-click="toggleMobileMenu();"><a ng-hide="authentication.user" ng-click="toggleSignIn();">Sign In</a></li>
                 <li ng-click="toggleMobileMenu();" ng-show="authentication.user"><a href="/api/auth/signout" target="_self">Log Out</a></li>
             </ul>
 

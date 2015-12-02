@@ -83,6 +83,10 @@ angular.module('users').controller('AuthenticationController', ['$scope', '$root
       }).error(function (response) {
         $scope.error = response.message;
       });
+
+      if ($scope.error !== null) {
+        $rootScope.signInVisible = false;
+      }
     };
 
     // OAuth provider request

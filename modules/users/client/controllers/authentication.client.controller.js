@@ -34,8 +34,8 @@ angular.module('users').controller('AuthenticationController', ['$scope', '$root
         return false;
       }
 
-      $http.post('/api/auth/signup', $scope.credentials).success(function (response) {
-
+      $http.post('/api/auth/signup', $scope.credentials)
+      .success(function (response) {
         // And redirect to the previous or home page
         $state.go($state.previous.state.name || 'home', $state.previous.params);
       }).error(function (response) {
@@ -96,3 +96,8 @@ angular.module('users').controller('AuthenticationController', ['$scope', '$root
     };
   }
 ]);
+
+$(document).ready(function(){
+  // the "href" attribute of .modal-trigger must specify the modal ID that wants to be triggered
+  $('.modal-trigger').leanModal();
+});

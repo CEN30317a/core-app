@@ -2,6 +2,12 @@ html {
   background-color: #f0f0f0;
 }
 
+[type="radio"]:not(:checked), [type="radio"]:checked {
+  visibility: visible;
+  left: 0px;
+  position: relative;
+}
+
 .content {
   margin-top: 70px;
 }

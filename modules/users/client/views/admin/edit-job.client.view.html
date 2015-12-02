@@ -18,7 +18,8 @@
         </div>
         <div class="form-group">
           <label for="contract">Full Time/Part Time</label>
-          <textarea name="contract" ng-model="job.contract" id="contract" class="form-control" cols="30" rows="10" placeholder="Full time or Part time"></textarea>
+          <input name="contract" ng-model="job.contract" id="contract" class="form-control" type="radio" value="Part Time" required />Full Time
+          <input name="contract" ng-model="job.contract" id="contract" class="form-control" type="radio" value="Part Time" required />Part Time
         </div>
         <div class="form-group">
           <label for="closing">Closing date</label>

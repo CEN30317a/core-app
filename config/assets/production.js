@@ -6,7 +6,7 @@ module.exports = {
       css: [
         //'public/lib/bootstrap/dist/css/bootstrap.min.css',
         //'public/lib/bootstrap/dist/css/bootstrap-theme.min.css',
-        'public/lib/Materialize/dist/css/materialize.css',
+        'public/lib/materialize/dist/css/materialize.css',
         'http://fonts.googleapis.com/icon?family=Material+Icons'
       ],
       js: [

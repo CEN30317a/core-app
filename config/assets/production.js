@@ -21,7 +21,7 @@ module.exports = {
         'public/lib/owasp-password-strength-test/owasp-password-strength-test.js',
         'public/lib/jquery/dist/jquery.js',
         //'https://code.jquery.com/jquery-2.1.1.min.js',
-        'public/lib/Materialize/dist/js/materialize.js'
+        'public/lib/materialize/dist/js/materialize.js'
       ]
     },
     css: 'public/dist/application.min.css',

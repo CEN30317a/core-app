@@ -5,6 +5,7 @@ angular.module('referrals').controller('ReferralsController', ['$scope', '$filte
   function ($scope, $filter ,$stateParams,$location, Authentication, Referrals, Admin) {
     $scope.authentication = Authentication;
     $scope.isAdmin  = (Authentication.user.roles[0] === "admin") ? true : false;
+    $scope.selectedUser = "";
 
     //get users
     Admin.query(function (data) {
@@ -12,6 +13,19 @@ angular.module('referrals').controller('ReferralsController', ['$scope', '$filte
       $scope.pagedItems = [];
       console.log(data);
     });
+
+    $scope.selectUser = function(myUser){
+      console.log(myUser);
+      $scope.selectedUser = myUser;
+    }
+
+    $scope.assignedTo = function(user) {
+      if(user === $scope.selectedUser){
+        return true;
+      } else {
+        return false;
+      }
+    };
 
     $scope.figureOutItemsToDisplay = function () {
       $scope.filteredItems = $filter('filter')($scope.users, {
@@ -34,7 +48,7 @@ angular.module('referrals').controller('ReferralsController', ['$scope', '$filte
       // Create new Referral object
       var referral = new Referrals({
         title: this.title,
-        assigned: this.assigned,
+        assigned: $scope.selectedUser.username,
         locate: this.locate,
         dateVisit: this.dateVisit,
         contactClient: this.contactClient,

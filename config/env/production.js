@@ -8,7 +8,7 @@ module.exports = {
   },
   port: process.env.PORT || 8443,
   db: {
-    uri: 'mongodb://ds055594.mongolab.com:55594/7a_db',
+    uri: 'mongodb://ds055594.mongolab.com:55594/7a_db_production',
     options: {
       user: 'admin',
       pass: 'pass'

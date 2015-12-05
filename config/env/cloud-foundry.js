@@ -58,12 +58,12 @@ module.exports = {
     sandbox: false
   },
   mailer: {
-    from: getCred('mean-mail', 'from') || 'MAILER_FROM',
+    from: getCred('mean-mail', 'from') || 'Extended Healthcare Solutions',
     options: {
-      service: getCred('mean-mail', 'service') || 'MAILER_SERVICE_PROVIDER',
+      service: getCred('mean-mail', 'service') || 'GMAIL',
       auth: {
-        user: getCred('mean-mail', 'username') || 'MAILER_EMAIL_ID',
-        pass: getCred('mean-mail', 'password') || 'MAILER_PASSWORD'
+        user: getCred('mean-mail', 'username') || 'extendedhealthcaresolutions',
+        pass: getCred('mean-mail', 'password') || 'Lucille1942'
       }
     }
   }

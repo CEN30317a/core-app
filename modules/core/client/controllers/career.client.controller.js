@@ -30,7 +30,7 @@ angular.module('core').controller('CareersController', ['$scope', '$filter', '$r
         $scope.closeContactForm = function() {
             $rootScope.contactFormVisible = false;
         };
-        
+
         $scope.figureOutItemsToDisplay = function () {
           $scope.filteredItems = $filter('filter')($scope.Jobs, {
             $: $scope.search

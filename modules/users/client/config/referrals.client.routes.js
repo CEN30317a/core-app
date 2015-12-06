@@ -18,9 +18,6 @@ angular.module('referrals').config(['$stateProvider',
       .state('referrals.safetyNet', {
         url: '/',
         templateUrl: 'modules/users/client/views/employees/list-referrals.client.view.html',
-        data: {
-          roles: ['admin', 'user']
-        }
       })
 
       //Both Users
@@ -50,7 +47,7 @@ angular.module('referrals').config(['$stateProvider',
         url: '/:referralId/edit',
         templateUrl: 'modules/users/client/views/admin/edit-referral.client.view.html',
         data: {
-          roles: ['admin', 'user']
+          roles: ['admin']
         }
       });
   }

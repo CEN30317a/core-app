@@ -6,4 +6,3 @@ ApplicationConfiguration.registerModule('users.admin', ['core.admin']);
 ApplicationConfiguration.registerModule('users.admin.routes', ['core.admin.routes']);
 ApplicationConfiguration.registerModule('jobs');
 ApplicationConfiguration.registerModule('referrals', ['core.admin']);
-ApplicationConfiguration.registerModule('jobApps');

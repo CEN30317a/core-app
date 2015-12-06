@@ -4,7 +4,6 @@ module.exports = function (app) {
   // Root routing
   var core = require('../controllers/core.server.controller');
   var jobs = require('../controllers/jobs.server.controller');
-  var jobApps = require('../controllers/jobapps.server.controller');
 
   // Define error pages
   app.route('/server-error').get(core.renderServerError);
@@ -31,8 +30,5 @@ module.exports = function (app) {
     app.route('/api/contacts')
       .post(core.create);
 
-    //jobapp collection route
-    app.route('/api/jobapps')
-      .post(jobApps.create);
 
 };

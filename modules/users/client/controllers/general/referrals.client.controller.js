@@ -1,10 +1,41 @@
 'use strict';
 
 // Referrals controller
-angular.module('referrals').controller('ReferralsController', ['$scope', '$stateParams', '$location', 'Authentication', 'Referrals',
-  function ($scope, $stateParams, $location, Authentication, Referrals) {
+angular.module('referrals').controller('ReferralsController', ['$scope', '$filter', '$stateParams', '$location', 'Authentication', 'Referrals', 'Admin',
+  function ($scope, $filter ,$stateParams,$location, Authentication, Referrals, Admin) {
     $scope.authentication = Authentication;
     $scope.isAdmin  = (Authentication.user.roles[0] === "admin") ? true : false;
+    $scope.selectedUser = "";
+
+    //get users
+    if($scope.isAdmin){
+      Admin.query(function (data) {
+        $scope.usersList = data; // callback for Users.query
+        $scope.pagedItems = [];
+        console.log(data);
+      });
+    }
+
+    $scope.selectUser = function(myUser){
+      console.log(myUser);
+      $scope.selectedUser = myUser;
+    };
+
+    $scope.assignedTo = function(user) {
+      if(user === $scope.selectedUser){
+        return true;
+      } else {
+        return false;
+      }
+    };
+
+    $scope.figureOutItemsToDisplay = function () {
+      $scope.filteredItems = $filter('filter')($scope.users, {
+        $: $scope.search
+      });
+      $scope.filterLength = $scope.filteredItems.length;
+    };
+
 
     // Create new Referral
     $scope.create = function (isValid) {
@@ -19,7 +50,7 @@ angular.module('referrals').controller('ReferralsController', ['$scope', '$state
       // Create new Referral object
       var referral = new Referrals({
         title: this.title,
-        assigned: this.assigned,
+        assigned: $scope.selectedUser.username,
         locate: this.locate,
         dateVisit: this.dateVisit,
         contactClient: this.contactClient,

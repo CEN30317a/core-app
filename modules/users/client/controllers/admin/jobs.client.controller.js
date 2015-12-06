@@ -21,8 +21,16 @@ angular.module('jobs').controller('JobsController', ['$scope', '$stateParams', '
         description: this.description,
         contract: this.contract,
         closing: this.closing,
-        minExp: this.minExp,
-        prefExp: this.prefExp,
+        minExp1: this.minExp1,
+        minExp2: this.minExp2,
+        minExp3: this.minExp3,
+        minExp4: this.minExp4,
+        minExp5: this.minExp5,
+        prefExp1: this.prefExp1,
+        prefExp2: this.prefExp2,
+        prefExp3: this.prefExp3,
+        prefExp4: this.prefExp4,
+        prefExp5: this.prefExp5,
         responsibilities: this.responsibilities,
       });
 
@@ -35,8 +43,16 @@ angular.module('jobs').controller('JobsController', ['$scope', '$stateParams', '
         $scope.description = '';
         $scope.contract = '';
         $scope.closing = '';
-        $scope.minExp = '';
-        $scope.prefExp = '';
+        $scope.minExp1 = '';
+        $scope.minExp2 = '';
+        $scope.minExp3 = '';
+        $scope.minExp4 = '';
+        $scope.minExp5 = '';
+        $scope.prefExp1 = '';
+        $scope.prefExp2 = '';
+        $scope.prefExp3 = '';
+        $scope.prefExp4 = '';
+        $scope.prefExp5 = '';
         $scope.responsibilities = '';
       }, function (errorResponse) {
         $scope.error = errorResponse.data.message;

@@ -2,16 +2,16 @@
 
 module.exports = {
   secure: {
-    ssl: true,
+    ssl: false,
     privateKey: './config/sslcerts/key.pem',
     certificate: './config/sslcerts/cert.pem'
   },
   port: process.env.PORT || 8443,
   db: {
-    uri: process.env.MONGOHQ_URL || process.env.MONGOLAB_URI || 'mongodb://' + (process.env.DB_1_PORT_27017_TCP_ADDR || 'localhost') + '/mean',
+    uri: 'mongodb://ds055594.mongolab.com:55594/7a_db',
     options: {
-      user: '',
-      pass: ''
+      user: 'admin',
+      pass: 'pass'
     },
     // Enable mongoose debug mode
     debug: process.env.MONGODB_DEBUG || false

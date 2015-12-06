@@ -43,8 +43,16 @@ exports.update = function (req, res) {
   job.description = req.body.description;
   job.contract = req.body.contract;
   job.closing = req.body.closing;
-  job.minExp = req.body.minExp;
-  job.prefExp = req.body.prefExp;
+  job.minExp1 = req.body.minExp1;
+  job.minExp2 = req.body.minExp2;
+  job.minExp3 = req.body.minExp3;
+  job.minExp4 = req.body.minExp4;
+  job.minExp5 = req.body.minExp5;
+  job.prefExp1 = req.body.prefExp1;
+  job.prefExp2 = req.body.prefExp2;
+  job.prefExp3 = req.body.prefExp3;
+  job.prefExp4 = req.body.prefExp4;
+  job.prefExp5 = req.body.prefExp5;
   job.responsibilities = req.body.responsibilities;
 
 

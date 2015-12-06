@@ -15,7 +15,7 @@
                 <li class="left"><a class="dark-blue-text" ui-sref="services">Services</a></li>
                 <li class="left"><a class="dark-blue-text" ui-sref="packages">Packages</a></li>
                 <li class="left"><a class="dark-blue-text" ui-sref="careers">Careers</a></li>
-                <li class="right" ng-model="signInBtn"><a class="dark-blue-text" ng-hide="authentication.user" ng-click="openSignIn();">Sign In</a></li>
+                <li class="right"><a class="dark-blue-text" ng-hide="authentication.user" ng-click="toggleSignIn();">Sign In</a></li>
                 <li class="right">
 
                     <a class='dropdown-button right dark-blue-text' ng-class="{active: dropdownOpen == true}" href='#' data-activates='dropdown1' ng-bind="authentication.user.displayName" ng-click="dropdownOpen = !dropdownOpen;">{{authentication.user.displayName}}</a>
@@ -24,6 +24,7 @@
                         <li ng-show="getHighestRole() == 'admin';"><a class="blue-text" ui-sref="admin.users">Manage Users</a></li>
                         <li ng-show="getHighestRole() == 'admin';"><a class="blue-text" ui-sref="jobs.list">Manage Jobs</a></li>
                         <li ng-show="getHighestRole() == 'admin' ;"><a class="blue-text" ui-sref="referrals.list">Manage Referrals</a></li>
+                        <li ng-show="getHighestRole() == 'admin' ;"><a class="blue-text" ui-sref="contacts.list">View Messages</a></li>
                         <li ng-show="getHighestRole() == 'user' ;"><a class="blue-text" ui-sref="referrals.list">View Referrals</a></li>
                         <li ng-show="getHighestRole() == 'user';"><a class="blue-text" ui-sref="settings.profile">Edit Profile</a></li>
                         <li><a class="blue-text" href="/api/auth/signout" target="_self">Signout</a></li>
@@ -35,7 +36,7 @@
 
             <a href="#" class="button-collapse" ng-click="toggleMobileMenu();"><i class="material-icons">menu</i></a>
 
-            <div class="overlay hide-on-large-only" ng-show="mobileMenuVisible" ng-init="submenuOpen = false;" ng-click="toggleMobileMenu();">
+            <div class="overlay" ng-show="mobileMenuVisible || signInVisible" ng-init="submenuOpen = false;" ng-click="toggleMenus();">
             </div>
 
             <ul class="side-nav hide-on-large-only" ng-show="mobileMenuVisible">

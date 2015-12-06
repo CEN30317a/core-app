@@ -13,8 +13,15 @@
             </div>
           </div>
           <div class="form-group">
-            <label for="assigned">Assigned to:</label>
-            <textarea name="assigned" ng-model="assigned" id="assigned" class="form-control" cols="30" rows="10" placeholder="User Name"></textarea>
+          <div class="col-md-4" style="margin-top: 2em">
+            <label for="first_name">Assigned to</label>
+            <div class="collection">
+              <a ng-repeat="user in usersList" class="collection-item dark-blue-text">
+                <p class="list-group-item-text pull-right small bold" ng-click="selectUser(user)">
+                  <span>{{user.firstName}} {{user.lastName}} ({{user.username}})</span> <i ng-if="assignedTo(user)" class="material-icons user-selected">offline_pin</i>
+                </p>
+              </a>
+            </div>
           </div>
           <div class="form-group">
             <label for="locate">Location:</label>

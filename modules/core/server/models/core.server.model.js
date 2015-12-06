@@ -41,28 +41,32 @@ var JobAppSchema = new Schema({
   first_name: {
     type: String,
     default: '',
-    trim: true
+    trim: true,
+    required: 'Required'
   },
   last_name: {
     type: String,
     default: '',
     trim: true,
-    required: 'Name cannot be blank'
+    required: 'Required'
   },
   email: {
     type: String,
     default: '',
-    trim: true
+    trim: true,
+    required: 'Required'
   },
   phone: {
     type: String,
     default: '',
-    trim: true
+    trim: true,
+    required: 'Required'
   },
   street_address: {
     type: String,
     default: '',
-    trim: true
+    trim: true,
+    required: 'Required'
   },
   apt_number: {
     type: String,
@@ -72,17 +76,20 @@ var JobAppSchema = new Schema({
   city: {
     type: String,
     default: '',
-    trim: true
+    trim: true,
+    required: 'Required'
   },
   state: {
     type: String,
     default: '',
-    trim: true
+    trim: true,
+    required: 'Required'
   },
   zip_code: {
     type: String,
     default: '',
-    trim: true
+    trim: true,
+    required: 'Required'
   },
   pt: {
     type: Number,

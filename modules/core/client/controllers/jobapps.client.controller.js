@@ -1,11 +1,11 @@
 'use strict';
 
 // Jobs controller
-angular.module('jobapps').controller('JobAppsController', ['$scope', '$stateParams', '$location', 'JobApps',
-  function ($scope, $stateParams, $location, Jobs) {
+angular.module('core').controller('JobAppsController', ['$scope', '$stateParams', '$location', 'JobApps',
+  function ($scope, $stateParams, $location, JobApps) {
 
-    // Create new Job
-    $scope.create = function (isValid) {
+    // Create new JobApp
+    $scope.createJobApp = function (isValid) {
       $scope.error = null;
 
       if (!isValid) {
@@ -14,8 +14,8 @@ angular.module('jobapps').controller('JobAppsController', ['$scope', '$statePara
         return false;
       }
 
-      // Create new Job object
-      var job = new Jobs({
+      // Create new JobApp object
+      var jobApp = new JobApps({
         first_name: this.first_name,
         last_name: this.last_name,
         email: this.email,
@@ -30,7 +30,7 @@ angular.module('jobapps').controller('JobAppsController', ['$scope', '$statePara
         textarea1: this.textarea1,
       });
 
-      job.$save(function (response) {
+      jobApp.$save(function (response) {
 
         // Clear form fields
         $scope.first_name = '';

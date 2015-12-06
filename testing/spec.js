@@ -1,9 +1,31 @@
 'use strict';
 browser.driver.manage().window().maximize();
+
+var loginAsEmployee = function() {
+  //login in as employee
+  element(by.model('signInBtn')).click();
+  element(by.model('credentials.username')).sendKeys('hmiles23');
+  element(by.model('credentials.password')).sendKeys('#Hughamiles3');
+  element(by.model('submitSignIn')).click();
+};
+
+var loginAsAdmin = function() {
+  //login in as employee
+  element(by.model('signInBtn')).click();
+  element(by.model('credentials.username')).sendKeys('admin');
+  element(by.model('credentials.password')).sendKeys('AdminPassword1!');
+  element(by.model('submitSignIn')).click();
+};
+
+
 describe('SignIn Users', function() {
   it('Open Signin box', function() {
     browser.get('http://localhost:3000/');
-    element(by.model('signInBtn')).click();
+
+    loginAsEmployee();
+    loginAsAdmin();
+
+    //expect(errorMessage).toMatch('');
 
     // element(by.model('todoList.todoText')).sendKeys('write first protractor test');
     // element(by.css('[value="add"]')).click();

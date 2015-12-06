@@ -29,6 +29,10 @@ nav, nav .nav-wrapper i, nav a.button-collapse, nav a.button-collapse i {
   line-height: 74px;
 }
 
+.nav-wrapper {
+  margin: 0 50px;
+}
+
 @media only screen and (max-width : 992px) {
   nav, nav .nav-wrapper i, nav a.button-collapse, nav a.button-collapse i {
     height: 74px;

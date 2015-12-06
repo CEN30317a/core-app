@@ -108,6 +108,15 @@ nav {
   top: 0;
 }
 
+nav ul a {
+  font-size: 17px;
+  font-weight: 500;
+}
+
+.nav-wrapper {
+  width: 76%;
+}
+
 .contact-row {
   margin-top: 17px;
 }

@@ -58,7 +58,7 @@ module.exports = {
     sandbox: false
   },
   mailer: {
-    from: getCred('mean-mail', 'from') || 'Extended Healthcare Solutions',
+    from: getCred('mean-mail', 'from') || 'Extended Health Care Solutions',
     options: {
       service: getCred('mean-mail', 'service') || 'GMAIL',
       auth: {

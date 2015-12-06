@@ -2,13 +2,13 @@
 
     <nav class="white lighten-1" role="navigation">
 
-        <div class="nav-wrapper container">
+        <div class="nav-wrapper container" ng-init="dropdownOpen = false;">
 
             <a id="logo-container" ui-sref="home" class="brand-logo">
               <img class="nav-logo brand-logo" ng-src="/modules/core/client/img/brand/logonotext.jpg" />
             </a>
 
-            <ul class="hide-on-med-and-down nav-options-container" ng-init="dropdownOpen = false;">
+            <ul class="hide-on-med-and-down nav-options-container">
 
                 <li class="left"><a class="dark-blue-text" ng-hide="authentication.user" ui-sref="contact">Contact</a></li>
                 <li class="left"><a class="dark-blue-text" ui-sref="about">About Us</a></li>
@@ -36,7 +36,7 @@
 
             <a href="#" class="button-collapse" ng-click="toggleMobileMenu();"><i class="material-icons">menu</i></a>
 
-            <div class="overlay" ng-show="mobileMenuVisible || signInVisible" ng-init="submenuOpen = false;" ng-click="toggleMenus();">
+            <div class="overlay" ng-show="mobileMenuVisible || signInVisible || dropdownOpen == true" ng-init="submenuOpen = false;" ng-click="closeMenus(); dropdownOpen = false;">
             </div>
 
             <ul class="side-nav hide-on-large-only" ng-show="mobileMenuVisible">

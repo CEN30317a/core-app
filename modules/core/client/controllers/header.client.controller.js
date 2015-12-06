@@ -12,13 +12,9 @@ angular.module('core').controller('HeaderController', ['$scope', '$state', 'Auth
             $rootScope.signInVisible = !$rootScope.signInVisible;
         };
 
-        $scope.toggleMenus = function() {
-            if ($rootScope.mobileMenuVisible) {
-                $rootScope.mobileMenuVisible = !$rootScope.mobileMenuVisible;
-            }
-            else {
-                $rootScope.signInVisible = !$rootScope.signInVisible;
-            }
+        $scope.closeMenus = function() {
+            $rootScope.signInVisible = false;
+            $rootScope.mobileMenuVisible = false;
         };
 
         $scope.toggleMobileMenu = function() {

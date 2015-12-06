@@ -1,49 +1,45 @@
 <!-- connect to email -->
-<!-- change color of box, center text , make sim size 
-			change address to miles address--> 
+<!-- change color of box, center text , make sim size
+			change address to miles address-->
 
-<div class="row padding-top-30">
+<div ng-controller="HomeController" class="row padding-top-30">
 	<form class="col s4 m12 l12 example">
-		<div class="card-panel center"> <!-- change color --> 
+		<div class="card-panel center"> <!-- change color -->
 			<span class="dark-yellow-text">Contact Us Today</span>
-			<div class = "row left-align contact-row"> 
-				<div class = "col s6"> 
-					<label for="icon_prefix">First Name</label> 
-					<input id="icon_prefix" type="text" class="validate">
+			<div class = "row left-align contact-row">
+				<div class = "col s6">
+					<label for="first_name">First Name</label>
+					<input id="first_name" ng-model="first_name" type="text" class="validate">
 				</div>
-				<div class = "col s6"> 
-					<label for="icon_prefix">Last Name</label> 
-					<input id="icon_prefix" type="text" class="validate">
+				<div class = "col s6">
+					<label for="last_name">Last Name</label>
+					<input id="last_name" ng-model="last_name" type="text" class="validate">
 				</div>
 			</div>
 			<div class = "row">
 				<div class = "col s6">
-					<label for="icon_prefix">Phone Number</label> 
-					<input id="icon_prefix" type="text" class="validate">
+					<label for="phone">Phone Number</label>
+					<input id="phone" ng-model="phone" type="text" class="validate">
 				</div>
 				<div class = "col s6">
-					<label for="icon_prefix">Email</label> 
-					<input id="icon_prefix" type="text" class="validate">
+					<label for="email">Email</label>
+					<input id="email" ng-model="email" type="email" class="validate">
 				</div>
 			</div>
 			<div class = "row">
 				<div class = "col s12">
-					<label for="icon_prefix">How can we be of service:</label> 
-					<input id="icon_prefix" type="text" class="validate">
+					<label for="message">How can we be of service:</label>
+					<input id="message" ng-model="message" type="text" class="validate">
 				</div>
 			</div>
-			<a class="waves-effect waves-light btn margin-bottom-25">Submit</a>
+			<a class="waves-effect waves-light btn margin-bottom-25" type="submit" ng-click="submitContactForm();">Submit</a>
 		</div>
 	</form>
-		
 
-	<div class="col s4 offset-s1 hide-on-med-and-down"> <!-- put miles office here --> 
+
+	<div class="col s4 offset-s1 hide-on-med-and-down"> <!-- put miles office here -->
 		<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3467.4077399200096!2d-82.35077284917445!3d29.649940343966893!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88e8a379c55b3a57%3A0xf870d075572b3ea2!2sBen+Hill+Griffin+Stadium!5e0!3m2!1sen!2sus!4v1447339810821" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
 	</div>
 
-	
+
 </div>
-
-
-
- 

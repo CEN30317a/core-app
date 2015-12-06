@@ -19,6 +19,7 @@ angular.module('core').controller('HomeController', ['$scope', '$rootScope', '$l
           // Create new Contact object
           var contact = new Contacts({
             name: this.name,
+            phone: this.phone,
             email: this.email,
             message: this.message,
           });
@@ -28,6 +29,7 @@ angular.module('core').controller('HomeController', ['$scope', '$rootScope', '$l
             
             // Clear form fields
             $scope.name = '';
+            $scope.phone = '';
             $scope.email = '';
             $scope.message = '';
           }, function (errorResponse) {

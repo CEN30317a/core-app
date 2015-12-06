@@ -1,7 +1,9 @@
 'use strict';
-describe('angularjs homepage todo list', function() {
-  it('should add a todo', function() {
+browser.driver.manage().window().maximize();
+describe('SignIn Users', function() {
+  it('Open Signin box', function() {
     browser.get('http://localhost:3000/');
+    element(by.model('signInBtn')).click();
 
     // element(by.model('todoList.todoText')).sendKeys('write first protractor test');
     // element(by.css('[value="add"]')).click();

@@ -15,7 +15,7 @@
                 <li class="left"><a class="dark-blue-text" ui-sref="services">Services</a></li>
                 <li class="left"><a class="dark-blue-text" ui-sref="packages">Packages</a></li>
                 <li class="left"><a class="dark-blue-text" ui-sref="careers">Careers</a></li>
-                <li class="right"><a class="dark-blue-text" ng-hide="authentication.user" ng-click="openSignIn();">Sign In</a></li>
+                <li class="right" ng-model="signInBtn"><a class="dark-blue-text" ng-hide="authentication.user" ng-click="openSignIn();">Sign In</a></li>
                 <li class="right">
 
                     <a class='dropdown-button right dark-blue-text' ng-class="{active: dropdownOpen == true}" href='#' data-activates='dropdown1' ng-bind="authentication.user.displayName" ng-click="dropdownOpen = !dropdownOpen;">{{authentication.user.displayName}}</a>
@@ -54,7 +54,7 @@
                 <li ng-click="toggleMobileMenu();"><a ui-sref="about">About Us</a></li>
                 <li ng-click="toggleMobileMenu();"><a ui-sref="services">Services</a></li>
                 <li ng-click="toggleMobileMenu();"><a ui-sref="packages">Packages</a></li>
-                <li ng-click="toggleMobileMenu();"><a ng-hide="authentication.user" ng-click="openSignIn();">Sign In</a></li>
+                <li ng-click="toggleMobileMenu();" id="test" ng-model="signInBtn"><a ng-hide="authentication.user" ng-click="openSignIn();">Sign In</a></li>
                 <li ng-click="toggleMobileMenu();" ng-show="authentication.user"><a href="/api/auth/signout" target="_self">Log Out</a></li>
             </ul>
 

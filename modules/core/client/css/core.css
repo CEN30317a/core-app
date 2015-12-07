@@ -127,6 +127,9 @@ nav ul a {
 
 .card.medium .card-image {
   height: 150px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .card.medium .card-content {

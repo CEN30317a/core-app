@@ -1,24 +1,24 @@
 <div class="container full-width" ng-controller="HeaderController">
 
-    <nav class="white lighten-1" role="navigation">
+    <nav class="dark-blue lighten-1" role="navigation">
 
         <div class="nav-wrapper container">
 
             <a id="logo-container" ui-sref="home" class="brand-logo">
-              <img class="nav-logo brand-logo" ng-src="/modules/core/client/img/brand/logonotext.jpg" />
+              <img class="nav-logo brand-logo" ng-src="/modules/core/client/img/brand/logonotext.png" />
             </a>
 
             <ul class="hide-on-med-and-down nav-options-container" ng-init="dropdownOpen = false;">
 
-                <li class="left"><a class="dark-blue-text" ng-click="openContactForm();">Contact</a></li>
-                <li class="left"><a class="dark-blue-text" ui-sref="about">About Us</a></li>
-                <li class="left"><a class="dark-blue-text" ui-sref="services">Services</a></li>
-                <li class="left"><a class="dark-blue-text" ui-sref="packages">Packages</a></li>
-                <li class="left"><a class="dark-blue-text" ui-sref="careers">Careers</a></li>
-                <li class="right"><a class="dark-blue-text" ng-hide="authentication.user" ng-click="toggleSignIn();">Sign In</a></li>
+                <li class="left"><a class="white-text" ng-click="openContactForm();">Contact</a></li>
+                <li class="left"><a class="white-text" ui-sref="about">About Us</a></li>
+                <li class="left"><a class="white-text" ui-sref="services">Services</a></li>
+                <li class="left"><a class="white-text" ui-sref="packages">Packages</a></li>
+                <li class="left"><a class="white-text" ui-sref="careers">Careers</a></li>
+                <li class="right"><a class="white-text" ng-hide="authentication.user" ng-click="toggleSignIn();">Sign In</a></li>
                 <li class="right">
 
-                    <a class='dropdown-button right dark-blue-text' ng-class="{active: dropdownOpen == true}" href='#' data-activates='dropdown1' ng-bind="authentication.user.displayName" ng-click="dropdownOpen = !dropdownOpen;">{{authentication.user.displayName}}</a>
+                    <a class='dropdown-button right white-text' ng-class="{active: dropdownOpen == true}" href='#' data-activates='dropdown1' ng-bind="authentication.user.displayName" ng-click="dropdownOpen = !dropdownOpen;">{{authentication.user.displayName}}</a>
 
                     <ul ng-show="dropdownOpen == true" class="dropdown-content" ng-click="dropdownOpen = false;">
                         <li ng-show="getHighestRole() == 'admin';"><a class="blue-text" ui-sref="admin.users">Manage Users</a></li>

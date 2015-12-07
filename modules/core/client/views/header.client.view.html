@@ -22,7 +22,7 @@
 
                     <ul ng-show="dropdownOpen == true" class="dropdown-content" ng-click="dropdownOpen = false;">
                         <li ng-show="getHighestRole() == 'admin';"><a class="dark-blue-text" ui-sref="admin.users">Manage Users</a></li>
-                        <li ng-show="getHighestRole() == 'admin';"><a class="dark-blue-text" ui-sref="jobs.list">Manage Jobs</a></li>
+                        <li ng-show="getHighestRole() == 'admin';"><a class="dark-blue-text" ui-sref="jobs.list">Manage Job Postings</a></li>
                         <li ng-show="getHighestRole() == 'admin' ;"><a class="dark-blue-text" ui-sref="referrals.list">Manage Referrals</a></li>
                         <li ng-show="getHighestRole() == 'admin' ;"><a class="dark-blue-text" ui-sref="contacts.list">View Messages</a></li>
                         <li ng-show="getHighestRole() == 'user' ;"><a class="dark-blue-text" ui-sref="referrals.list">View Referrals</a></li>
@@ -44,7 +44,8 @@
 
                 <ul ng-show="submenuOpen == true" class='submenu'>
                     <li ng-show="getHighestRole() == 'admin';" ng-click="toggleMobileMenu();"><a class="blue-text" ui-sref="admin.users">Manage Users</a></li>
-                    <li ng-show="getHighestRole() == 'admin';" ng-click="toggleMobileMenu();"><a class="blue-text" ui-sref="jobs.list">Manage Jobs</a></li>
+                    <li ng-show="getHighestRole() == 'admin';" ng-click="toggleMobileMenu();"><a class="blue-text" ui-sref="jobs.list">Manage Job Postings</a></li>
+                    <li ng-show="getHighestRole() == 'admin' ;"><a class="dark-blue-text" ui-sref="contacts.list">View Messages</a></li>
                     <li ng-show="getHighestRole() == 'admin';" ng-click="toggleMobileMenu();"><a class="blue-text" ui-sref="referrals.list">Manage Referrals</a></li>
                     <li ng-show="getHighestRole() == 'user' ;" ng-click="toggleMobileMenu();"><a class="blue-text" ui-sref="referrals.list">View Referrals</a></li>
                     <li ng-show="getHighestRole() == 'user';" ng-click="toggleMobileMenu();"><a class="blue-text" ui-sref="settings.profile">Edit Profile</a></li>

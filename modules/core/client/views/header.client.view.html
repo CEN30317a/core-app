@@ -10,7 +10,7 @@
 
             <ul class="hide-on-med-and-down nav-options-container">
 
-                <li class="left"><a class="white-text" ng-click="openContactForm();">Contact</a></li>
+                <li class="left"><a class="white-text" ng-hide="authentication.user" ui-sref="contact">Contact</a></li>
                 <li class="left"><a class="white-text" ui-sref="about">About Us</a></li>
                 <li class="left"><a class="white-text" ui-sref="services">Services</a></li>
                 <li class="left"><a class="white-text" ui-sref="packages">Packages</a></li>

@@ -4,7 +4,7 @@
 angular.module('jobs').factory('Jobs', ['$resource',
   function ($resource) {
     return $resource('api/job/:jobId', {
-      articleId: '@_id'
+      jobId: '@_id'
     }, {
       update: {
         method: 'GET'
@@ -16,7 +16,7 @@ angular.module('jobs').factory('Jobs', ['$resource',
 angular.module('contacts').factory('Contacts', ['$resource',
   function ($resource) {
     return $resource('api/contacts/:contactId', {
-      articleId: '@_id'
+      contactId: '@_id'
     }, {
       update: {
         method: 'PUT'

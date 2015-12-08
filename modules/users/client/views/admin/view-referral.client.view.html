@@ -9,6 +9,9 @@
     <a class="waves-effect waves-light btn" ng-show="getHighestRole() == 'admin';" ng-click="remove();">
       <i class="material-icons left">delete</i><span>Remove</span>
     </a>
+    <a class="btn waves-effect waves-light" ng-show="getHighestRole() == 'user';" ui-sref="referrals.edit({referralId: referral._id})">
+      <i class="material-icons left">edit</i><span>Add Comments</span>
+    </a>
   </div>
   <small>
     <em class="text-muted">

@@ -10,7 +10,7 @@
             </div>
 
             <div class="slider" ng-init="slideval = 0">
-            
+
               <ul class="slides" ng-click="slideval = (slideval + 1) % 5">
                 <li ng-show="slideval === 0" style="background-image: url('modules/core/client/img/banner.jpg'); background-size: cover;"></li>
                 <li ng-show="slideval === 1" style="background-image: url('modules/core/client/img/banner1.jpg'); background-size: cover;"></li>
@@ -35,7 +35,9 @@
 
                     <div class="icon-block">
 
-                      <a class="waves-effect waves-light btn" ui-sref = "about">About Us</a>
+                        <h2 class="center dark-blue-text"><i class="material-icons">flash_on</i></h2>
+                        <h5 class="center"><a class="dark-blue-text" ui-sref="about">About Us!</a></h5>
+                        <p class="light"></p>
 
                     </div>
 

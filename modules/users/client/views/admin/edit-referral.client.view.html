@@ -1,26 +1,34 @@
 <section class="admin" ng-controller="ReferralsController" ng-init="findOne()">
   <div class="page-header">
-    <h3 class="header center dark-blue-text">Edit Job</h3>
+    <h1>Edit Referral for {{referral.title}}</h1>
   </div>
   <div class="col-md-12">
     <form name="referralForm" class="form-horizontal" ng-submit="update(referralForm.$valid)" novalidate>
       <fieldset>
-        <div class="form-group" show-errors>
+        <div class="form-group" ng-show="getHighestRole() == 'admin';" show-errors>
           <label for="title">Patient's name</label>
           <input name="title" type="text" ng-model="referral.title" id="title" class="form-control" placeholder="Patient's name" required>
           <div ng-messages="referralForm.title.$error" role="alert">
             <p class="help-block error-text" ng-message="required">Patient's name is required.</p>
           </div>
         </div>
-        <div class="form-group">
-          <label for="assigned">Assigned to:</label>
-          <textarea name="assigned" ng-model="referral.assigned" id="assigned" class="form-control" cols="30" rows="10" placeholder="User Name"></textarea>
+        <div class="form-group" ng-show="getHighestRole() == 'admin';">
+          <div class="col-md-4" style="margin-top: 2em">
+            <label for="first_name">Assigned to:</label>
+            <div class="collection">
+              <a ng-repeat="user in usersList" class="collection-item dark-blue-text">
+                <p class="list-group-item-text pull-right small bold" ng-click="selectUser(user)">
+                  <span>{{user.firstName}} {{user.lastName}} ({{user.username}})</span> <i ng-if="assignedTo(user)" class="material-icons user-selected">offline_pin</i>
+                </p>
+              </a>
+            </div>
+          </div>
         </div>
-        <div class="form-group">
+        <div class="form-group" ng-show="getHighestRole() == 'admin';">
           <label for="locate">Location:</label>
           <textarea name="locate" ng-model="referral.locate" id="locate" class="form-control" cols="30" rows="10" placeholder="Address of patient"></textarea>
         </div>
-        <div class="form-group">
+        <div class="form-group" ng-show="getHighestRole() == 'admin';">
           <label for="dateVisit">Date and time of appointment:</label>
           <textarea name="dateVisit" ng-model="referral.dateVisit" id="dateVisit" class="form-control" cols="30" rows="10" placeholder="Date and time of appointment"></textarea>
         </div>
@@ -33,16 +41,16 @@
           <textarea name="description" ng-model="referral.description" id="description" class="form-control" cols="30" rows="10" placeholder="Description or background of patient"></textarea>
         </div>
         <div class="form-group">
-          <label for="history">History of patient:</label>
+          <label for="history">History with patient:</label>
           <textarea name="history" ng-model="referral.history" id="history" class="form-control" cols="30" rows="10" placeholder="Patient's history with us"></textarea>
         </div>
         <div class="form-group">
-          <label for="comments">Assigned to:</label>
+          <label for="comments">Comments:</label>
           <textarea name="comments" ng-model="referral.comments" id="comments" class="form-control" cols="30" rows="10" placeholder="This space reserved for employees to make comments on the appointment"></textarea>
         </div>
         <div class="form-group">
           <input type="submit" value="Update" class="btn btn-default">
-          <a class="btn btn-default" ui-sref="referrals.list">Cancel</a>
+          <a class="btn btn-default" ui-sref="referrals.view({referralId: referral._id})">Cancel</a>
         </div>
         <div ng-show="error" class="text-danger">
           <strong ng-bind="error"></strong>

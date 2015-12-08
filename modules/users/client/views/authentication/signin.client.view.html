@@ -14,7 +14,7 @@
           <label for="password">Password</label>
           <input type="password" id="password" name="password" class="form-control" ng-model="credentials.password" placeholder="Password" required>
           <div ng-messages="userForm.password.$error" role="alert">
-            <p class="help-block error-text" ng-message="required">Password is required.</p>
+            <!-- <p class="help-block error-text" ng-message="required">Password is required.</p> -->
           </div>
         </div>
         <div class="text-center form-group">
@@ -22,11 +22,11 @@
           <button class="btn btn-primary" ui-sref="home" ng-click="closeSignIn();">Cancel</button>
         </div>
         <div class="text-center forgot-password">
-          <a ui-sref="password.forgot" ng-click="closeSignIn();">Forgot your password?</a>
+          <!-- <a ui-sref="password.forgot" ng-click="closeSignIn();">Forgot your password?</a> -->
         </div>
 
         <div class ="text-center forgot-username">
-          <a ui-sref="authentication.forgot" ng-click="closeSignIn();">Forgot your username?</a>
+          <!-- <a ui-sref="authentication.forgot" ng-click="closeSignIn();">Forgot your username?</a> -->
         </div>
       </fieldset>
     </form>

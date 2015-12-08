@@ -1,10 +1,10 @@
-<section ng-controller="JobsController">
+<section class="admin" ng-controller="JobsController">
   <div class="page-header">
     <h1>New Job</h1>
   </div>
   <div class="col-md-12">
     <form name="jobForm" class="form-horizontal" ng-submit="create(jobForm.$valid)" novalidate>
-      <fieldset>
+      <fieldset class="job-create">
         <div class="form-group" show-errors>
           <label for="title">Job Title</label>
           <input name="title" type="text" ng-model="title" id="title" class="form-control" placeholder="Title" required>
@@ -18,7 +18,8 @@
         </div>
         <div class="form-group">
           <label for="contract">Full Time/Part Time</label>
-          <textarea name="contract" ng-model="contract" id="contract" class="form-control" cols="30" rows="10" placeholder="Full time or Part time"></textarea>
+          <input name="contract" ng-model="contract" id="contract" class="form-control" type="radio" value="Full Time" required />Full Time
+          <input name="contract" ng-model="contract" id="contract" class="form-control" type="radio" value="Part Time" required />Part Time
         </div>
         <div class="form-group">
           <label for="closing">Closing date</label>

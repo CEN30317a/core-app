@@ -7,28 +7,25 @@ angular.module('core').controller('HomeController', ['$scope', '$rootScope', '$l
 
     function ($scope, $rootScope, $location, Contacts) {
 
-        $scope.openContactForm = function() {
-            $rootScope.contactFormVisible = true;
-        };
-
-        $scope.closeContactForm = function() {
-            $rootScope.contactFormVisible = false;
-        };
 
         $scope.submitContactForm = function() {
           // Create new Contact object
           var contact = new Contacts({
-            name: this.name,
+            first_name: this.first_name,
+            last_name: this.last_name,
             email: this.email,
+            phone: this.phone,
             message: this.message,
           });
 
           // Redirect after save
           contact.$save(function (response) {
-            
+
             // Clear form fields
-            $scope.name = '';
+            $scope.first_name = '';
+            $scope.last_name = '';
             $scope.email = '';
+            $scope.phone = '';
             $scope.message = '';
           }, function (errorResponse) {
             $scope.error = errorResponse.data.message;

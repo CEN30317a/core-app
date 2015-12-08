@@ -55,6 +55,7 @@ angular.module('jobs').controller('JobsController', ['$scope', '$stateParams', '
         $scope.prefExp4 = '';
         $scope.prefExp5 = '';
         $scope.responsibilities = '';
+        $scope.salary = '';
       }, function (errorResponse) {
         $scope.error = errorResponse.data.message;
       });

@@ -5,7 +5,7 @@
 <div ng-controller="HomeController" class="row padding-top-30">
 	<form class="col s4 m12 l12 example">
 		<div class="card-panel center"> <!-- change color -->
-			<span class="dark-yellow-text">Contact Us Today</span>
+			<h4><span class="dark-yellow-text">Contact Us Today</span></h4>
 			<div class = "row left-align contact-row">
 				<div class = "col s6">
 					<label for="first_name">First Name</label>
@@ -15,7 +15,6 @@
 					<label for="last_name">Last Name</label>
 					<input id="last_name" ng-model="last_name" type="text" class="validate">
 				</div>
-			</div>
 			<div class = "row">
 				<div class = "col s6">
 					<label for="phone">Phone Number</label>
@@ -32,7 +31,10 @@
 					<input id="message" ng-model="message" type="text" class="validate">
 				</div>
 			</div>
+			</div>
+			<div class = "row right-align contact-row">
 			<a class="waves-effect waves-light btn margin-bottom-25" type="submit" ng-click="submitContactForm();">Submit</a>
+		</div>
 		</div>
 	</form>
 

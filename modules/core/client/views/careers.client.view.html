@@ -39,7 +39,7 @@
             <li class="jobList-reqItem">{{job.minExp4}}</li>
             <li>{{job.minExp5}}</li>
           </ul>
-          <p><strong>Prefered Qualifications</strong>:</p>
+          <p ng-show="job.prefExp != '' && job.prefExp != '' && job.prefExp != '' && job.prefExp != ''"><strong>Prefered Qualifications</strong>:</p>
           <ul class="jobList-req">
             <li class="jobList-reqItem">{{job.prefExp}}</li>
             <li class="jobList-reqItem">{{job.prefExp2}}</li>
@@ -47,6 +47,7 @@
             <li class="jobList-reqItem">{{job.prefExp4}}</li>
             <li>{{job.prefExp5}}</li>
           </ul>
+          <p ng-show="job.salary != ''"><strong>Salary: </strong> {{job.salary}} </p>
           <p><strong>Closing Date: </strong> {{job.closing}} </p>
           <a class="btn waves-effect waves-light" ng-click="openCareerApplication();" style = "margin-left: 28px">Apply Now</a>
         </div>

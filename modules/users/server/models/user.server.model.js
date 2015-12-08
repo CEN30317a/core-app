@@ -262,6 +262,11 @@ var JobSchema = new Schema({
     default: '',
     trim: true
   },
+  salary: {
+    type: String,
+    default: '',
+    trim: true
+  },
   user: {
     type: Schema.ObjectId,
     ref: 'User'

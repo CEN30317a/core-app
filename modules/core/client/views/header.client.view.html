@@ -2,15 +2,15 @@
 
     <nav class="dark-blue lighten-1" role="navigation">
 
-        <div class="nav-wrapper container">
+        <div class="nav-wrapper container" ng-init="dropdownOpen = false;">
 
             <a id="logo-container" ui-sref="home" class="brand-logo">
               <img class="nav-logo brand-logo" ng-src="/modules/core/client/img/brand/logonotext.png" />
             </a>
 
-            <ul class="hide-on-med-and-down nav-options-container" ng-init="dropdownOpen = false;">
+            <ul class="hide-on-med-and-down nav-options-container">
 
-                <li class="left"><a class="white-text" ng-click="openContactForm();">Contact</a></li>
+                <li class="left"><a class="white-text" ng-hide="authentication.user" ui-sref="contact">Contact</a></li>
                 <li class="left"><a class="white-text" ui-sref="about">About Us</a></li>
                 <li class="left"><a class="white-text" ui-sref="services">Services</a></li>
                 <li class="left"><a class="white-text" ui-sref="packages">Packages</a></li>
@@ -21,13 +21,13 @@
                     <a class='dropdown-button right white-text' ng-class="{active: dropdownOpen == true}" href='#' data-activates='dropdown1' ng-bind="authentication.user.displayName" ng-click="dropdownOpen = !dropdownOpen;">{{authentication.user.displayName}}</a>
 
                     <ul ng-show="dropdownOpen == true" class="dropdown-content" ng-click="dropdownOpen = false;">
-                        <li ng-show="getHighestRole() == 'admin';"><a class="blue-text" ui-sref="admin.users">Manage Users</a></li>
-                        <li ng-show="getHighestRole() == 'admin';"><a class="blue-text" ui-sref="jobs.list">Manage Jobs</a></li>
-                        <li ng-show="getHighestRole() == 'admin' ;"><a class="blue-text" ui-sref="referrals.list">Manage Referrals</a></li>
-                        <li ng-show="getHighestRole() == 'admin' ;"><a class="blue-text" ui-sref="contacts.list">View Messages</a></li>
-                        <li ng-show="getHighestRole() == 'user' ;"><a class="blue-text" ui-sref="referrals.list">View Referrals</a></li>
-                        <li ng-show="getHighestRole() == 'user';"><a class="blue-text" ui-sref="settings.profile">Edit Profile</a></li>
-                        <li><a class="blue-text" href="/api/auth/signout" target="_self">Signout</a></li>
+                        <li ng-show="getHighestRole() == 'admin';"><a class="dark-blue-text" ui-sref="admin.users">Manage Users</a></li>
+                        <li ng-show="getHighestRole() == 'admin';"><a class="dark-blue-text" ui-sref="jobs.list">Manage Job Postings</a></li>
+                        <li ng-show="getHighestRole() == 'admin' ;"><a class="dark-blue-text" ui-sref="referrals.list">Manage Referrals</a></li>
+                        <li ng-show="getHighestRole() == 'admin' ;"><a class="dark-blue-text" ui-sref="contacts.list">View Messages</a></li>
+                        <li ng-show="getHighestRole() == 'user' ;"><a class="dark-blue-text" ui-sref="referrals.list">View Referrals</a></li>
+                        <li ng-show="getHighestRole() == 'user';"><a class="dark-blue-text" ui-sref="settings.profile">Edit Profile</a></li>
+                        <li><a class="dark-blue-text" href="/api/auth/signout" target="_self">Signout</a></li>
                     </ul>
 
                 </li>
@@ -36,7 +36,7 @@
 
             <a href="#" class="button-collapse" ng-click="toggleMobileMenu();"><i class="material-icons">menu</i></a>
 
-            <div class="overlay" ng-show="mobileMenuVisible || signInVisible" ng-init="submenuOpen = false;" ng-click="toggleMenus();">
+            <div class="overlay" ng-show="mobileMenuVisible || signInVisible || dropdownOpen == true" ng-init="submenuOpen = false;" ng-click="closeMenus(); dropdownOpen = false;">
             </div>
 
             <ul class="side-nav hide-on-large-only" ng-show="mobileMenuVisible">
@@ -44,18 +44,19 @@
 
                 <ul ng-show="submenuOpen == true" class='submenu'>
                     <li ng-show="getHighestRole() == 'admin';" ng-click="toggleMobileMenu();"><a class="blue-text" ui-sref="admin.users">Manage Users</a></li>
-                    <li ng-show="getHighestRole() == 'admin';" ng-click="toggleMobileMenu();"><a class="blue-text" ui-sref="jobs.list">Manage Jobs</a></li>
+                    <li ng-show="getHighestRole() == 'admin';" ng-click="toggleMobileMenu();"><a class="blue-text" ui-sref="jobs.list">Manage Job Postings</a></li>
+                    <li ng-show="getHighestRole() == 'admin' ;"><a class="dark-blue-text" ui-sref="contacts.list">View Messages</a></li>
                     <li ng-show="getHighestRole() == 'admin';" ng-click="toggleMobileMenu();"><a class="blue-text" ui-sref="referrals.list">Manage Referrals</a></li>
                     <li ng-show="getHighestRole() == 'user' ;" ng-click="toggleMobileMenu();"><a class="blue-text" ui-sref="referrals.list">View Referrals</a></li>
                     <li ng-show="getHighestRole() == 'user';" ng-click="toggleMobileMenu();"><a class="blue-text" ui-sref="settings.profile">Edit Profile</a></li>
                 </ul>
 
-                <li ng-click="toggleMobileMenu();"><a ng-click="openContactForm();">Contact</a></li>
+                <li ng-click="toggleMobileMenu();"><a ng-hide="authentication.user" ui-sref="contact">Contact</a></li>
                 <li ng-click="toggleMobileMenu();"><a ui-sref="careers">Careers</a></li>
                 <li ng-click="toggleMobileMenu();"><a ui-sref="about">About Us</a></li>
                 <li ng-click="toggleMobileMenu();"><a ui-sref="services">Services</a></li>
                 <li ng-click="toggleMobileMenu();"><a ui-sref="packages">Packages</a></li>
-                <li ng-click="toggleMobileMenu();"><a ng-hide="authentication.user" ng-click="openSignIn();">Sign In</a></li>
+                <li ng-click="toggleMobileMenu();"><a ng-hide="authentication.user" ng-click="toggleSignIn();">Sign In</a></li>
                 <li ng-click="toggleMobileMenu();" ng-show="authentication.user"><a href="/api/auth/signout" target="_self">Log Out</a></li>
             </ul>
 
@@ -66,13 +67,6 @@
     <div class="lightbox sign-in ng-hide" ng-show="signInVisible && !authentication.user">
 
         <div ng-include="'/modules/users/client/views/authentication/signin.client.view.html'"></div>
-
-    </div>
-
-    <div class="lightbox ng-hide" ng-show="contactFormVisible">
-        <i class="material-icons close-button" ng-click="closeContactForm();">close</i>
-
-        <div ng-include="'/modules/core/client/views/lightbox/contact.client.view.html'"></div>
 
     </div>
 

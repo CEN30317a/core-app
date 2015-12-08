@@ -4,7 +4,6 @@ angular.module('users').controller('AuthenticationController', ['$scope', '$root
   function ($scope, $rootScope, $state, $http, $location, $window, Authentication, PasswordValidator) {
     $scope.authentication = Authentication;
     $scope.popoverMsg = PasswordValidator.getPopoverMsg();
-    $scope.showSuccess = false;
 
     // Get an eventual error defined in the URL query string:
     $scope.error = $location.search().err;
@@ -15,10 +14,6 @@ angular.module('users').controller('AuthenticationController', ['$scope', '$root
    /* if ($scope.authentication.user) {
       $location.path('/');
     }*/
-
-    $scope.closeUserCreatedModal = function() {
-      $scope.showSuccess = false;
-    };
 
     $scope.closeSignIn = function() {
       $rootScope.signInVisible = false;
@@ -41,8 +36,8 @@ angular.module('users').controller('AuthenticationController', ['$scope', '$root
 
       $http.post('/api/auth/signup', $scope.credentials)
       .success(function (response) {
-        $scope.showSuccess = true;
-
+        // And redirect to the previous or home page
+        $state.go($state.previous.state.name || 'home', $state.previous.params);
       }).error(function (response) {
         $scope.error = response.message;
       });

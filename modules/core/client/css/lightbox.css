@@ -12,22 +12,6 @@
     overflow-y: auto;
 }
 
-.lightbox-med {
-    position: fixed;
-    height:30%;
-    max-height: 100%;
-    top: 5%;
-    left: 20%;
-    right: 20%;
-    padding: 50px;
-    background-color: white;
-    border: 2px solid #ffda5f;
-    z-index: 2;
-    overflow-x: hidden;
-    overflow-y: auto;
-}
-
-
 .button-footer {
     float: right;
     margin-right: 10px;

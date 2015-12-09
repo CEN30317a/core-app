@@ -22,14 +22,6 @@ angular.module('core').controller('CareersController', ['$scope', '$filter', '$r
         $scope.closeCareerApplication = function() {
             $scope.careerApplicationVisible = false;
         };
-
-        $scope.openContactForm = function() {
-            $rootScope.contactFormVisible = true;
-        };
-
-        $scope.closeContactForm = function() {
-            $rootScope.contactFormVisible = false;
-        };
         
         $scope.figureOutItemsToDisplay = function () {
           $scope.filteredItems = $filter('filter')($scope.Jobs, {

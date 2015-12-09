@@ -1,5 +1,11 @@
 html {
-  background-color: #d3d3d3;
+  background-color: #f0f0f0;
+}
+
+[type="radio"]:not(:checked), [type="radio"]:checked {
+  visibility: visible;
+  left: 0;
+  position: relative;
 }
 
 .content {
@@ -77,7 +83,7 @@ a:hover .header-profile-image {
   background-color: #ffb83c !important;
 }
 .btn, .btn-large {
-  background-color: #ffda5f !important;
+  background-color: #2b39b4 !important;
 }
 input[type=text]:focus:not([readonly]), input[type=password]:focus:not([readonly]), input[type=email]:focus:not([readonly]), input[type=url]:focus:not([readonly]), input[type=time]:focus:not([readonly]), input[type=date]:focus:not([readonly]), input[type=datetime-local]:focus:not([readonly]), input[type=tel]:focus:not([readonly]), input[type=number]:focus:not([readonly]), input[type=search]:focus:not([readonly]), textarea.materialize-textarea:focus:not([readonly]) {
     border-bottom: 1px solid #6b79f4 !important;
@@ -102,6 +108,15 @@ nav {
   top: 0;
 }
 
+nav ul a {
+  font-size: 17px;
+  font-weight: 500;
+}
+
+.nav-wrapper {
+  width: 76%;
+}
+
 .contact-row {
   margin-top: 17px;
 }
@@ -112,6 +127,9 @@ nav {
 
 .card.medium .card-image {
   height: 150px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .card.medium .card-content {
@@ -139,3 +157,19 @@ nav {
 .margin-bottom-25 {
   margin-bottom: 25px;
 }
+
+.no-padding {
+  padding: 0 !important;
+}
+
+.no-padding-right {
+  padding-right: 0 !important;
+}
+
+.card-panel, .transparentboxshadow {
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, .5), 0 2px 10px 0 rgba(0, 0, 0, 0.5);
+  background-color: transparent;
+}
+
+.card .card-action {
+  font-weight: 500 !important;

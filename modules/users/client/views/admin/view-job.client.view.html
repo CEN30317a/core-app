@@ -1,6 +1,6 @@
-<section ng-controller="JobsController" ng-init="findOne()">
+<section class="admin" ng-controller="JobsController" ng-init="findOne()">
   <div class="page-header">
-    <h1 ng-bind="job.title"></h1>
+    <h3 class="header center dark-blue-text" ng-bind="job.title"></h3>
   </div>
   <div class="pull-right">
     <a class="btn waves-effect waves-light" ui-sref="jobs.edit({jobId: job._id})">
@@ -59,6 +59,9 @@
   </p>
   <p class="list-group-item-text pull-right small">
     <span><b>Job Responibilities:</b> </br> {{job.responsibilities}}</span>
+  </p>
+  <p class="list-group-item-text pull-right small">
+    <span><b>Salary</b> </br> {{job.salary}}</span>
   </p>
 </br>
   <a class="btn btn-primary" ui-sref="jobs.list">Done</a>

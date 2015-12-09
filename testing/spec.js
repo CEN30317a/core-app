@@ -23,7 +23,7 @@ describe('SignIn Users', function() {
     browser.get('http://localhost:3000/');
 
     loginAsEmployee();
-    
+
     //expect(errorMessage).toMatch('');
 
     // element(by.model('todoList.todoText')).sendKeys('write first protractor test');

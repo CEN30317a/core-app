@@ -16,15 +16,15 @@
                 <li class="right" ng-model="signInBtn"><a class="dark-blue-text" ng-hide="authentication.user" ng-click="toggleSignIn();">Sign In</a></li>
                 <li class="right">
 
-                    <a class='dropdown-button right white-text' ng-class="{active: dropdownOpen == true}" href='#' data-activates='dropdown1' ng-bind="authentication.user.displayName" ng-click="dropdownOpen = !dropdownOpen;">{{authentication.user.displayName}}</a>
+                    <a ng-model="openDropdown" class='dropdown-button right white-text' ng-class="{active: dropdownOpen == true}" href='#' data-activates='dropdown1' ng-bind="authentication.user.displayName" ng-click="dropdownOpen = !dropdownOpen;">{{authentication.user.displayName}}</a>
 
                     <ul ng-show="dropdownOpen == true" class="dropdown-content" ng-click="dropdownOpen = false;">
-                        <li ng-show="getHighestRole() == 'admin';"><a class="dark-blue-text" ui-sref="admin.users">Manage Users</a></li>
-                        <li ng-show="getHighestRole() == 'admin';"><a class="dark-blue-text" ui-sref="jobs.list">Manage Job Postings</a></li>
-                        <li ng-show="getHighestRole() == 'admin' ;"><a class="dark-blue-text" ui-sref="referrals.list">Manage Referrals</a></li>
-                        <li ng-show="getHighestRole() == 'admin' ;"><a class="dark-blue-text" ui-sref="contacts.list">View Messages</a></li>
-                        <li ng-show="getHighestRole() == 'user' ;"><a class="dark-blue-text" ui-sref="referrals.list">View Referrals</a></li>
-                        <li ng-show="getHighestRole() == 'user';"><a class="dark-blue-text" ui-sref="settings.profile">Edit Profile</a></li>
+                        <li ng-show="getHighestRole() == 'admin';"><a ng-model="manageUser" class="dark-blue-text" ui-sref="admin.users">Manage Users</a></li>
+                        <li ng-show="getHighestRole() == 'admin';"><a ng-model="manageJob" class="dark-blue-text" ui-sref="jobs.list">Manage Job Postings</a></li>
+                        <li ng-show="getHighestRole() == 'admin' ;"><a ng-model="manageRef" class="dark-blue-text" ui-sref="referrals.list">Manage Referrals</a></li>
+                        <li ng-show="getHighestRole() == 'admin' ;"><a ng-model="viewMess" class="dark-blue-text" ui-sref="contacts.list">View Messages</a></li>
+                        <li ng-show="getHighestRole() == 'user' ;"><a ng-model="viewRef" class="dark-blue-text" ui-sref="referrals.list">View Referrals</a></li>
+                        <li ng-show="getHighestRole() == 'user';"><a ng-model="editProf" class="dark-blue-text" ui-sref="settings.profile">Edit Profile</a></li>
                         <li><a class="dark-blue-text" href="/api/auth/signout" target="_self">Signout</a></li>
                     </ul>
 

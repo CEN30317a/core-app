@@ -7,27 +7,27 @@
       <fieldset class="job-create">
         <div class="form-group" show-errors>
           <label for="title">Job Title</label>
-          <input name="title" type="text" ng-model="title" id="title" class="form-control" placeholder="Title" required>
+          <input name="title" type="text" ng-model="job.title" id="title" class="form-control" placeholder="Title" required>
           <div ng-messages="jobForm.title.$error" role="alert">
             <p class="help-block error-text" ng-message="required">Job title is required.</p>
           </div>
         </div>
         <div class="form-group">
           <label for="description">Job Description</label>
-          <textarea name="description" ng-model="description" id="description" class="form-control" cols="30" rows="10" placeholder="description"></textarea>
+          <textarea name="description" ng-model="job.description" id="description" class="form-control" cols="30" rows="10" placeholder="description"></textarea>
         </div>
         <div class="form-group">
           <label for="contract">Full Time/Part Time</label>
-          <input name="contract" ng-model="contract" id="contract" class="form-control" type="radio" value="Full Time" required />Full Time
-          <input name="contract" ng-model="contract" id="contract" class="form-control" type="radio" value="Part Time" required />Part Time
+          <input name="contract" ng-model="job.full" id="contract" class="form-control" type="radio" value="Full Time" required />Full Time
+          <input name="contract" ng-model="job.part" id="contract" class="form-control" type="radio" value="Part Time" required />Part Time
         </div>
         <div class="form-group">
           <label for="closing">Closing date</label>
-          <textarea name="closing" ng-model="closing" id="closing" class="form-control" cols="30" rows="10" placeholder="End date"></textarea>
+          <textarea name="closing" ng-model="job.closing" id="closing" class="form-control" cols="30" rows="10" placeholder="End date"></textarea>
         </div>
         <div class="form-group">
           <label for="minExp1">Minimum Experience 1</label>
-          <textarea name="minExp1" ng-model="minExp1" id="minExp1" class="form-control" cols="30" rows="10" placeholder="What are the minimum qualifications for this position?"></textarea>
+          <textarea name="minExp1" ng-model="job.minExp1" id="minExp1" class="form-control" cols="30" rows="10" placeholder="What are the minimum qualifications for this position?"></textarea>
         </div>
         <div class="form-group">
           <label for="minExp2">Minimum Experience 2</label>
@@ -47,7 +47,7 @@
         </div>
         <div class="form-group">
           <label for="prefExp1">Preferred Experience 1</label>
-          <textarea name="prefExp1" ng-model="prefExp1" id="prefExp1" class="form-control" cols="30" rows="10" placeholder="What are the preferred qualifications for this position?"></textarea>
+          <textarea name="prefExp1" ng-model="job.prefExp1" id="prefExp1" class="form-control" cols="30" rows="10" placeholder="What are the preferred qualifications for this position?"></textarea>
         </div>
         <div class="form-group">
           <label for="prefExp2">Preferred Experience 2</label>
@@ -67,14 +67,14 @@
         </div>
         <div class="form-group">
           <label for="responsibilities">Job responsibilities</label>
-          <textarea name="responsibilities" ng-model="responsibilities" id="responsibilities" class="form-control" cols="30" rows="10" placeholder="What are the job responsibilities of this position?"></textarea>
+          <textarea name="responsibilities" ng-model="job.responsibilities" id="responsibilities" class="form-control" cols="30" rows="10" placeholder="What are the job responsibilities of this position?"></textarea>
         </div>
         <div class="form-group">
           <label for="salary">Salary</label>
-          <textarea name="salary" ng-model="salary" id="responsibilities" class="form-control" cols="30" rows="10" placeholder="Salary of this position?"></textarea>
+          <textarea name="salary" ng-model="job.salary" id="salary" class="form-control" cols="30" rows="10" placeholder="Salary of this position?"></textarea>
         </div>
         <div class="form-group">
-          <input type="submit" class="btn btn-default">
+          <input ng-model="submitNewJob" type="submit" class="btn btn-default">
           <a class="btn btn-default" ui-sref="jobs.list">Cancel</a>
         </div>
         <div ng-show="error" class="text-danger">

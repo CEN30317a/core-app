@@ -158,6 +158,14 @@ nav ul a {
   margin-bottom: 25px;
 }
 
+.no-padding {
+  padding: 0 !important;
+}
+
+.no-padding-right {
+  padding-right: 0 !important;
+}
+
 .card-panel, .transparentboxshadow {
   box-shadow: 0 2px 5px 0 rgba(0, 0, 0, .5), 0 2px 10px 0 rgba(0, 0, 0, 0.5);
   background-color: transparent;
@@ -165,4 +173,3 @@ nav ul a {
 
 .card .card-action {
   font-weight: 500 !important;
-}

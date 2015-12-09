@@ -22,7 +22,7 @@ angular.module('core').controller('CareersController', ['$scope', '$filter', '$r
         $scope.closeCareerApplication = function() {
             $scope.careerApplicationVisible = false;
         };
-        
+
         $scope.figureOutItemsToDisplay = function () {
           $scope.filteredItems = $filter('filter')($scope.Jobs, {
             $: $scope.search
@@ -31,7 +31,6 @@ angular.module('core').controller('CareersController', ['$scope', '$filter', '$r
           var begin = (($scope.currentPage - 1) * $scope.itemsPerPage);
           var end = begin + $scope.itemsPerPage;
           $scope.pagedItems = $scope.filteredItems.slice(begin, end);
-          console.log($scope.pagedItems);
         };
 
         $scope.pageChanged = function () {

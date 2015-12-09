@@ -17,8 +17,8 @@ var addUser = function() {
   element(by.model('credentials.lastName')).sendKeys('is doing');
   element(by.model('credentials.email')).sendKeys('this');
   element(by.model('credentials.address')).sendKeys('wow@g.com');
-  element(by.model('credentials.phone')).sendKeys('55544433333');
-  element(by.model('credentials.username')).sendKeys('Protractor');
+  element(by.model('credentials.phone')).sendKeys('5554443333');
+  element(by.model('credentials.username')).sendKeys('pro');
   element(by.model('credentials.password')).sendKeys('Abc123!@#$');
   element(by.model('submitNewUser')).click();
   element(by.model('newUserDone')).click();
@@ -36,8 +36,7 @@ var addJob = function() {
   element(by.model('job.prefExp1')).sendKeys('Be ice cold');
   element(by.model('job.responsibilities')).sendKeys('CEO');
   element(by.model('job.salary')).sendKeys('Hunnid stax');
-  element(by.model('submitNewJob')).click();
-  element(by.model('home')).click();
+  element(by.model('submitNewJob')).submit();
 };
 
 var addReferral = function() {
@@ -58,6 +57,10 @@ var addContact = function() {
   element(by.model('home')).click();
 };
 
+var signout = function() {
+    element(by.model('openDropdown')).click();
+    element(by.model('signoutBtn')).click();
+}
 browser.get('http://localhost:3000/');
 
 describe('Clicking all the header buttons', function(){
@@ -88,20 +91,9 @@ describe('Sending message to admin', function(){
 
 
 describe('Sign in as admin and add a bunch of stuff', function(){
-
-  it('Add User', function() {
-    loginAsAdmin();
-    addUser();
-  });
   it('Add Job', function() {
+    loginAsAdmin();
     addJob();
-  });
-  it('Add Referral', function() {
-    element(by.model('packages')).click();
-    element(by.model('home')).click();
-  });
-  it('Look at Messages', function() {
-    element(by.model('careers')).click();
-    element(by.model('home')).click();
+    signout();
   });
 });

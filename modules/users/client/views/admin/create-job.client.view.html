@@ -74,7 +74,7 @@
           <textarea name="salary" ng-model="job.salary" id="salary" class="form-control" cols="30" rows="10" placeholder="Salary of this position?"></textarea>
         </div>
         <div class="form-group">
-          <input ng-model="submitNewJob" type="submit" class="btn btn-default">
+          <input type="submit" class="btn btn-default" ng-model="submitNewJob">
           <a class="btn btn-default" ui-sref="jobs.list">Cancel</a>
         </div>
         <div ng-show="error" class="text-danger">

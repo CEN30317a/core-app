@@ -4,18 +4,16 @@
 
         <div class="nav-wrapper container" ng-init="dropdownOpen = false;">
 
-            <a id="logo-container" ui-sref="home" class="brand-logo">
+            <a id="logo-container" ng-model="home" ui-sref="home" class="brand-logo">
               <img class="nav-logo brand-logo" ng-src="/modules/core/client/img/brand/logonotext.png" />
             </a>
 
             <ul class="hide-on-med-and-down nav-options-container">
-
-                <li class="left"><a class="white-text" ng-hide="authentication.user" ui-sref="contact">Contact</a></li>
-                <li class="left"><a class="white-text" ui-sref="about">About Us</a></li>
-                <li class="left"><a class="white-text" ui-sref="services">Services</a></li>
-                <li class="left"><a class="white-text" ui-sref="packages">Packages</a></li>
-                <li class="left"><a class="white-text" ui-sref="careers">Careers</a></li>
-                <li class="right"><a class="white-text" ng-hide="authentication.user" ng-click="toggleSignIn();">Sign In</a></li>
+                <li class="left"><a class="dark-blue-text" ng-model="aboutUs" ui-sref="about">About Us</a></li>
+                <li class="left"><a class="dark-blue-text" ng-model="services" ui-sref="services">Services</a></li>
+                <li class="left"><a class="dark-blue-text" ng-model="packages" ui-sref="packages">Packages</a></li>
+                <li class="left"><a class="dark-blue-text" ng-model="careers" ui-sref="careers">Careers</a></li>
+                <li class="right" ng-model="signInBtn"><a class="dark-blue-text" ng-hide="authentication.user" ng-click="toggleSignIn();">Sign In</a></li>
                 <li class="right">
 
                     <a class='dropdown-button right white-text' ng-class="{active: dropdownOpen == true}" href='#' data-activates='dropdown1' ng-bind="authentication.user.displayName" ng-click="dropdownOpen = !dropdownOpen;">{{authentication.user.displayName}}</a>

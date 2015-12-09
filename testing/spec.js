@@ -17,6 +17,11 @@ var loginAsAdmin = function() {
   element(by.model('submitSignIn')).click();
 };
 
+var signout = function() {
+    element(by.model('openDropdown')).click();
+    element(by.model('signoutBtn')).click();
+};
+
 
 describe('SignIn Users', function() {
   it('Open Signin box and Login as employee', function() {
@@ -24,8 +29,7 @@ describe('SignIn Users', function() {
 
     loginAsEmployee();
 
-    browser.get('http://localhost:3000/referrals');
-
+    signout();
     //expect(errorMessage).toMatch('');
 
     // element(by.model('todoList.todoText')).sendKeys('write first protractor test');

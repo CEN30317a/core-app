@@ -9,12 +9,6 @@ angular.module('jobs').controller('JobsController', ['$scope', '$stateParams', '
     $scope.create = function (isValid) {
       $scope.error = null;
 
-      if (!isValid) {
-        $scope.$broadcast('show-errors-check-validity', 'jobForm');
-
-        return false;
-      }
-
       // Create new Job object
       var job = new Jobs({
         title: this.title,

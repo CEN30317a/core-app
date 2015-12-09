@@ -54,6 +54,7 @@ exports.update = function (req, res) {
   job.prefExp4 = req.body.prefExp4;
   job.prefExp5 = req.body.prefExp5;
   job.responsibilities = req.body.responsibilities;
+  job.salary = req.body.salary;
 
 
   job.save(function (err) {

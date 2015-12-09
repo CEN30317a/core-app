@@ -12,12 +12,10 @@ angular.module('referrals').controller('ReferralsController', ['$scope', '$filte
       Admin.query(function (data) {
         $scope.usersList = data; // callback for Users.query
         $scope.pagedItems = [];
-        console.log(data);
       });
     }
 
     $scope.selectUser = function(myUser){
-      console.log(myUser);
       $scope.selectedUser = myUser;
     };
 

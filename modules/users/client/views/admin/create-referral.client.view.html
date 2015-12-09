@@ -49,12 +49,13 @@
           </div>
           <div class="form-group">
             <input type="submit" class="btn btn-default">
-            <a class="btn btn-default" ui-sref="referrals.list">Cancel</a>
+            <a class="btn btn-default" ui-sref="referrals.list" ng-model="backFromRef">Cancel</a>
           </div>
           <div ng-show="error" class="text-danger">
             <strong ng-bind="error"></strong>
           </div>
         </fieldset>
       </form>
+    </div>
     </div>
 </section>

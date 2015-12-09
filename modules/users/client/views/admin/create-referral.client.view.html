@@ -1,12 +1,12 @@
-<section ng-controller="ReferralsController">
+<section class="admin" ng-controller="ReferralsController">
     <div class="page-header">
-      <h1>New Referral</h1>
+      <h1>Create a new Referral</h1>
     </div>
     <div class="col-md-12">
       <form name="referralForm" class="form-horizontal" ng-submit="create(referralForm.$valid)" novalidate>
         <fieldset>
           <div class="form-group" show-errors>
-            <label for="title">Patient Name</label>
+            <label for="title">Patient Name:</label>
             <input name="title" type="text" ng-model="title" id="title" class="form-control" placeholder="Patient's Name" required>
             <div ng-messages="articleForm.title.$error" role="alert">
               <p class="help-block error-text" ng-message="required">Patient name is required.</p>
@@ -14,7 +14,7 @@
           </div>
           <div class="form-group">
           <div class="col-md-4" style="margin-top: 2em">
-            <label for="first_name">Assigned to</label>
+            <label for="first_name">Assigned to:</label>
             <div class="collection">
               <a ng-repeat="user in usersList" class="collection-item dark-blue-text">
                 <p class="list-group-item-text pull-right small bold" ng-click="selectUser(user)">

@@ -32,6 +32,7 @@ angular.module('jobs').controller('JobsController', ['$scope', '$stateParams', '
         prefExp4: this.prefExp4,
         prefExp5: this.prefExp5,
         responsibilities: this.responsibilities,
+        salary: this.salary
       });
 
       // Redirect after save
@@ -54,6 +55,7 @@ angular.module('jobs').controller('JobsController', ['$scope', '$stateParams', '
         $scope.prefExp4 = '';
         $scope.prefExp5 = '';
         $scope.responsibilities = '';
+        $scope.salary = '';
       }, function (errorResponse) {
         $scope.error = errorResponse.data.message;
       });

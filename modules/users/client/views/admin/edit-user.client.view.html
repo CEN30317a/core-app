@@ -1,6 +1,6 @@
-<section>
+<section class="admin">
   <div class="page-header">
-    <h1>User <span class="bold" ng-bind="user.username"></span></h1>
+    <h3 class="header center dark-blue-text">User <span class="bold" ng-bind="user.username"></span></h3>
   </div>
   <div class="col-md-12">
     <form name="userForm" ng-submit="update(userForm.$valid)" novalidate>
@@ -20,9 +20,12 @@
           </div>
         </div>
         <div class="form-group" show-errors>
-          <label class="control-label" for="roles">Roles</label>
           <div class="controls">
-            <input class="form-control" type="text" name="roles" ng-model="user.roles" id="roles" ng-list required />
+            <div class="form-group">
+              <label for="contract">Roles</label>
+              <input name="role-radio" ng-model="user.roles" class="form-control" type="radio" value="admin" required />Admin
+              <input name="role-radio" ng-model="user.roles" class="form-control" type="radio" value="user" required />Employee
+            </div>
             <div ng-messages="userForm.roles.$error" role="alert">
               <p class="help-block error-text" ng-message="required">At least one role is required.</p>
             </div>

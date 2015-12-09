@@ -14,10 +14,15 @@ var ContactSchema = new Schema({
     type: Date,
     default: Date.now
   },
-  name: {
+  first_name: {
     type: String,
     default: '',
     trim: true,
+    required: 'Name cannot be blank'
+  },
+  last_name: {
+    type: String,
+    default: '',
     required: 'Name cannot be blank'
   },
   message: {
@@ -26,6 +31,11 @@ var ContactSchema = new Schema({
     trim: true
   },
   email: {
+    type: String,
+    default: '',
+    trim: true
+  },
+  phone: {
     type: String,
     default: '',
     trim: true

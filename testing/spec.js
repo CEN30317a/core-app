@@ -19,10 +19,12 @@ var loginAsAdmin = function() {
 
 
 describe('SignIn Users', function() {
-  it('Open Signin box', function() {
+  it('Open Signin box and Login as employee', function() {
     browser.get('http://localhost:3000/');
 
     loginAsEmployee();
+
+    browser.get('http://localhost:3000/referrals');
 
     //expect(errorMessage).toMatch('');
 

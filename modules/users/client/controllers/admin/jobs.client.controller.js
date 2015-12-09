@@ -8,12 +8,14 @@ angular.module('jobs').controller('JobsController', ['$scope', '$stateParams', '
     // Create new Job
     $scope.create = function (isValid) {
       $scope.error = null;
+      console.log('hello');
 
-      if (!isValid) {
-        $scope.$broadcast('show-errors-check-validity', 'jobForm');
-
-        return false;
-      }
+      // if (!isValid) {
+      //   $scope.$broadcast('show-errors-check-validity', 'jobForm');
+      //
+      //   return false;
+      // }
+      console.log('its me');
 
       // Create new Job object
       var job = new Jobs({
@@ -39,6 +41,7 @@ angular.module('jobs').controller('JobsController', ['$scope', '$stateParams', '
       job.$save(function (response) {
         $location.path('admin/jobs');
 
+        console.log('hi');
         // Clear form fields
         $scope.title = '';
         $scope.description = '';

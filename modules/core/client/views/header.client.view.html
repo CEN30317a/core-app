@@ -13,7 +13,7 @@
                 <li class="left"><a class="dark-blue-text" ng-model="services" ui-sref="services">Services</a></li>
                 <li class="left"><a class="dark-blue-text" ng-model="packages" ui-sref="packages">Packages</a></li>
                 <li class="left"><a class="dark-blue-text" ng-model="careers" ui-sref="careers">Careers</a></li>
-                <li class="right" ng-model="signInBtn"><a class="dark-blue-text" ng-hide="authentication.user" ng-click="toggleSignIn();">Sign In</a></li>
+                <li class="right"><a ng-model="signInBtn" class="dark-blue-text" ng-hide="authentication.user" ng-click="toggleSignIn();">Sign In</a></li>
                 <li class="right">
 
                     <a ng-model="openDropdown" class='dropdown-button right white-text' ng-class="{active: dropdownOpen == true}" href='#' data-activates='dropdown1' ng-bind="authentication.user.displayName" ng-click="dropdownOpen = !dropdownOpen;">{{authentication.user.displayName}}</a>

@@ -20,7 +20,7 @@ var loginAsAdmin = function() {
 var signout = function() {
     element(by.model('openDropdown')).click();
     element(by.model('signoutBtn')).click();
-}
+};
 
 
 describe('SignIn Users', function() {

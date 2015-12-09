@@ -30,9 +30,8 @@ var viewReferrals = function() {
 
 };
 
-browser.get('http://localhost:3000/');
-
 describe('employee testing', function() {
+  browser.get('http://localhost:3000/');
   it('Login as employee and view referrals', function() {
       loginAsEmployee();
       viewReferrals();

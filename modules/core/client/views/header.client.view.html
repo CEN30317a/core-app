@@ -25,7 +25,7 @@
                         <li ng-show="getHighestRole() == 'admin' ;"><a ng-model="viewMess" class="dark-blue-text" ui-sref="contacts.list">View Messages</a></li>
                         <li ng-show="getHighestRole() == 'user' ;"><a ng-model="viewRef" class="dark-blue-text" ui-sref="referrals.list">View Referrals</a></li>
                         <li ng-show="getHighestRole() == 'user';"><a ng-model="editProf" class="dark-blue-text" ui-sref="settings.profile">Edit Profile</a></li>
-                        <li><a class="dark-blue-text" href="/api/auth/signout" target="_self">Signout</a></li>
+                        <li ng-model="signOutBtn"><a class="dark-blue-text" href="/api/auth/signout" target="_self">Signout</a></li>
                     </ul>
 
                 </li>

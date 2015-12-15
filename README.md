@@ -32,3 +32,6 @@
 * To Navigate
   * go to->> localhost:3000/admin/jobs. Must be an admin user to use this feature.
   * For Admin privileges refer to Slack
+ 
+###Deployment Link
+ * https://extendedhealthcaresolutions.herokuapp.com/

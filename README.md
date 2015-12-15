@@ -35,7 +35,12 @@
 
 ###Database Info
 * Updates to the database are handled by the app automatically
-* To change database connections, go to '/core-app/config/env/production.js'
+
+* To change development database connections, go to '/core-app/config/env/development.js'
+	- Provide link to desired database on Line 7, on the far right
+	- Provide appropriate credentials to database on lines 9 and 10
+	
+* To change production database connections, go to '/core-app/config/env/production.js'
 	- Provide link to desired database on Line 11
 	- Provide appropriate credentials to database on lines 13 and 14
  

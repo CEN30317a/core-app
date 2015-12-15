@@ -33,5 +33,9 @@
   * go to->> localhost:3000/admin/jobs. Must be an admin user to use this feature.
   * For Admin privileges refer to Slack
  
+###Resources
+* MEAN.JS - Full-Stack JavaScript Using MongoDB, Express, AngularJS, and Node.js - http://meanjs.org
+* Materialize Style - http://materializecss.com/
+
 ###Deployment Link
  * https://extendedhealthcaresolutions.herokuapp.com/

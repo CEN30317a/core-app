@@ -30,8 +30,14 @@
    * Goto Terminal and press CTRL + C
 
 * To Navigate
-  * go to->> localhost:3000/admin/jobs. Must be an admin user to use this feature.
+  * go to->> localhost:3000
   * For Admin privileges refer to Slack
+
+###Database Info
+* Updates to the database are handled by the app automatically
+* To change database connections, go to '/core-app/config/env/production.js'
+	- Provide link to desired database on Line 11
+	- Provide appropriate credentials to database on lines 13 and 14
  
 ###Resources
 * MEAN.JS - Full-Stack JavaScript Using MongoDB, Express, AngularJS, and Node.js - http://meanjs.org

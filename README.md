@@ -34,10 +34,26 @@
   * For Admin privileges refer to Slack
   
 ###Screenshots of App
+* Landing Page:
 ![alt tag](https://github.com/CEN30317a/core-app/blob/master/screenshots/Landing.png)
+* Contact Us Page:
 ![alt tag](https://github.com/CEN30317a/core-app/blob/master/screenshots/ContactUs.png)
+* Careers Page:
 ![alt tag](https://github.com/CEN30317a/core-app/blob/master/screenshots/Careers.png)
-
+* Admin Views:
+	* Manage Users
+	![alt tag](https://github.com/CEN30317a/core-app/blob/master/screenshots/AdminUsersLanding.png)
+	* Manage Referrals
+	![alt tag](https://github.com/CEN30317a/core-app/blob/master/screenshots/AdminReferralsLanding.png)
+	* Manage Jobs
+	![alt tag](https://github.com/CEN30317a/core-app/blob/master/screenshots/AdminJobsLanding.png)
+	* View Messages
+	![alt tag](https://github.com/CEN30317a/core-app/blob/master/screenshots/AdminMessagesLanding.png)
+* Employee Views:
+	* View Referrals
+	![alt tag](https://github.com/CEN30317a/core-app/blob/master/screenshots/EmployeeReferralLanding.png)
+	* Edit Profile
+	![alt tag](https://github.com/CEN30317a/core-app/blob/master/screenshots/EmployeeEditProfile.png)
 
 ###Database Info
 * Updates to the database are handled by the app automatically

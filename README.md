@@ -32,6 +32,12 @@
 * To Navigate
   * go to->> localhost:3000
   * For Admin privileges refer to Slack
+  
+###Screenshots of App
+![alt tag](https://github.com/CEN30317a/core-app/blob/master/screenshots/Landing.png)
+![alt tag](https://github.com/CEN30317a/core-app/blob/master/screenshots/ContactUs.png)
+![alt tag](https://github.com/CEN30317a/core-app/blob/master/screenshots/Careers.png)
+
 
 ###Database Info
 * Updates to the database are handled by the app automatically
